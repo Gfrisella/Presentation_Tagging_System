@@ -14,11 +14,11 @@
 
 % ---------------------------------------------------------------- slide 13: Track cuts: what a good track is
 \begin{btframe}{3 · Selection · tracks}{Track cuts: what a good track is}
-\noindent \begin{minipage}[c]{\dimexpr(0.3103\linewidth-0.3103\dimexpr12.40pt\relax)}\raggedright
-{\centering \includegraphics[width=1.00\linewidth,height=59.18pt,keepaspectratio]{figs/s12_sk1.pdf}\par}
+\noindent \begin{minipage}[c]{0.4\linewidth}
+{\centering \includegraphics[width=1.00\linewidth,keepaspectratio]{figs/s12_sk1.pdf}\par}
 \end{minipage}%
 \hfill%
-\begin{minipage}[c]{\dimexpr(0.6897\linewidth-0.6897\dimexpr12.40pt\relax)}\raggedright
+\begin{minipage}[c]{0.6\linewidth}
 {\centering \includegraphics[width=1.00\linewidth]{figs/s12_img2.png}\par}
 \end{minipage}\par
 \vspace{2.46pt}
@@ -30,16 +30,15 @@
 3 & momentum & p > 1 GeV & 8.5 kHz good tracks (8.17 straight + 0.38 bounced) \\\rowrule
 – & track quality (ACTS) & converged, n\textsubscript{dof} > 25, χ\textsuperscript{2}/n\textsubscript{dof} < 5 & not yet measured (option, not applied) \\\rowrule
 \end{tabularx}\par}
-\slidenote{Plots: veto results\_rerun/nov4\_flow/sst1\_pair\_dists.py (Nov-4 production, per spill); newdeck/plots\_dists.py.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 14: Pair cuts: opposite charge, DOCA, vertex, IP
 \begin{btframe}{3 · Selection · pair cuts}{Pair cuts: opposite charge, DOCA, vertex, IP}
-\noindent \begin{minipage}[c]{\dimexpr(0.5652\linewidth-0.5652\dimexpr6.94pt\relax)}\raggedright
+\noindent \begin{minipage}[c]{0.75\linewidth}
 {\centering \includegraphics[width=1.00\linewidth,height=54.62pt,keepaspectratio]{figs/s13_sk1.pdf}\par}
 \end{minipage}%
 \hfill%
-\begin{minipage}[c]{\dimexpr(0.4348\linewidth-0.4348\dimexpr6.94pt\relax)}\raggedright
+\begin{minipage}[c]{0.25\linewidth}
 \begin{mathbox}[cern]{4.55pt}
 \[\mathrm{DOCA} = \frac{\left|\,\Delta\vec r\cdot(\vec p_1\times\vec p_2)\,\right|}{\left|\vec p_1\times\vec p_2\right|}\]
 \end{mathbox}
@@ -51,6 +50,5 @@
 \vspace{2.46pt}
 {\centering \includegraphics[width=0.66\linewidth]{figs/s13_img2.png}\par}
 \vspace{2.46pt}
-{\fontsize{5.01pt}{6.76pt}\selectfont \textbf{Time}: two unrelated muons must agree within ±200 ps (TD, σ\textsubscript{t} = 100 ps) over a 1 s spill → factor 2 × 200 ps / 1 s = \textbf{4×10\textsuperscript{-10}}.\par}
-\slidenote{Source: veto lib/veto/vertex\_selection.py (IP\_CUTS, measured\_ip). Plots: results\_rerun/nov4\_flow/sst1\_pair\_dists.py (sampled pairs per spill; IP shape only).}
+{\centering \fontsize{7.01pt}{8.76pt}\selectfont \textbf{Time}: two unrelated muons must agree within ±200 ps (TD, σ\textsubscript{t} = 100 ps) over a 1 s spill → factor 2 × 200 ps / 1 s = \textbf{4×10\textsuperscript{-10}}.\par}
 \end{btframe}

@@ -18,22 +18,22 @@
 \vspace{2.46pt}
 \noindent \begin{minipage}[t]{\dimexpr(0.4651\linewidth-0.4651\dimexpr11.49pt\relax)}\vspace{0pt}\raggedright
 {\centering \includegraphics[width=1.00\linewidth,keepaspectratio]{figs/s06_img2.jpg}\par}
-{\color{muted}\fontsize{3.48pt}{4.71pt}\selectfont Geant4 on a CPU, one muon at a time (left) vs Cuda Muons on a GPU (right)\par}
+{\color{muted}\fontsize{5.48pt}{8.71pt}\selectfont Geant4 on a CPU, one muon at a time (left) vs Cuda Muons on a GPU (right)\par}
 \vspace{2.46pt}
-{\centering \includegraphics[width=1.00\linewidth,height=54.62pt,keepaspectratio]{figs/s06_sk3.pdf}\par}
+% {\centering \includegraphics[width=1.00\linewidth,height=54.62pt,keepaspectratio]{figs/s06_sk3.pdf}\par}
 \end{minipage}%
 \hfill%
 \begin{minipage}[t]{\dimexpr(0.5349\linewidth-0.5349\dimexpr11.49pt\relax)}\vspace{0pt}\raggedright
-{\fontsize{5.02pt}{7.03pt}\selectfont
+{\fontsize{5.92pt}{8.03pt}\selectfont
 \begin{itemize}
-  \item Offline: Geant4 fills per-material histograms of momentum loss and p\textsubscript{T} kick for a fixed 2 cm step (95 log bins, 0.18–400 GeV)
-  \item Online: one CUDA thread per muon samples them in O(1) (alias method); field integrated with RK4
-  \item Reproduces Geant4 at z = 82 m behind the SHiP shield
-  \item One GPU: >10\textsuperscript{4}× faster than single-core Geant4, >100× faster than 1024 CPU cores
-  \item Decays are not simulated
-  \item Air is not simulated: muons travel in straight lines through the cavern air
-  \item Nov-4 production (Shah Rukh): the Nov-4 target pool transported through the TRY6 shield and the cavern 3 220 times, one seed = one spill
-  \item Stored: each muon’s state at z = 30.6 m (plane A) and at SST1
+  \item[\status{blue}] Offline: Geant4 fills per-material histograms of momentum loss and p\textsubscript{T} kick for a fixed 2 cm step (95 log bins, 0.18–400 GeV)
+  \item[\status{blue}] Online: one CUDA thread per muon samples them in O(1) (alias method); field integrated with RK4
+    \item[\status{blue}] Nov-4 production (Shah Rukh): the Nov-4 target pool transported through the TRY6 shield and the cavern 3 220 times, one seed = one spill
+    \item[\status{blue}] Stored: each muon’s state @UBT and @SST1
+  \item[\status{green}] One GPU: >10\textsuperscript{4}× faster than single-core Geant4, >100× faster than 1024 CPU cores
+  \item[\status{red}] Decays are not simulated
+  \item[\status{red}] Air is not simulated: muons travel in straight lines through the cavern air
+
 \end{itemize}}
 \end{minipage}\par
 \slidenote{L. F. P. Cattelan, S. R. Qasim, P. H. Owen, N. Serra, “Ultra-Fast Muon Transport via Histogram Sampling on GPUs”, arXiv:2512.10520 (2025). Source: Cuda Muons (arXiv:2512.10520); veto lib/veto/io.py stores at z = 30.6 m and SST1.}
@@ -76,12 +76,12 @@
 \vspace{0.82pt}
 {\fontsize{4.78pt}{6.45pt}\selectfont P = n σ L along the crossing (helium, 10 GeV: 4×10\textsuperscript{-6}); the vertex is forced, the event weight w·P = interactions per spill\par}
 \end{minipage}\par
-\slidenote{Details per target: back-up, page 38. Source: veto bin/dis\_library.py, bin/nu\_library.py, bin/shield\_dis.py + cpp/g4shield.cc, lib/veto/interactions.py; plots: report figs dis\_sigma\_generators, interactions/int\_nu\_xsec (Section 3).}
+\slidenote{Details per target: back-up, page 38.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 9: Detector technologies and the cost unit: the drachma
 \begin{btframe}{2 · Simulation · technologies}{Detector technologies and the cost unit: the drachma}
-{\fontsize{4.36pt}{5.66pt}\selectfont\setlength{\tabcolsep}{3.05pt}\renewcommand{\arraystretch}{1.42}
+{\fontsize{6.36pt}{8.66pt}\selectfont\setlength{\tabcolsep}{3.05pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrrrr}
 \textcolor{muted}{} & \textcolor{muted}{straw (UBT)} & \textcolor{muted}{tile} & \textcolor{muted}{tile2 (flames)} & \textcolor{muted}{LS + WOM (SBT)} & \textcolor{muted}{Si strips (MSMS)} \\\headrule
 layers & 6 (vertical) & 1 & 1 & LS cell 20 cm & 300 µm Si, 2 views \\\rowrule
@@ -91,36 +91,55 @@ efficiency & 99.9 \% & 99.9 \% & 99.9 \% & 99.3 \% & 99 \% \\\rowrule
 X / X\textsubscript{0} & 0.12 \% & 2.4 \% & 2.4 \% & \textasciitilde{}40 \% & 0.3 \% \\\rowrule
 cost / m\textsuperscript{2} (drachmas) & 2.9 & 4.0 & 16.9 & \textasciitilde{}0.34 & ≈ 15 (per 30 × 30 cm\textsuperscript{2} station 1.3 – 1.9) \\\rowrule
 \end{tabularx}\par}
+
 \vspace{2.46pt}
-\noindent \begin{minipage}[c]{\dimexpr(0.2500\linewidth-0.2500\dimexpr16.96pt\relax)}\raggedright
-{\centering \includegraphics[width=1.00\linewidth,height=59.18pt,keepaspectratio]{figs/s08_sk1.pdf}\par}
+\noindent
+\begin{minipage}[c]{0.6\linewidth}
+    \raggedright
+    {\fontsize{6.15pt}{8.30pt}\selectfont
+    \textcolor{cern}{\textbf{R2 = 333.5 drachmas = the budget
+    \textcolor{muted}{{\fontsize{4.61pt}{5.99pt}\selectfont
+    (R1 99.7 · R3 378.7)}}}}\par}
+    \vspace{2.46pt}
+    {\centering
+    \includegraphics[width=\linewidth,keepaspectratio]
+    {figs/s08_sk3.pdf}\par}
 \end{minipage}%
-\hfill%
-\begin{minipage}[c]{\dimexpr(0.2500\linewidth-0.2500\dimexpr16.96pt\relax)}\raggedright
-{\fontsize{13.66pt}{18.44pt}\selectfont \textcolor{cern}{\textbf{=}}\par}
+\hfill
+\begin{minipage}[c]{0.125\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,keepaspectratio]
+    {figs/s08_sk1.pdf}
 \end{minipage}%
-\hfill%
-\begin{minipage}[c]{\dimexpr(0.2500\linewidth-0.2500\dimexpr16.96pt\relax)}\raggedright
-{\centering \includegraphics[height=31.86pt,keepaspectratio]{figs/s08_img2.jpg}\par}
+\hfill
+\begin{minipage}[c]{0.04\linewidth}
+    \centering
+    {\fontsize{13.66pt}{18.44pt}\selectfont
+    \textcolor{cern}{\textbf{=}}}
 \end{minipage}%
-\hfill%
-\begin{minipage}[c]{\dimexpr(0.2500\linewidth-0.2500\dimexpr16.96pt\relax)}\raggedright
+\hfill
+\begin{minipage}[c]{0.145\linewidth}
+    \centering
+    \includegraphics[width=\linewidth,keepaspectratio]
+    {figs/s08_img2.jpg}
+\end{minipage}%
+\par
+% \hfill%
+\vspace{2.46pt}
+\noindent 
+% \begin{minipage}[c]{\dimexpr(0.2500\linewidth-0.2500\dimexpr16.96pt\relax)}\raggedright
 {\fontsize{6.02pt}{8.43pt}\selectfont
 \begin{itemize}
   \item \textbf{1 drachma} = the cost of one 0.5 × 0.5 m\textsuperscript{2} module of 4 × 4 cm\textsuperscript{2} tiles (144 tiles)
   \item Relative costs from one placeholder model: channels × relative cost per channel + 10 \% mechanics; never absolute money
 \end{itemize}}
-\end{minipage}\par
-\vspace{2.46pt}
-{\fontsize{6.15pt}{8.30pt}\selectfont \textcolor{cern}{\textbf{R2 = 333.5 drachmas = the budget \textcolor{muted}{{\fontsize{4.61pt}{5.99pt}\selectfont (R1 99.7 · R3 378.7)}}}}\par}
-\vspace{2.46pt}
-{\centering \includegraphics[width=1.00\linewidth,height=52.35pt,keepaspectratio]{figs/s08_sk3.pdf}\par}
-\slidenote{Source: veto lib/veto/technology.py (MODULES, module\_cost), lib/veto/budget.py (drachma); report Table tab:tag:tech and tab:tag:drachma. Values marked “assumed” in the report are not yet confirmed (ISSUES C6).}
+% \end{minipage}\par
+
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 10: Hits and digitisation: own hits, random hits, time windows
 \begin{btframe}{2 · Simulation · hits and digitisation}{Hits and digitisation: own hits, random hits, time windows}
-{\fontsize{5.02pt}{6.52pt}\selectfont\setlength{\tabcolsep}{3.51pt}\renewcommand{\arraystretch}{1.42}
+{\fontsize{6.02pt}{7.52pt}\selectfont\setlength{\tabcolsep}{3.51pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabularx}{\linewidth}{lrr>{\raggedright\arraybackslash}Xr}
 \textcolor{muted}{plane} & \textcolor{muted}{cell} & \textcolor{muted}{time window} & \textcolor{muted}{position} & \textcolor{muted}{efficiency} \\\headrule
 UBT straws & 6 layers, vertical, 5 mm & 50 ns drift: ±25 ns & no position along the 0.9 m section & 99.9 \% \\\rowrule
@@ -129,38 +148,41 @@ SBT cells & 854 LS cells, 20 cm, 30 MeV threshold & \textasciitilde{}1 ns, ±3 n
 MSMS strips & 300 µm Si, 187.5 µm pitch, 30 × 30 cm\textsuperscript{2} & ±1.5 ns & strip crossing & 99 \% \\\rowrule
 \end{tabularx}\par}
 \vspace{2.46pt}
-\noindent \begin{minipage}[t]{\dimexpr(0.4118\linewidth-0.4118\dimexpr7.85pt\relax)}\vspace{0pt}\raggedright
-{\centering \includegraphics[width=0.58\linewidth,keepaspectratio]{figs/s09_img1.png}\par}
+\noindent \begin{minipage}[c]{0.5\linewidth}
+{\centering \includegraphics[width=1\linewidth,keepaspectratio]{figs/s09_img1.png}\par}
 \end{minipage}%
 \hfill%
-\begin{minipage}[t]{\dimexpr(0.5882\linewidth-0.5882\dimexpr7.85pt\relax)}\vspace{0pt}\raggedright
+\begin{minipage}[c]{0.5\linewidth}
 {\fontsize{6.02pt}{8.43pt}\selectfont
 \begin{itemize}
   \item \textbf{Own hits:} each simulated particle is crossed with every plane; a hit if the cell fires (efficiency, threshold, energy deposit in the LS)
-  \item \textbf{Random hits:} all the other muons of the spill, Poisson from full-statistics rate maps, μ = R\textsubscript{plane} · 2W / 1 s
+  \item \textbf{Random hits:} all the other muons of the spill, Poisson from full-statistics rate maps, 
+  \begin{equation*}
+      \langle N_\text{acc}\rangle  = R_\text{plane} · 2W / 1 s
+  \end{equation*}
   \item \textbf{EM debris} of the shield end (e / γ) added to the UBT rate maps
   \item \textbf{Scattering} in the vessel walls and the SBT shell, mean \textbf{energy loss} in the shell (soft muons stop)
   \item A track is \textbf{tagged} by a hit in its space–time window on any plane upstream of its vertex
   \item Tile plane: up to 2.8 MHz per channel from muons in the flames, ≤ 53 kHz from EM debris; mean random hits per tile in ±0.36 ns: 2×10\textsuperscript{-3} (μ), 4×10\textsuperscript{-5} (EM)
 \end{itemize}}
 \end{minipage}\par
-\slidenote{Parametrised response (no detailed detector simulation). SBT random rate ×4 the simulated muon rate (cavern back-scatter, e/γ). Source: veto lib/veto/technology.py, lib/veto/reco.py (accidental\_hits, own\_hits), lib/veto/sbt.py, lib/veto/shield\_strips.py, lib/veto/em\_debris.py; report Table tab:tag:tech. Maps: results\_rerun/rate\_maps/tiles\_…3220seeds…\_z31.13\_2x2.npz (Nov-4 muons), results\_rerun/em\_debris/em\_maps.npz (EM debris × detection probability).}
+\slidenote{$N_\text{acc}$ is the mean number of accidental hits. The actual number is drawn from a Poisson distribution with that mean, independently for each event. $R_\text{plane}$ the total rate of hits on the whole plane, The maps are built from the full muon sample, EM debris included, and the SBT uses ×4 itssimulated rate.  - 2W: the full width of the time window the plane is read in. W is the half-width; for    tiles the window is ±1.5 ns, so 2W = 3 ns.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 11: Signal: truth-level generation with EventCalc
 \begin{btframe}{2 · Simulation · signal}{Signal: truth-level generation with EventCalc}
 \begin{flowrow}{\dimexpr(\linewidth-3\dimexpr6.37pt\relax)/4\relax}{6.37pt}%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{production}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{tabulated P(θ, E) per proton; LLP from the target centre, straight}\par}}%
+\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{production}}\par}\vspace{0.91pt}{\fontsize{5.91}{6.76pt}\selectfont\textcolor{ink}{tabulated P(θ, E) per proton;\\ LLP from the target centre, straight}\par}}%
 \flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{decay vertex}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{exponential in the decay volume, weight P\textsubscript{decay}}\par}}%
+\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{decay vertex}}\par}\vspace{0.91pt}{\fontsize{5.91}{6.76pt}\selectfont\textcolor{ink}{exponential in the decay volume, weight P\textsubscript{decay}}\par}}%
 \flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{decay}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{all channels of the model (423 blocks), Pythia for the hadrons}\par}}%
+\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{decay}}\par}\vspace{0.91pt}{\fontsize{5.91}{6.76pt}\selectfont\textcolor{ink}{all channels of the model (423 blocks), Pythia for the hadrons}\par}}%
 \flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{to tracks}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{daughters through field and matter to SST1 and the TD, then the same selection}\par}}%
+\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{to tracks}}\par}\vspace{0.91pt}{\fontsize{5.91}{6.76pt}\selectfont\textcolor{ink}{daughters through field and matter to SST1 and the TD, then the same selection}\par}}%
 \end{flowrow}
 \vspace{2.46pt}
-\noindent \begin{minipage}[t]{\dimexpr(0.4651\linewidth-0.4651\dimexpr7.85pt\relax)}\vspace{0pt}\raggedright
-{\fontsize{4.11pt}{5.34pt}\selectfont\setlength{\tabcolsep}{2.88pt}\renewcommand{\arraystretch}{1.42}
+\noindent \begin{minipage}[c]{0.5\linewidth}
+{\fontsize{6.11pt}{6.34pt}\selectfont\setlength{\tabcolsep}{2.88pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabular}{llr}
 \textcolor{muted}{model} & \textcolor{muted}{coupling} & \textcolor{muted}{masses [GeV]} \\\headrule
 HNL & pure e mixing; pure μ mixing & 0.5, 1, 2, 3, 4 \\\rowrule
@@ -170,8 +192,8 @@ ALP & coupling to fermions & 0.5, 1, 2, 4 \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
 \hfill%
-\begin{minipage}[t]{\dimexpr(0.5349\linewidth-0.5349\dimexpr7.85pt\relax)}\vspace{0pt}\raggedright
-{\fontsize{4.11pt}{5.34pt}\selectfont\setlength{\tabcolsep}{2.88pt}\renewcommand{\arraystretch}{1.42}
+\begin{minipage}[c]{0.5\linewidth}
+{\fontsize{6.11pt}{6.34pt}\selectfont\setlength{\tabcolsep}{2.88pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabularx}{\linewidth}{l>{\raggedright\arraybackslash}Xr}
 \textcolor{muted}{model} & \textcolor{muted}{two-body} & \textcolor{muted}{three-body (missing ν / π\textsuperscript{0})} \\\headrule
 HNL & N → π\textsuperscript{±} ℓ\textsuperscript{\ensuremath{\mp}} (full) & N → ℓ\textsuperscript{+} ℓ\textsuperscript{−} ν (partial) \\\rowrule
@@ -181,7 +203,8 @@ ALP & a → μ\textsuperscript{+} μ\textsuperscript{−} (full) & a → π\text
 \end{tabularx}\par}
 \end{minipage}\par
 \vspace{2.46pt}
-{\centering {\centering \includegraphics[height=91.04pt,keepaspectratio]{figs/s10_img1.png}\par}
-{\fontsize{4.78pt}{6.45pt}\selectfont cτ = 1 m and 100 m; 5×10\textsuperscript{4} LLPs per point, 3–4.5×10\textsuperscript{4} decaying in the vessel; efficiencies P\textsubscript{decay}-weighted\par}
+{\centering {\centering \includegraphics[height=109.04pt,keepaspectratio]{figs/s10_img1.png}\par}
+\noindent
+{\fontsize{6.78pt}{7.45pt}\selectfont cτ = 1 m and 100 m; 5×10\textsuperscript{4} LLPs per point, 3–4.5×10\textsuperscript{4} decaying in the vessel; efficiencies P\textsubscript{decay}-weighted\par}
 \par}
 \end{btframe}
