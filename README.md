@@ -34,3 +34,5 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 19 Nov 2026: back-up pages 44-46 from veto results_rerun/kl_distributions/seen_by: V0-rule aperture (angle of p_vis
   vs p, miss/r at the tile plane), which detector (UBT / SBT / MS7 strips) sees the parent of a selected MS7 K_L (own
   hits only, R3), and the dependence on the interaction z in MS7. Page 42: median beta of the K_L added. 47 pages.
+- 19 Nov 2026: now a git repo, pushed to github.com/Gfrisella/Presentation_Tagging_System (main, commit 79c7860);
+  main.pdf is tracked, the *.bak_* backups and LaTeX build files are not.
