@@ -36,3 +36,5 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   hits only, R3), and the dependence on the interaction z in MS7. Page 42: median beta of the K_L added. 47 pages.
 - 19 Nov 2026: now a git repo, pushed to github.com/Gfrisella/Presentation_Tagging_System (main, commit 79c7860);
   main.pdf is tracked, the *.bak_* backups and LaTeX build files are not.
+- 19 Nov 2026: Overleaf compiled with pdflatex (fontspec fatal error). latexmkrc now also maps $pdflatex to lualatex, so
+  "latexmk -pdf" (Overleaf's default) runs LuaLaTeX; tested locally, 47 pages.
