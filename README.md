@@ -40,3 +40,7 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   "latexmk -pdf" (Overleaf's default) runs LuaLaTeX; tested locally, 47 pages.
 - 19 Nov 2026: Overleaf could not find SourceSansPro-*.otf (its TeX Live has Source Sans 3). The four font files are now
   in fonts/ (OFL, see fonts/README.md) and beamerthemebt.sty loads them with Path=fonts/; italic name fixed (*-RegularIt).
+- 19 Nov 2026: back-up page 41 "Muon flux at the target: Nov-4 vs 2018" (pz / pT, physical and with FairShip's 2018
+  weighting emulated; veto results_rerun/nov4_vs_2018). Not committed yet (waiting for the Overleaf push). 48 pages.
+- 19 Nov 2026: back-up page 49 "All rules run on every candidate, in parallel: tagged = OR" (TikZ diagram + which rule
+  finds which background). Not committed yet (waiting for the Overleaf push). 49 pages.

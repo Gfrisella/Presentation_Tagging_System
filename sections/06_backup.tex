@@ -56,6 +56,19 @@ cross the vessel region, miss SST1 & 2.49×10\textsuperscript{4} \\\rowrule
 \slidenote{Source: muon store design-optimization-dataset-nov4-shell-3220seeds-2026-11-11, meta.json per\_type (types 0–7 of bin/generate\_muon\_study.py).}
 \end{btframe}
 
+% ---------------------------------------------------------------- slide 39b: Nov-4 muon flux vs 2018 (19 Nov 2026)
+\begin{btframe}{7 · Back-up · muon flux vs 2018}{Muon flux at the target: Nov-4 production vs the 2018 FairShip sample}
+{\centering \includegraphics[height=138pt,keepaspectratio]{figs/s39b_nov4_vs_2018.png}\par}
+\vspace{1.5pt}
+{\fontsize{5.9pt}{8.0pt}\selectfont
+\begin{itemize}
+  \item Same 2018 selection on both (E > 10 GeV at the 2018 plane, p ≥ 25 GeV): Nov-4 / 2018 = \textbf{1.057}; charm, beauty, onia 0.98–1.00
+  \item With FairShip's \textbf{2018 weighting emulated} (η → μμγ, ω → π\textsuperscript{0}μμ muons /100 without the ×100 boost): \textbf{0.83} → the 2018 files lack \textasciitilde{}22–27 \% of the min-bias flux
+  \item p\textsubscript{T} is not like-for-like: Nov-4 keeps only the direction after the target (dashed: 2018 with approximate target scattering)
+\end{itemize}}
+\slidenote{Nov-4: all 23 train chunks of the source pool (2.2×10\textsuperscript{9} muons); 2018: all 506 M muons (reference\_2018.h5), weights ×0.8 to 4×10\textsuperscript{13} PoT. 2018 selection emulated with bin/old\_convention.py, 2018 weighting per muon with compare\_inventory\_2018.classify. Source: veto results\_rerun/nov4\_vs\_2018 (README.md, numbers.json).}
+\end{btframe}
+
 % ---------------------------------------------------------------- slide 40: MS7 KL: from production to SST1, and the comparison with data
 \begin{btframe}{7 · Back-up · MS7 K\textsubscript{L}}{MS7 K\textsubscript{L}: from production to SST1, and the comparison with data}
 \noindent \begin{minipage}[t]{\dimexpr(0.5556\linewidth-0.5556\dimexpr9.67pt\relax)}\vspace{0pt}\raggedright
@@ -182,4 +195,39 @@ V0 rule (UBT) & candidate traced back as a neutral along p\textsubscript{vis} to
 MSMS strips & candidate traced back to the strip layers in MS7: own products of the interaction & R3 \\\rowrule
 \end{tabularx}\par}
 \slidenote{Source: veto lib/veto/reco.py (run\_events, v0\_tag), lib/veto/sbt.py (tag, zone\_tag), lib/veto/shield\_strips.py; design JSONs in veto designs/.}
+\end{btframe}
+
+% ---------------------------------------------------------------- slide 42: the OR of the rules (19 Nov 2026)
+\begin{btframe}{7 · Back-up · OR of the rules}{All rules run on every candidate, in parallel: tagged = OR}
+{\centering
+\begin{tikzpicture}[x=1pt,y=1pt,font=\fontsize{5.2pt}{6.4pt}\selectfont,
+  box/.style={line width=0.5pt,rounded corners=1.5pt,fill=white,align=center,inner sep=2.2pt,text width=140pt},
+  arr/.style={-{Stealth[length=2.6pt]},line width=0.5pt,color=ink}]
+  \node[draw=cern,fill=tint,line width=0.5pt,rounded corners=1.5pt,align=center,inner sep=2.5pt,text width=62pt] (c) at (0,0)
+    {\textbf{\textcolor{cern}{candidate}}\\2 tracks at SST1\\vertex in the vessel};
+  \node[box,draw=cern] (t) at (135,32) {\textbf{\textcolor{cern}{Track rule}} -- each track separately\\line from SST1 back\\r = 5 cm + (0.5 + 6 GeV/p) mrad · d};
+  \node[box,draw=purple] (v) at (135,0) {\textbf{\textcolor{purple}{V0 rule}} -- the pair as one neutral (p\textsubscript{vis} < 20 GeV)\\line from the vertex along p\textsubscript{vis}, early time window};
+  \node[box,draw=green] (s) at (135,-32) {\textbf{\textcolor{green}{SBT rules}} -- pointing, V0 line, zone\\(MSMS strips in R3: same idea, in MS7)};
+  \node[circle,draw=ink,line width=0.6pt,fill=white,inner sep=1.2pt,font=\fontsize{6pt}{7pt}\selectfont\bfseries] (or) at (250,0) {OR};
+  \node[draw=red,fill=red!8,line width=0.5pt,rounded corners=1.5pt,align=center,inner sep=2.5pt,text width=52pt] (out) at (310,0)
+    {\textbf{\textcolor{red}{tagged}}\\any rule found a hit};
+  \foreach \b in {t,v,s}{\draw[arr] (c.east) -- (\b.west); \draw[arr] (\b.east) -- (or);}
+  \draw[arr] (or) -- (out.west);
+\end{tikzpicture}\par}
+\vspace{4pt}
+{\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X}
+\textcolor{muted}{what made the candidate} & \textcolor{muted}{what is upstream} & \textcolor{muted}{rule that finds it} \\\headrule
+muon pairs from outside, rock tracks, bounced muons & each track came from upstream & track rule \\\rowrule
+muon interaction in the helium / walls & the incoming muon, nearly along the outgoing one & track rule (a kinked one escapes) \\\rowrule
+K\textsubscript{L} / neutrals from MS7 or the SBT material & nothing on the tracks' lines; the parent's products along p\textsubscript{vis} & V0 rule, SBT V0 line \\\rowrule
+\rowcolor{tint}signal (HNL, …) & nothing & none -- a random hit in any window = signal lost \\\rowrule
+\end{tabularx}\par}
+\vspace{3pt}
+{\fontsize{6.15pt}{8.60pt}\selectfont
+\begin{itemize}
+  \item No “first the tracks, then the V0 rule”: every window is open at the same time; a rule built for another source simply finds nothing
+  \item Tables quote the extra candidates each rule adds (e.g. V0 rule: MS7 1.8×10\textsuperscript{4} → 0.67); the signal loss includes all windows together, which is why p\textsubscript{max} keeps fast (signal-like) pairs out of the V0 disc
+\end{itemize}}
+\slidenote{Source: veto lib/veto/reco.py run\_events (vetoed = track rule; |= v0\_tag; |= sbt.tag), predictions (track windows from SST1), v0\_tag (window from the vertex).}
 \end{btframe}
