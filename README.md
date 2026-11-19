@@ -57,3 +57,9 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 19 Nov 2026: Z2 / Z3 slides moved into section 6, after the GA method slide (outline updated).
 - 19 Nov 2026: back-up p41 Q² / W of the interactions making the MS7 K_L (report fig:int:q2w); seen-by / aperture / z plots re-coloured PASS blue, FAIL orange as the momentum / species plots.
 - 19 Nov 2026: back-up p46 search radius at the tile plane (track rule p = 10–90 GeV, V0 rule p_vis = 2–20 GeV, vertex mid-vessel); veto results_rerun/aperture_radii.
+- 19 Nov 2026: **no-MSMS version** `main_nomsms.tex` + `sections_nomsms/` (copy of the chapters, 50 pages): no R3, no MSMS
+  strips (tagging chain 3/3 and the R3 slide removed, MS7 rows of the chain slides removed, MSMS column / row out of the
+  technology tables, R3 column out of the summary, outlines / cover / conclusion / GA genes adjusted). Back-up K_L
+  seen-by and z plots redone for UBT + SBT only (veto results_rerun/kl_distributions/seen_by/plot_seen_by_nomsms.py:
+  UBT 70 / 74, SBT 28 / 74, OR of the R2 rules 74 / 74). The V0-fix study slide keeps its numbers (made on R2 + strips),
+  said in its note. Build: `latexmk main_nomsms.tex` (Overleaf: set main_nomsms.tex as the main document).
