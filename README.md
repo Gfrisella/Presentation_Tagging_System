@@ -38,3 +38,5 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   main.pdf is tracked, the *.bak_* backups and LaTeX build files are not.
 - 19 Nov 2026: Overleaf compiled with pdflatex (fontspec fatal error). latexmkrc now also maps $pdflatex to lualatex, so
   "latexmk -pdf" (Overleaf's default) runs LuaLaTeX; tested locally, 47 pages.
+- 19 Nov 2026: Overleaf could not find SourceSansPro-*.otf (its TeX Live has Source Sans 3). The four font files are now
+  in fonts/ (OFL, see fonts/README.md) and beamerthemebt.sty loads them with Path=fonts/; italic name fixed (*-RegularIt).
