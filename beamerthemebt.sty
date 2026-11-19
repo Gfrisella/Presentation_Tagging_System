@@ -1,0 +1,67 @@
+% beamerthemebt.sty: the design of the HTML deck "Backgrounds and tagging" (UZH blue, Source Sans Pro, blue footer
+% band with the UZH and SHiP logos, date, short title and page number). Frame 16 cm x 9 cm = the 1600 x 900 px stage.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{beamerthemebt}[2026/11/18 Backgrounds and tagging deck]
+\RequirePackage{fontspec}
+\setsansfont{SourceSansPro}[Extension=.otf, UprightFont=*-Regular, BoldFont=*-Semibold, ItalicFont=*-It, BoldItalicFont=*-SemiboldIt]
+\RequirePackage{xcolor,graphicx,tabularx,colortbl,tikz,amsmath,transparent}
+\RequirePackage{tcolorbox}
+\usetikzlibrary{arrows.meta}
+\usefonttheme{professionalfonts}
+\definecolor{cern}{HTML}{0053A1}\definecolor{cernfoot}{HTML}{8FAAD0}\definecolor{ink}{HTML}{1C2330}
+\definecolor{muted}{HTML}{5A6474}\definecolor{note}{HTML}{6D7480}\definecolor{tint}{HTML}{F2F5F9}
+\definecolor{rule}{HTML}{D6DCE5}\definecolor{orange}{HTML}{D55E00}\definecolor{green}{HTML}{1BAF7A}
+\definecolor{amber}{HTML}{EDA100}\definecolor{purple}{HTML}{7B4FB0}\definecolor{red}{HTML}{C8323C}\definecolor{grey}{HTML}{9AA6B6}
+\setbeamercolor{normal text}{fg=ink,bg=white}
+\setbeamercolor{structure}{fg=cern}
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=14.57pt,text margin right=14.57pt}
+% px -> pt: 1 px of the HTML stage = 0.2845 pt
+\newcommand{\btshort}{Backgrounds and tagging}
+\newcommand{\btdate}{18 Nov 2026}
+% footer band: 54.4 px high
+\setbeamertemplate{footline}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[cern] (current page.south west) rectangle ([yshift=15.48pt]current page.south east);
+    \node[anchor=west,inner sep=0] at ([xshift=6.37pt,yshift=7.74pt]current page.south west) {\includegraphics[height=8.65pt]{figs/logo_uzh.png}};
+    \node[anchor=west,inner sep=0] at ([xshift=35pt,yshift=7.74pt]current page.south west) {\includegraphics[height=12.3pt]{figs/logo_ship.png}};
+    \node[anchor=east,inner sep=0,text=cernfoot,font=\fontsize{4.55pt}{5.5pt}\selectfont] at ([xshift=-6.37pt,yshift=7.74pt]current page.south east) {\insertframenumber};
+    \node[anchor=east,inner sep=0,text=cernfoot,font=\fontsize{4.55pt}{5.5pt}\selectfont] at ([xshift=-40.9pt,yshift=7.74pt]current page.south east) {\btshort};
+    \node[anchor=east,inner sep=0,text=cernfoot,font=\fontsize{4.55pt}{5.5pt}\selectfont] at ([xshift=-108pt,yshift=7.74pt]current page.south east) {\btdate};
+  \end{tikzpicture}}
+% title block: eyebrow (16 px, muted, uppercase, tracked) + title (37.6 px, UZH blue)
+\setbeamertemplate{frametitle}{}
+\newcommand{\btheader}[2]{%
+  \vspace*{-2pt}%
+  \ifx\relax#1\relax\else{\fontsize{4.55pt}{5.6pt}\selectfont\color{muted}\addfontfeatures{LetterSpace=6}\MakeUppercase{#1}\par}\vspace{0.6pt}\fi
+  {\fontsize{10.7pt}{12pt}\selectfont\color{cern}#2\par}\vspace{5.46pt}}
+\newenvironment{btframe}[2]{\begin{frame}[t]\btheader{#1}{#2}\fontsize{4.55pt}{6.1pt}\selectfont}{\end{frame}}
+% grey note above the footer band
+\newcommand{\slidenote}[1]{\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=south west,inner sep=0,text width=\dimexpr\paperwidth-29.14pt\relax,align=left,text=note,font=\fontsize{4.78pt}{6.45pt}\selectfont]
+   at ([xshift=14.57pt,yshift=18.5pt]current page.south west) {#1};\end{tikzpicture}}
+% bullets
+\setbeamertemplate{itemize item}{\textcolor{cern}{\raisebox{0.15ex}{\scalebox{0.7}{$\bullet$}}}}
+\setbeamertemplate{itemize subitem}{\textcolor{cern}{--}}
+\setlength{\leftmargini}{1.2em}
+\AtBeginEnvironment{itemize}{\setlength{\itemsep}{0.25em}\setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}}
+% tables: header rule 1.5 px ink, row rules 1 px
+\newcommand{\headrule}{\arrayrulecolor{ink}\noalign{\global\arrayrulewidth0.43pt}\hline}
+\newcommand{\rowrule}{\arrayrulecolor{rule}\noalign{\global\arrayrulewidth0.28pt}\hline}
+% formula box: tinted, coloured left rule
+\NewDocumentEnvironment{mathbox}{O{cern} m}{\begin{tcolorbox}[colback=tint,colframe=#1,arc=0pt,outer arc=0pt,leftrule=1.14pt,rightrule=0pt,toprule=0pt,bottomrule=0pt,
+   left=7pt,right=4.5pt,top=1.6pt,bottom=1.6pt,fontupper=\fontsize{#2}{1.3\dimexpr#2\relax}\selectfont]}{\end{tcolorbox}}
+% flow boxes with arrows
+\newlength{\flowgap}\newlength{\flowwidth}
+\newcounter{flowrowno}
+\newenvironment{flowrow}[2]{\stepcounter{flowrowno}\setlength{\flowwidth}{#1}\setlength{\flowgap}{#2}\par\noindent}{\par}
+\newcommand{\flowstep}[5]{\begin{tcolorbox}[width=\flowwidth,colback=#1,colframe=#2,boxrule=0.43pt,arc=2.7pt,
+   left=#4,right=#4,top=#3,bottom=#3,box align=center,nobeforeafter,valign=top,before upper=\raggedright,equal height group=flow\the\value{flowrowno}]#5\end{tcolorbox}}
+\newcommand{\flowarrow}{\makebox[\flowgap]{\tikz[baseline=-0.5ex]\draw[cern,-{Stealth[length=2pt]},line width=0.57pt](0,0)--(0.8\flowgap,0);}}
+% faded blocks (opacity < 1 in the HTML)
+\newcommand{\fadeblock}[2]{{\transparent{#1}#2}}
+% outline list (chapter dividers)
+\newenvironment{outlinelist}{\vspace{2pt}\par}{\par}
+\newcommand{\outlineitem}[4]{{\transparent{#4}\noindent\makebox[17.5pt][l]{\fontsize{7.28pt}{9pt}\selectfont\bfseries\color{cern}#1}%
+  \parbox[t]{\dimexpr\linewidth-17.5pt\relax}{\fontsize{7.28pt}{9pt}\selectfont #2\par\vspace{1pt}{\fontsize{5.1pt}{6.3pt}\selectfont\color{muted}#3\par}}\par\vspace{5.8pt}}}
+\endinput

@@ -1,0 +1,43 @@
+%% sketch_design.tex: top-view sketch of a tagging design in TikZ (19 Nov 2026), same layout and colours as the former SVG
+%% sketches (1000 x 260 units, y downwards). Usage:
+%%   \designsketch[<height>]{<equipped SBT rings, e.g. 0,...,9 or 2,5,6,7,8,9; empty = no SBT>}{<1 = MSMS strips, 0 = none>}{<SBT label>}
+%% Labels of the UBT and of the strips: redefine \skubtlabel / \skmsmslabel inside a group before the call.
+%% Ring k of SR-389: first 80 cm row + 6 cell rings for k = 0, then 6 cell rings (5 m) each, along the 50 m vessel.
+\definecolor{skshield}{HTML}{E3E8EF}\definecolor{skms7}{HTML}{C9D1DC}\definecolor{skoff}{HTML}{D6DCE5}
+\newcommand{\skubtlabel}{UBT: straws 30.73 m + tiles 31.13 m}
+\newcommand{\skmsmslabel}{strips in MS7\\(MSMS)}
+\newcommand{\skringseg}[3]{% #1 ring, #2 style, #3 = 1: number in bold ink, 0: grey
+  \pgfmathsetmacro{\ta}{#1==0 ? 0 : (0.8+5*#1)/50}\pgfmathsetmacro{\tb}{#1==9 ? 1 : (0.8+5*(#1+1))/50}%
+  \draw[#2] ($(246,103)!\ta+0.006!(860,53)$) -- ($(246,103)!\tb-0.006!(860,53)$);
+  \draw[#2] ($(246,157)!\ta+0.006!(860,207)$) -- ($(246,157)!\tb-0.006!(860,207)$);
+  \ifnum#3=1\node[text=ink,font=\fontsize{3.9pt}{4.6pt}\selectfont\bfseries] at ($($(246,103)!0.5*\ta+0.5*\tb!(860,53)$)+(0,-14)$) {#1};
+  \else\node[text=grey,font=\fontsize{3.9pt}{4.6pt}\selectfont] at ($($(246,103)!0.5*\ta+0.5*\tb!(860,53)$)+(0,-14)$) {#1};\fi}
+\newcommand{\designsketch}[4][45.52pt]{%
+\begin{tikzpicture}[x=#1/260,y=-#1/260,font=\fontsize{5.1pt}{6pt}\selectfont]
+  \useasboundingbox (-40,0) rectangle (1000,260);
+  % muon shield and MS7
+  \filldraw[fill=skshield,draw=grey,rounded corners=0.6pt] (20,95) rectangle (170,165);
+  \node[text=muted] at (95,180) {muon shield};
+  \filldraw[fill=skms7,draw=purple,line width=0.35pt] (140,95) rectangle (170,165);
+  \node[text=purple] at (155,82) {MS7};
+  \ifnum#3=1
+    \foreach \x in {146,155,164}{\foreach \y in {102,112,148,158}{\draw[red,line width=0.85pt] (\x,\y) -- (\x,\y+8);}}
+    \node[text=red,anchor=south west,inner sep=0.5pt,align=left] at (-35,50) {\skmsmslabel};
+    \draw[red,line width=0.25pt] (95,62) -- (150,98);
+  \fi
+  % decay vessel
+  \filldraw[fill=tint,draw=cern,line width=0.45pt] (240,112) -- (860,62) -- (860,198) -- (240,148) -- cycle;
+  \node[text=cern] at (560,130) {decay vessel (He), z = 31.1 – 81.1 m};
+  % SBT: every ring outlined in grey, the equipped ones in green; nothing if there is no SBT
+  \if\relax\detokenize{#2}\relax\else
+    \foreach \k in {0,...,9}{\skringseg{\k}{skoff,line width=0.5pt,dash pattern=on 1.2pt off 0.8pt}{0}}
+    \foreach \k in {#2}{\skringseg{\k}{green,line width=1.5pt}{1}}
+    \node[text=green] at (560,22) {#4};
+  \fi
+  % UBT and SST1
+  \draw[orange,line width=0.9pt] (228,104) -- (228,156);
+  \draw[orange,line width=0.9pt] (236,90) -- (236,170);
+  \node[text=orange,anchor=west,inner sep=0pt] at (130,232) {\skubtlabel};
+  \draw[ink,line width=0.9pt] (900,55) -- (900,205);
+  \node[text=ink] at (900,43) {SST1};
+\end{tikzpicture}}

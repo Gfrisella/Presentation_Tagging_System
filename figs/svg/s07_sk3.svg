@@ -1,0 +1,9 @@
+<svg aria-label="Top view of the decay vessel: one muon crosses the helium; one forced interaction is placed along its path, with weight w times P" height="120.0" role="img" style="font-family:'Source Sans Pro'" viewBox="0 0 640 120" width="640.0" xmlns="http://www.w3.org/2000/svg">
+<polygon fill="#f2f5f9" points="40,52 600,22 600,98 40,68" stroke="#0053a1" stroke-width="2"/>
+<text fill="#0053a1" font-size="18" text-anchor="middle" x="320" y="116">decay vessel (He), 50 m</text>
+<line stroke="#d55e00" stroke-width="3" x1="0" x2="640" y1="62" y2="56"/>
+<text fill="#d55e00" font-size="18" x="4" y="40">μ, 100 GeV, w = 7.69</text>
+<g stroke="#1c2330" stroke-width="1.6"><line x1="300" x2="360" y1="59.5" y2="36"/><line x1="300" x2="370" y1="59.5" y2="70"/><line x1="300" x2="350" y1="59.5" y2="86"/></g>
+<circle cx="300" cy="59.5" fill="#1c2330" r="5"/>
+<text fill="#1c2330" font-size="18" text-anchor="middle" x="330" y="16">one forced vertex, uniform along the path, weight w·P</text>
+</svg>

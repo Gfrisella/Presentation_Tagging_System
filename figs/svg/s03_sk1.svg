@@ -1,0 +1,61 @@
+<svg aria-label="Top view of SHiP from the target to the timing detector: target, muon shield MHS and MS1 to MS7 with the SD inside MS5 and MS6, UBT at the decay-volume entrance, helium decay volume surrounded by the SBT, spectrometer straw tracker stations T1 to T4 around the dipole magnet, timing detector, calorimeters and muon detector" height="300.0" role="img" style="font-family:'Source Sans Pro'" viewBox="0 0 1500 300" width="1500.0" xmlns="http://www.w3.org/2000/svg">
+<line stroke="#d6dce5" stroke-dasharray="4 6" x1="20" x2="1480" y1="150" y2="150"/>
+<!-- target -->
+<rect fill="#1c2330" height="24" width="22" x="30" y="138"/>
+<text fill="#1c2330" font-size="19" x="14" y="232">target</text><line stroke="#1c2330" stroke-width="1.5" x1="41" x2="41" y1="164" y2="214"/>
+<!-- muon shield: MHS, MS1-MS7; SD inside MS5 and MS6 -->
+<rect fill="#9aa6b6" height="100" stroke="#9aa6b6" width="42" x="60" y="100.0"/>
+<text fill="#5a6474" font-size="13" text-anchor="middle" x="81" y="90">MHS</text>
+<rect fill="#c9d1dc" height="92" stroke="#9aa6b6" width="42" x="108" y="104.0"/>
+<text fill="#5a6474" font-size="13" text-anchor="middle" x="129" y="94">MS1</text>
+<rect fill="#c9d1dc" height="100" stroke="#9aa6b6" width="42" x="156" y="100.0"/>
+<text fill="#5a6474" font-size="13" text-anchor="middle" x="177" y="90">MS2</text>
+<rect fill="#c9d1dc" height="92" stroke="#9aa6b6" width="42" x="204" y="104.0"/>
+<text fill="#5a6474" font-size="13" text-anchor="middle" x="225" y="94">MS3</text>
+<rect fill="#c9d1dc" height="100" stroke="#9aa6b6" width="42" x="252" y="100.0"/>
+<text fill="#5a6474" font-size="13" text-anchor="middle" x="273" y="90">MS4</text>
+<rect fill="#c9d1dc" height="92" stroke="#9aa6b6" width="42" x="300" y="104.0"/>
+<text fill="#5a6474" font-size="13" text-anchor="middle" x="321" y="94">MS5</text>
+<rect fill="#c9d1dc" height="100" stroke="#9aa6b6" width="42" x="348" y="100.0"/>
+<text fill="#5a6474" font-size="13" text-anchor="middle" x="369" y="90">MS6</text>
+<rect fill="#c9d1dc" height="92" stroke="#9aa6b6" width="42" x="396" y="104.0"/>
+<text fill="#5a6474" font-size="13" text-anchor="middle" x="417" y="94">MS7</text>
+<rect fill="#d55e00" fill-opacity="0.35" height="64" stroke="#d55e00" stroke-width="2" width="69" x="321" y="118"/>
+<text fill="#8a3a00" font-size="16" font-weight="700" text-anchor="middle" x="355" y="156">SD</text>
+<text fill="#5a6474" font-size="19" text-anchor="middle" x="260" y="232">muon shield: MHS + MS1–MS7</text>
+<text fill="#b34700" font-size="14" text-anchor="middle" x="355" y="214">SD: 5 m, mid-MS5 → end of MS6</text>
+<!-- decay volume -->
+<polygon fill="#f2f5f9" points="468,128 1160,95 1160,205 468,172" stroke="#0053a1" stroke-width="2.5"/>
+<text fill="#0053a1" font-size="20" text-anchor="middle" x="814" y="156">Decay Volume (DV): He balloon, PVC walls</text>
+<!-- SBT -->
+<polyline fill="none" points="476,118 1160,84" stroke="#1baf7a" stroke-dasharray="14 8" stroke-width="5"/>
+<polyline fill="none" points="476,182 1160,216" stroke="#1baf7a" stroke-dasharray="14 8" stroke-width="5"/>
+<text fill="#1baf7a" font-size="19" text-anchor="middle" x="814" y="80">SBT: Surrounding Background Tagger, 854 liquid-scintillator cells</text>
+<!-- UBT -->
+<rect fill="#d55e00" height="48" width="10" x="462" y="126"/>
+<text fill="#d55e00" font-size="19" text-anchor="middle" x="467" y="258">UBT</text>
+<line stroke="#d55e00" stroke-width="1.5" x1="467" x2="467" y1="238" y2="176"/>
+<!-- SST stations and magnet -->
+<rect fill="#1c2330" height="104" width="8" x="1180" y="98"/><rect fill="#1c2330" height="104" width="8" x="1214" y="98"/>
+<rect fill="#e7d9f2" height="92" rx="3" stroke="#7b4fb0" width="40" x="1240" y="104"/>
+<rect fill="#1c2330" height="104" width="8" x="1298" y="98"/><rect fill="#1c2330" height="104" width="8" x="1332" y="98"/>
+<text fill="#1c2330" font-size="16" text-anchor="middle" x="1184" y="88">T1</text><text fill="#1c2330" font-size="16" text-anchor="middle" x="1218" y="88">T2</text>
+<text fill="#1c2330" font-size="16" text-anchor="middle" x="1302" y="88">T3</text><text fill="#1c2330" font-size="16" text-anchor="middle" x="1336" y="88">T4</text>
+<text fill="#7b4fb0" font-size="16" text-anchor="middle" x="1260" y="226">0.65 Tm magnet</text>
+<text fill="#1c2330" font-size="19" text-anchor="middle" x="1260" y="258">SST: Spectrometer Straw Tracker</text>
+<!-- timing detector -->
+<rect fill="#0053a1" height="112" width="8" x="1362" y="94"/>
+<text fill="#0053a1" font-size="19" text-anchor="middle" x="1366" y="40">TD</text>
+<line stroke="#0053a1" stroke-width="1.5" x1="1366" x2="1366" y1="46" y2="92"/>
+<!-- calorimeters / muon -->
+<rect fill="#e3e8ef" height="108" stroke="#9aa6b6" width="22" x="1390" y="96"/><rect fill="#d6dce5" height="108" stroke="#9aa6b6" width="22" x="1418" y="96"/><rect fill="#c9d1dc" height="108" stroke="#9aa6b6" width="22" x="1446" y="96"/>
+<text fill="#5a6474" font-size="15" text-anchor="middle" x="1429" y="226">ECAL HCAL μ</text>
+<!-- z axis -->
+<line stroke="#5a6474" x1="30" x2="1160" y1="285" y2="285"/>
+<g fill="#5a6474" font-size="15" text-anchor="middle">
+<line stroke="#5a6474" x1="30" x2="30" y1="280" y2="290"/><text x="30" y="300">0</text>
+<line stroke="#5a6474" x1="468" x2="468" y1="280" y2="290"/><text x="468" y="300">31.13 m</text>
+<line stroke="#5a6474" x1="1160" x2="1160" y1="280" y2="290"/><text x="1160" y="300">81.13 m</text>
+<text x="1320" y="300">SST1 82.08 m · TD 94.01 m, not to scale</text>
+</g>
+</svg>
