@@ -188,6 +188,19 @@ Pythia 6 & 0.153 & 0.090 & 0.0058 \\\rowrule
 \slidenote{Fractions of each set's weight; numbers on the bars are raw simulated counts. π\textsuperscript{0} are stored as photon pairs. Neutral particles and neutrinos are shown but the straws see only charged tracks. Source: veto results\_rerun/kl\_distributions/numbers.json.}
 \end{btframe}
 
+% ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
+\begin{btframe}{7 · Back-up · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
+{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii.pdf}\par}
+\vspace{2.46pt}
+{\fontsize{5.9pt}{7.9pt}\selectfont
+\begin{itemize}
+  \item \textbf{Track rule} (left), traced back from SST1 (82.08 m) over d = 51 m: r = 5 cm + (0.5 + 6 GeV / p) mrad × d → \textbf{10.6 cm at 10 GeV}, 7.9 cm at 90 GeV (straws, 30.73 m: +0.2 mm)
+  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) × Δz → \textbf{3.2 m at 2 GeV}, 1.3 m at 5 GeV, 83 cm at 8 GeV; above 10 GeV the 25 mrad floor gives \textbf{68 cm}; the rule is off above p\textsubscript{vis} = 20 GeV
+  \item The V0 disc is 6–40 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
+\end{itemize}}
+\slidenote{Rule radius only; the V0 search adds half a cell diagonal (2.8 cm for 4 × 4 cm tiles). Formulas: lib/veto/reco.py (RecoConfig r0, r\_slope, r\_ms; V0\_RULE\_DEFAULT, theta\_p). Source: veto results\_rerun/aperture\_radii (plot\_radii.py, numbers.json).}
+\end{btframe}
+
 % ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
 \begin{btframe}{7 · Back-up · V0 rule aperture}{Why the V0-rule disc is r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) · Δz}
 \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering

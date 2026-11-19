@@ -56,3 +56,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 19 Nov 2026: slide 16 μ crossing column also shows the per-spill count in parentheses.
 - 19 Nov 2026: Z2 / Z3 slides moved into section 6, after the GA method slide (outline updated).
 - 19 Nov 2026: back-up p41 Q² / W of the interactions making the MS7 K_L (report fig:int:q2w); seen-by / aperture / z plots re-coloured PASS blue, FAIL orange as the momentum / species plots.
+- 19 Nov 2026: back-up p46 search radius at the tile plane (track rule p = 10–90 GeV, V0 rule p_vis = 2–20 GeV, vertex mid-vessel); veto results_rerun/aperture_radii.
