@@ -161,22 +161,51 @@
 
 \end{btframe}
 
+% ---------------------------------------------------------------- slide 41: What a design can use to tag a candidate
+\begin{btframe}{5 · Background tagging · tagging rules}{What a design can use to tag a candidate}
+{\fontsize{4.74pt}{6.16pt}\selectfont\setlength{\tabcolsep}{3.32pt}\renewcommand{\arraystretch}{1.42}
+\begin{tabularx}{\linewidth}{l>{\raggedright\arraybackslash}Xl}
+\textcolor{muted}{rule} & \textcolor{muted}{what fires it} & \textcolor{muted}{designs} \\\headrule
+track pointing & each spectrometer track extrapolated back to every plane upstream of its vertex; hit in r = 5 cm + (0.5 mrad + 6 mrad·GeV/p)·Δz and ±3σ & R1 R2 Z2 Z3 \\\rowrule
+bounce search & second window from the cavern-wall / floor bounce point & all \\\rowrule
+SBT pointing & fired cell where the track line crosses the wall, window r/sin α + shell scattering & R2 Z2 Z3 \\\rowrule
+SBT v0\_line, self-tag & candidate traced back as a neutral to the wall: its own cell fired & R2 Z2 Z3 \\\rowrule
+SBT zone rule & any in-time cell downstream of z\textsubscript{vertex} − 1 m (light from the vertex ±4 ns) & R2 Z2 Z3 \\\rowrule
+V0 rule (UBT) & candidate traced back as a neutral along p\textsubscript{vis} to the UBT: any hit in a cone, early window & R2 Z2 Z3 \\\rowrule
+\end{tabularx}\par}
+\slidenote{Source: veto lib/veto/reco.py (run\_events, v0\_tag), lib/veto/sbt.py (tag, zone\_tag), design JSONs in veto designs/.}
+\end{btframe}
+
+% ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
+\begin{btframe}{5 · Background tagging · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
+{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii.pdf}\par}
+\vspace{2.46pt}
+{\fontsize{5.9pt}{7.9pt}\selectfont
+\begin{itemize}
+  \item \textbf{Track rule} (left), traced back from SST1 (82.08 m) over d = 51 m: r = 5 cm + (0.5 + 6 GeV / p) mrad × d → \textbf{10.6 cm at 10 GeV}, 7.9 cm at 90 GeV (straws, 30.73 m: +0.2 mm)
+  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) × Δz → \textbf{3.2 m at 2 GeV}, 1.3 m at 5 GeV, 83 cm at 8 GeV; above 10 GeV the 25 mrad floor gives \textbf{68 cm}; the rule is off above p\textsubscript{vis} = 20 GeV
+  \item The V0 disc is 6–40 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
+\end{itemize}}
+\slidenote{Rule radius only; the V0 search adds half a cell diagonal (2.8 cm for 4 × 4 cm tiles). Formulas: lib/veto/reco.py (RecoConfig r0, r\_slope, r\_ms; V0\_RULE\_DEFAULT, theta\_p). Source: veto results\_rerun/aperture\_radii (plot\_radii.py, numbers.json).}
+\end{btframe}
+
 %---------------------------------------------------------------- slide 27: R1: UBT only — 99.7 drachmas, 18 100 channels
 \begin{btframe}{5 · Background tagging · R1}{R1: UBT only — 99.7 drachmas, 18 100 channels}
 {\centering \designsketch[74.62pt]{}{0}{}\par}
 \vspace{2.46pt}
 \noindent \begin{minipage}[c]{0.5\linewidth}
 {\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabular}{lr}
-\textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{R1} \\\headrule
-signal lost, full / partial IP cut & 2.45 / 2.24 \% (4.0 / 3.8 at UBT rate ×2) \\\rowrule
-μμ pairs & < 0.26 (90 \% CL) \\\rowrule
-rock × μ pairs & 0.59 ± 0.09 \\\rowrule
-interaction product × μ pairs & 0.019 ± 0.002 \\\rowrule
-μ in the vessel & 70 ± 8 \\\rowrule
-ν in the vessel & 3.5 \\\rowrule
-MS7 μ (V0, K\textsuperscript{±}) & 1.70×10\textsuperscript{4} \\\rowrule
-ν in MS7 & 2.6 \\\rowrule
+\begin{tabular}{lrr}
+\textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{without V0 rule} & \textcolor{muted}{with V0 rule} \\\headrule
+signal lost, full / partial IP cut & 2.45 / 2.24 \% & 4.35 \% / \textcolor{muted}{n.e.} \\\rowrule
+μμ pairs & < 0.26 (90 \% CL) & < 0.26 (90 \% CL) \\\rowrule
+rock × μ pairs & 0.59 ± 0.09 & \textcolor{muted}{n.e.} \\\rowrule
+interaction product × μ pairs & 0.019 ± 0.002 & \textcolor{muted}{n.e.} \\\rowrule
+μ in the vessel & 86 ± 22 & 96 ± 21 \\\rowrule
+ν in the vessel & 3.38 ± 0.18 & 3.37 ± 0.18 \\\rowrule
+\rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries (1.67 ± 0.24)×10\textsuperscript{4} & \bfseries 189 ± 91 (16 ev.) \\\rowrule
+ν in MS7 & 2.6 & \textcolor{muted}{n.e.} \\\rowrule
+single SST1 μ tagged, all / bounced & 64 / 34 \% & 63 / 30 \% \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
 \hfill%
@@ -188,6 +217,7 @@ MS7 μ (V0, K\textsuperscript{±}) & 1.70×10\textsuperscript{4} \\\rowrule
   \item Signal loss: 1.5 points EM debris on the straws, 1 point muons in the flame tiles
 \end{itemize}}
 \end{minipage}\par
+\slidenote{Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Rock and interaction-product pairs, ν in MS7 / SBT and the partial IP cut: full chain, reference configuration only (n.e. = not evaluated). “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 28: R2: SBT + UBT + V0 rule — 333.5 drachmas (the budget), 31 764 channels
@@ -196,17 +226,18 @@ MS7 μ (V0, K\textsuperscript{±}) & 1.70×10\textsuperscript{4} \\\rowrule
 \vspace{2.46pt}
 \noindent \begin{minipage}[c]{0.5\linewidth}
 {\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabular}{lr}
-\textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{R2} \\\headrule
-signal lost, full / partial IP cut & 6.7 / 9.7 \% (9.3 / 14.1 at UBT rate ×2) \\\rowrule
-μμ pairs & < 0.052 (90 \% CL) \\\rowrule
-rock × μ pairs & < 0.018 (90 \% CL) \\\rowrule
-interaction product × μ pairs & < 1.1×10\textsuperscript{-4} \\\rowrule
-μ in the vessel & 1.3 ± 1.3 (1 event) \\\rowrule
-ν in the vessel & 1.09 ± 0.10 \\\rowrule
-SBT material μ / ν & 0 (K\textsubscript{L} < 13) / 0.05 \\\rowrule
-\rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries 0.67 ± 0.32 \\\rowrule
-ν in MS7 & 0.70 \\\rowrule
+\begin{tabular}{lrr}
+\textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{without V0 rule} & \textcolor{muted}{with V0 rule} \\\headrule
+signal lost, full / partial IP cut & 5.00 \% / \textcolor{muted}{n.e.} & 6.74 / 9.71 \% \\\rowrule
+μμ pairs & < 0.052 (90 \% CL) & < 0.052 (90 \% CL) \\\rowrule
+rock × μ pairs & \textcolor{muted}{n.e.} & < 0.018 (90 \% CL) \\\rowrule
+interaction product × μ pairs & \textcolor{muted}{n.e.} & < 1.1×10\textsuperscript{-4} (90 \% CL) \\\rowrule
+μ in the vessel & 1.3 ± 1.3 (1 ev.) & 1.3 ± 1.3 (1 ev.) \\\rowrule
+ν in the vessel & 1.08 ± 0.10 & 1.07 ± 0.10 \\\rowrule
+SBT material μ & 122 ± 24 & 2.95 ± 2.8 (1 heavy ev.) \\\rowrule
+\rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries (1.37 ± 0.24)×10\textsuperscript{4} & \bfseries 0.48 ± 0.34 \\\rowrule
+ν in MS7 / SBT material ν & \textcolor{muted}{n.e.} & 0.70 / 0.05 \\\rowrule
+single SST1 μ tagged, all / bounced & 95 / 87 \% & 95 / 84 \% \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
 \hfill%
@@ -219,6 +250,7 @@ SBT material μ / ν & 0 (K\textsubscript{L} < 13) / 0.05 \\\rowrule
   \item Cost of the V0 rule: signal 5.0 / 5.2 → 6.7 / 9.7 \%
 \end{itemize}}
 \end{minipage}\par
+\slidenote{Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Rock and interaction-product pairs, ν in MS7 / SBT and the partial IP cut: full chain, reference configuration only (n.e. = not evaluated). “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 30: R1, R2: background left in 15 years and signal lost

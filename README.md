@@ -63,3 +63,8 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   seen-by and z plots redone for UBT + SBT only (veto results_rerun/kl_distributions/seen_by/plot_seen_by_nomsms.py:
   UBT 70 / 74, SBT 28 / 74, OR of the R2 rules 74 / 74). The V0-fix study slide keeps its numbers (made on R2 + strips),
   said in its note. Build: `latexmk main_nomsms.tex` (Overleaf: set main_nomsms.tex as the main document).
+- 20 Nov 2026 (night): tagging-rules table and the search-radius slide moved into section 5, after the V0-rule slide
+  (both decks). R1 / R2 / R3 tables: "without V0 rule" / "with V0 rule" columns from the optimiser chain (veto
+  results_rerun/reco/r1_v0rule, r23_nov0rule, tiles_x34; R3 with V0 from the GA seed evaluation). Z2 / Z3 tables: same
+  rows as R1 / R2, 90 % CL where nothing is left, n.e. where the design was not evaluated (rock, product pairs, ν MS7 / SBT,
+  partial IP).
