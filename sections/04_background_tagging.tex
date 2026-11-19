@@ -212,34 +212,7 @@
 
 \end{btframe}
 
-% ---------------------------------------------------------------- slide 41: What a design can use to tag a candidate
-\begin{btframe}{5 · Background tagging · tagging rules}{What a design can use to tag a candidate}
-{\fontsize{4.74pt}{6.16pt}\selectfont\setlength{\tabcolsep}{3.32pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabularx}{\linewidth}{l>{\raggedright\arraybackslash}Xl}
-\textcolor{muted}{rule} & \textcolor{muted}{what fires it} & \textcolor{muted}{designs} \\\headrule
-track pointing & each spectrometer track extrapolated back to every plane upstream of its vertex; hit in r = 5 cm + (0.5 mrad + 6 mrad·GeV/p)·Δz and ±3σ & R1 R2 R3 Z2 Z3 \\\rowrule
-bounce search & second window from the cavern-wall / floor bounce point & all \\\rowrule
-SBT pointing & fired cell where the track line crosses the wall, window r/sin α + shell scattering & R2 R3 Z2 Z3 \\\rowrule
-SBT v0\_line, self-tag & candidate traced back as a neutral to the wall: its own cell fired & R2 R3 Z2 Z3 \\\rowrule
-SBT zone rule & any in-time cell downstream of z\textsubscript{vertex} − 1 m (light from the vertex ±4 ns) & R2 R3 Z2 Z3 \\\rowrule
-V0 rule (UBT) & candidate traced back as a neutral along p\textsubscript{vis} to the UBT: any hit in a cone, early window & R2 R3 Z2 Z3 \\\rowrule
-MSMS strips & candidate traced back to the strip layers in MS7: own products of the interaction & R3 \\\rowrule
-\end{tabularx}\par}
-\slidenote{Source: veto lib/veto/reco.py (run\_events, v0\_tag), lib/veto/sbt.py (tag, zone\_tag), lib/veto/shield\_strips.py; design JSONs in veto designs/.}
-\end{btframe}
 
-% ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
-\begin{btframe}{5 · Background tagging · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
-{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii.pdf}\par}
-\vspace{2.46pt}
-{\fontsize{5.9pt}{7.9pt}\selectfont
-\begin{itemize}
-  \item \textbf{Track rule} (left), traced back from SST1 (82.08 m) over d = 51 m: r = 5 cm + (0.5 + 6 GeV / p) mrad × d → \textbf{10.6 cm at 10 GeV}, 7.9 cm at 90 GeV (straws, 30.73 m: +0.2 mm)
-  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) × Δz → \textbf{3.2 m at 2 GeV}, 1.3 m at 5 GeV, 83 cm at 8 GeV; above 10 GeV the 25 mrad floor gives \textbf{68 cm}; the rule is off above p\textsubscript{vis} = 20 GeV
-  \item The V0 disc is 6–40 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
-\end{itemize}}
-\slidenote{Rule radius only; the V0 search adds half a cell diagonal (2.8 cm for 4 × 4 cm tiles). Formulas: lib/veto/reco.py (RecoConfig r0, r\_slope, r\_ms; V0\_RULE\_DEFAULT, theta\_p). Source: veto results\_rerun/aperture\_radii (plot\_radii.py, numbers.json).}
-\end{btframe}
 
 % ---------------------------------------------------------------- slide 24: How a candidate is tagged: MS7 strips
 \begin{btframe}{5 · Background tagging · tagging chain 3/3}{How a candidate is tagged: MS7 strips}
@@ -309,6 +282,40 @@ MSMS strips & candidate traced back to the strip layers in MS7: own products of 
 \end{minipage}\par
 
 \end{btframe}
+
+
+% ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
+\begin{btframe}{5 · Background tagging · V0 rule aperture}{Why the V0-rule disc is r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) · Δz}
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
+\includegraphics[width=0.95\linewidth]{figs/s40d_angle_vs_pvis.png}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
+\includegraphics[width=0.95\linewidth]{figs/s40d_miss_over_r.png}
+\end{minipage}
+\vspace{2.46pt}
+{\fontsize{6.15pt}{8.60pt}\selectfont
+\begin{itemize}
+  \item The pair momentum p\textsubscript{vis} misses the K\textsubscript{L} direction because of the lost ν / π\textsuperscript{0}: selected median 18.5 mrad, 90 \% at 37 mrad; the error falls as 1/p
+  \item Upper edge is kinematic: the lost particle carries at most its rest-frame momentum (K\textsubscript{e3} 0.228 GeV) → \textbf{0.25 GeV / p\textsubscript{vis}}; \textbf{25 mrad} = 68 \% of the back-trace errors (strip study); \textbf{5 cm} = the track-search radius
+  \item With the 1/p term the true K\textsubscript{L} line is inside the disc for 100 \% of the candidates (flat 25 mrad: 68 \%); only loss: the 4 selected K\textsubscript{L} above p\textsubscript{max} = 20 GeV
+\end{itemize}}
+\slidenote{Right: miss distance of the back-traced line from the true K\textsubscript{L} line at the tile plane (31.13 m), over the disc radius. FAIL uses the truth decay point and the sum of the charged daughters. Source: veto results\_rerun/kl\_distributions/seen\_by (seen\_by.py); docs/r3\_shield\_strips\_v0rule.md:28, lib/veto/reco.py:556-563; the kinematic argument is new (not in the repo docs).}
+\end{btframe}
+
+
+% ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
+\begin{btframe}{5 · Background tagging · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
+{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii.pdf}\par}
+\vspace{2.46pt}
+{\fontsize{5.9pt}{7.9pt}\selectfont
+\begin{itemize}
+  \item \textbf{Track rule} (left), traced back from SST1 (82.08 m) over d = 51 m: r = 5 cm + (0.5 + 6 GeV / p) mrad × d → \textbf{10.6 cm at 10 GeV}, 7.9 cm at 90 GeV (straws, 30.73 m: +0.2 mm)
+  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) × Δz → \textbf{3.2 m at 2 GeV}, 1.3 m at 5 GeV, 83 cm at 8 GeV; above 10 GeV the 25 mrad floor gives \textbf{68 cm}; the rule is off above p\textsubscript{vis} = 20 GeV
+  \item The V0 disc is 6–40 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
+\end{itemize}}
+\slidenote{Rule radius only; the V0 search adds half a cell diagonal (2.8 cm for 4 × 4 cm tiles). Formulas: lib/veto/reco.py (RecoConfig r0, r\_slope, r\_ms; V0\_RULE\_DEFAULT, theta\_p). Source: veto results\_rerun/aperture\_radii (plot\_radii.py, numbers.json).}
+\end{btframe}
+
 %---------------------------------------------------------------- slide 27: R1: UBT only — 99.7 drachmas, 18 100 channels
 \begin{btframe}{5 · Background tagging · R1}{R1: UBT only — 99.7 drachmas, 18 100 channels}
 {\centering \designsketch[74.62pt]{}{0}{}\par}

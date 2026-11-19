@@ -188,24 +188,6 @@ Pythia 6 & 0.153 & 0.090 & 0.0058 \\\rowrule
 \slidenote{Fractions of each set's weight; numbers on the bars are raw simulated counts. π\textsuperscript{0} are stored as photon pairs. Neutral particles and neutrinos are shown but the straws see only charged tracks. Source: veto results\_rerun/kl\_distributions/numbers.json.}
 \end{btframe}
 
-% ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
-\begin{btframe}{7 · Back-up · V0 rule aperture}{Why the V0-rule disc is r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) · Δz}
-\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
-\includegraphics[width=0.95\linewidth]{figs/s40d_angle_vs_pvis.png}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
-\includegraphics[width=0.95\linewidth]{figs/s40d_miss_over_r.png}
-\end{minipage}
-\vspace{2.46pt}
-{\fontsize{6.15pt}{8.60pt}\selectfont
-\begin{itemize}
-  \item The pair momentum p\textsubscript{vis} misses the K\textsubscript{L} direction because of the lost ν / π\textsuperscript{0}: selected median 18.5 mrad, 90 \% at 37 mrad; the error falls as 1/p
-  \item Upper edge is kinematic: the lost particle carries at most its rest-frame momentum (K\textsubscript{e3} 0.228 GeV) → \textbf{0.25 GeV / p\textsubscript{vis}}; \textbf{25 mrad} = 68 \% of the back-trace errors (strip study); \textbf{5 cm} = the track-search radius
-  \item With the 1/p term the true K\textsubscript{L} line is inside the disc for 100 \% of the candidates (flat 25 mrad: 68 \%); only loss: the 4 selected K\textsubscript{L} above p\textsubscript{max} = 20 GeV
-\end{itemize}}
-\slidenote{Right: miss distance of the back-traced line from the true K\textsubscript{L} line at the tile plane (31.13 m), over the disc radius. FAIL uses the truth decay point and the sum of the charged daughters. Source: veto results\_rerun/kl\_distributions/seen\_by (seen\_by.py); docs/r3\_shield\_strips\_v0rule.md:28, lib/veto/reco.py:556-563; the kinematic argument is new (not in the repo docs).}
-\end{btframe}
-
 % ---------------------------------------------------------------- slide 40e: who sees the parent (19 Nov 2026)
 \begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} parent}{Selected MS7 K\textsubscript{L}: which detector sees the parent interaction (R3, own hits only)}
 {\centering \includegraphics[width=0.84\linewidth]{figs/s40e_categories.png}\par}

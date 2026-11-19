@@ -161,20 +161,26 @@
 
 \end{btframe}
 
-% ---------------------------------------------------------------- slide 41: What a design can use to tag a candidate
-\begin{btframe}{5 · Background tagging · tagging rules}{What a design can use to tag a candidate}
-{\fontsize{4.74pt}{6.16pt}\selectfont\setlength{\tabcolsep}{3.32pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabularx}{\linewidth}{l>{\raggedright\arraybackslash}Xl}
-\textcolor{muted}{rule} & \textcolor{muted}{what fires it} & \textcolor{muted}{designs} \\\headrule
-track pointing & each spectrometer track extrapolated back to every plane upstream of its vertex; hit in r = 5 cm + (0.5 mrad + 6 mrad·GeV/p)·Δz and ±3σ & R1 R2 Z2 Z3 \\\rowrule
-bounce search & second window from the cavern-wall / floor bounce point & all \\\rowrule
-SBT pointing & fired cell where the track line crosses the wall, window r/sin α + shell scattering & R2 Z2 Z3 \\\rowrule
-SBT v0\_line, self-tag & candidate traced back as a neutral to the wall: its own cell fired & R2 Z2 Z3 \\\rowrule
-SBT zone rule & any in-time cell downstream of z\textsubscript{vertex} − 1 m (light from the vertex ±4 ns) & R2 Z2 Z3 \\\rowrule
-V0 rule (UBT) & candidate traced back as a neutral along p\textsubscript{vis} to the UBT: any hit in a cone, early window & R2 Z2 Z3 \\\rowrule
-\end{tabularx}\par}
-\slidenote{Source: veto lib/veto/reco.py (run\_events, v0\_tag), lib/veto/sbt.py (tag, zone\_tag), design JSONs in veto designs/.}
+
+% ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
+\begin{btframe}{5 · Background tagging  · V0 rule aperture}{Why the V0-rule disc is r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) · Δz}
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
+\includegraphics[width=0.95\linewidth]{figs/s40d_angle_vs_pvis.png}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
+\includegraphics[width=0.95\linewidth]{figs/s40d_miss_over_r.png}
+\end{minipage}
+\vspace{2.46pt}
+{\fontsize{6.15pt}{8.60pt}\selectfont
+\begin{itemize}
+  \item The pair momentum p\textsubscript{vis} misses the K\textsubscript{L} direction because of the lost ν / π\textsuperscript{0}: selected median 18.5 mrad, 90 \% at 37 mrad; the error falls as 1/p
+  \item Upper edge is kinematic: the lost particle carries at most its rest-frame momentum (K\textsubscript{e3} 0.228 GeV) → \textbf{0.25 GeV / p\textsubscript{vis}}; \textbf{25 mrad} = 68 \% of the back-trace errors (back-trace study); \textbf{5 cm} = the track-search radius
+  \item With the 1/p term the true K\textsubscript{L} line is inside the disc for 100 \% of the candidates (flat 25 mrad: 68 \%); only loss: the 4 selected K\textsubscript{L} above p\textsubscript{max} = 20 GeV
+\end{itemize}}
+\slidenote{Right: miss distance of the back-traced line from the true K\textsubscript{L} line at the tile plane (31.13 m), over the disc radius. FAIL uses the truth decay point and the sum of the charged daughters. Source: veto results\_rerun/kl\_distributions/seen\_by (seen\_by.py); docs/r3\_shield\_strips\_v0rule.md:28, lib/veto/reco.py:556-563; the kinematic argument is new (not in the repo docs).}
 \end{btframe}
+
+
 
 % ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
 \begin{btframe}{5 · Background tagging · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
