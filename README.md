@@ -53,3 +53,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - Slide 17: total row (interactions 2.0e7, ≥2 tracks 3.3e5, pair cuts 2140, IP<10 cm 17 ± 7, IP<2.5 m 2050 ± 170).
 - Back-up p41–42 (new): MS7 K_L production — Geant4 vs Pythia vs SLAC γp data (v0_vs_W), and low-W strangeness vs
   SAPHIR/CLAS/ABBHHM/SLAC (v0_lowW). Figures copied from veto docs/figures/v0_production.
+- 19 Nov 2026: slide 16 μ crossing column also shows the per-spill count in parentheses.
