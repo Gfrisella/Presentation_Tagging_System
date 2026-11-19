@@ -54,3 +54,5 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - Back-up p41–42 (new): MS7 K_L production — Geant4 vs Pythia vs SLAC γp data (v0_vs_W), and low-W strangeness vs
   SAPHIR/CLAS/ABBHHM/SLAC (v0_lowW). Figures copied from veto docs/figures/v0_production.
 - 19 Nov 2026: slide 16 μ crossing column also shows the per-spill count in parentheses.
+- 19 Nov 2026: Z2 / Z3 slides moved into section 6, after the GA method slide (outline updated).
+- 19 Nov 2026: back-up p41 Q² / W of the interactions making the MS7 K_L (report fig:int:q2w); seen-by / aperture / z plots re-coloured PASS blue, FAIL orange as the momentum / species plots.

@@ -99,6 +99,30 @@ Pythia 6 & 0.153 & 0.090 & 0.0058 \\\rowrule
 \slidenote{Source: report Appendix B (tab:app:kl:vertex, tab:app:kl:fate, tab:app:kl:w6; Geant4 11.4.2 V0-stable library, MS7 parents muons\_iron\_nov4.npz) and Section 6 (tab:res:mudis).}
 \end{btframe}
 
+% ---------------------------------------------------------------- slide 40q: Q2 and W of the interactions that make the MS7 KL (19 Nov 2026)
+\begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} production}{Which muon interactions make the MS7 K\textsubscript{L}: Q\textsuperscript{2} and W}
+\begin{minipage}[t]{0.27\linewidth}\vspace{0pt}\centering
+{\fontsize{5.5pt}{6.5pt}\selectfont Geant4 11.2 muonNuclear (default)\par}
+\includegraphics[width=\linewidth]{figs/kl_q2w_geant4.pdf}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.27\linewidth}\vspace{0pt}\centering
+{\fontsize{5.5pt}{6.5pt}\selectfont Pythia 6\par}
+\includegraphics[width=\linewidth]{figs/kl_q2w_pythia6.pdf}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.42\linewidth}\vspace{0pt}
+{\fontsize{5.9pt}{7.9pt}\selectfont
+\begin{itemize}
+  \item Geant4: 96 \% of the interactions have Q\textsuperscript{2} < 0.1 GeV\textsuperscript{2} and 72 \% W < 2 GeV, but they make almost no K\textsubscript{L}
+  \item \textcolor{cern}{\textbf{The K\textsubscript{L} come from W = 5–10 GeV (55 \%) and W > 10 GeV (15 \%)}}: 5 \% of the interactions, still at Q\textsuperscript{2} < 1 GeV\textsuperscript{2} (98 \%)
+  \item Pythia 6 fills the same region but makes ≈ 14× more K\textsubscript{L} per interaction there
+  \item \textbf{Quasi-real photoproduction at W ≈ 3–10 GeV}, where γp data exist: used to choose the generator (next slides)
+\end{itemize}}
+\end{minipage}
+\vspace{2pt}
+{\centering \includegraphics[width=0.80\linewidth,height=88pt,keepaspectratio]{figs/int_kl_q2w_shares.pdf}\par}
+\slidenote{Top: Q\textsuperscript{2} and W of the muon interactions in the last 50 cm of MS7 that produce a K\textsubscript{L}, weighted by K\textsubscript{L} made per spill (generator level, before the iron); dotted W = 2 GeV, dashed Q\textsuperscript{2} = 1 GeV\textsuperscript{2}. Bottom: fractions of interactions (light) and of K\textsubscript{L} made (dark) per interval. Source: report Section 3 (fig:int:q2w), bin/kl\_q2w.py.}
+\end{btframe}
+
 % ---------------------------------------------------------------- slide 40a1: MS7 KL production, Geant4 vs Pythia vs data (19 Nov 2026)
 \begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} production}{MS7 K\textsubscript{L}: what we know, Geant4 and Pythia against the data}
 {\centering \includegraphics[width=0.86\linewidth,height=118pt,keepaspectratio]{figs/v0_vs_W.pdf}\par}
