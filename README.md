@@ -44,3 +44,12 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   weighting emulated; veto results_rerun/nov4_vs_2018). Not committed yet (waiting for the Overleaf push). 48 pages.
 - 19 Nov 2026: back-up page 49 "All rules run on every candidate, in parallel: tagged = OR" (TikZ diagram + which rule
   finds which background). Not committed yet (waiting for the Overleaf push). 49 pages.
+
+## 19 Nov 2026 (evening)
+- Slide 16: new "μ crossing" column (muons crossing each region per 15 y, each counted once; Nov-4 DIS parents, R2 geometry:
+  helium 8.4e11, walls 8.4e11, air around 8.5e11, air upstream 3.5e11, UBT planes 5.8e11) and, in the MS7 table, a
+  "muons in the iron" row with μ crossing 6.9e15 and interactions 1.4e13 (shield_dis summary, Nov-4). Sketches 38→30 pt, note added.
+  Flux script/numbers: veto/results_rerun/nov4_flow/flux_regions.{py,json}.
+- Slide 17: total row (interactions 2.0e7, ≥2 tracks 3.3e5, pair cuts 2140, IP<10 cm 17 ± 7, IP<2.5 m 2050 ± 170).
+- Back-up p41–42 (new): MS7 K_L production — Geant4 vs Pythia vs SLAC γp data (v0_vs_W), and low-W strangeness vs
+  SAPHIR/CLAS/ABBHHM/SLAC (v0_lowW). Figures copied from veto docs/figures/v0_production.

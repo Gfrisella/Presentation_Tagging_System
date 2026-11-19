@@ -99,6 +99,34 @@ Pythia 6 & 0.153 & 0.090 & 0.0058 \\\rowrule
 \slidenote{Source: report Appendix B (tab:app:kl:vertex, tab:app:kl:fate, tab:app:kl:w6; Geant4 11.4.2 V0-stable library, MS7 parents muons\_iron\_nov4.npz) and Section 6 (tab:res:mudis).}
 \end{btframe}
 
+% ---------------------------------------------------------------- slide 40a1: MS7 KL production, Geant4 vs Pythia vs data (19 Nov 2026)
+\begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} production}{MS7 K\textsubscript{L}: what we know, Geant4 and Pythia against the data}
+{\centering \includegraphics[width=0.86\linewidth,height=118pt,keepaspectratio]{figs/v0_vs_W.pdf}\par}
+\vspace{2.46pt}
+{\fontsize{5.9pt}{7.9pt}\selectfont
+\begin{itemize}
+  \item \textbf{Generators:} \textcolor{cern}{\textbf{Geant4 11.2 muonNuclear}} on Fe (default; median W 1.3 GeV, mostly below the K Λ threshold) and \textbf{Pythia 6.4.28} γ\textsuperscript{*} on p, n (W > 2 GeV only). Per interaction: K\textsubscript{L} 0.0099 (Geant4) vs 0.12 (Pythia), mostly from their different W spectra (right)
+  \item \textbf{K\textsubscript{L} is not measured directly:} K\textsuperscript{0}, \=K\textsuperscript{0} give ½ K\textsubscript{S} + ½ K\textsubscript{L}, so K\textsubscript{L} = K\textsubscript{S} and the K\textsubscript{S} data validate it
+  \item \textbf{Data:} SLAC γp at E\textsubscript{γ} = 20 GeV (W = 6.2 GeV, stars): K\textsubscript{S} 0.082 ± 0.003, Λ 0.049 ± 0.002 per event. \textcolor{cern}{\textbf{Geant4 within 6 \%}}, Pythia ×1.9 high. Cross-check: NOMAD ν\textsubscript{μ} CC on C, K\textsubscript{S} 0.068 per event
+  \item \textbf{Chain (per spill):} 1.5×10\textsuperscript{4} K\textsubscript{L} made (half by the shower in the iron) → 3.2×10\textsuperscript{3} leave the iron (37 \% from the shower) → 1.5×10\textsuperscript{3} decay in the vessel. Geant4 11.4 and 11.2 agree within 1–3 \%
+\end{itemize}}
+\slidenote{Left: mean V0 multiplicity per interaction vs W, Geant4 (solid, Fe) and Pythia 6 (dashed, p and n). Data: K. Abe et al., PRD 30 (1984) 1 (SLAC SHF, Table II); NOMAD: P. Astier et al., NPB 621 (2002) 3. Data on hydrogen, simulation on iron. Source: veto docs/v0\_production.md (bin/v0\_production.py, bin/v0\_fate.py), ISSUES D16.}
+\end{btframe}
+
+% ---------------------------------------------------------------- slide 40a2: MS7 KL production at low W (19 Nov 2026)
+\begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} production}{Strangeness at low W: where most Geant4 interactions are}
+{\centering \includegraphics[width=0.86\linewidth,height=118pt,keepaspectratio]{figs/v0_lowW.pdf}\par}
+\vspace{2.46pt}
+{\fontsize{5.9pt}{7.9pt}\selectfont
+\begin{itemize}
+  \item \textbf{Data (γp, near threshold, all lower limits):} SAPHIR and CLAS exclusive K Λ, K Σ cross sections over σ\textsubscript{tot}; ABBHHM identified strange final states; SLAC visible strange decays
+  \item Geant4 is \textbf{low by ≥ ×2} for W < 2.2 GeV and by ≥ ×2.5–3 at W = 2.5–3 GeV; Pythia (W > 2 GeV) is ×3–5 above the exclusive Λ channels
+  \item \textbf{Impact is small:} of the vertex K\textsubscript{L} that can leave the iron (T > 0.5 GeV), \textcolor{cern}{\textbf{78 \% come from W > 5 GeV}} (validated, previous slide), 14 \% from 3.5–5 GeV, 7.6 \% from W < 3.5 GeV. A ×2–3 deficit there gives \textbf{+8–15 \%} on the K\textsubscript{L}
+  \item \textbf{Open:} W = 3.5–5 GeV not compared with data (14 \% of the relevant K\textsubscript{L}); the selected K\textsubscript{L} rest on 74 simulated events
+\end{itemize}}
+\slidenote{Data: SAPHIR (Glander 2004, Lawall 2005), CLAS (McCracken 2010, Dey 2010; measured angles only), ABBHHM (Erbe 1969), SLAC (Ballam 1969, Bingham 1973); σ\textsubscript{tot}: Armstrong 1972, Caldwell 1973. Caveats: Fe vs p (Fermi motion smears the thresholds), quasi-real photons (median Q\textsuperscript{2} 0.03 GeV\textsuperscript{2}). Source: veto docs/v0\_production.md (bin/v0\_lowW.py, data/reference/lowW\_strangeness\_photoproduction.json).}
+\end{btframe}
+
 % ---------------------------------------------------------------- slide 40b: MS7 KL momentum, decay point and SST1 (19 Nov 2026)
 \begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} momentum}{MS7 K\textsubscript{L}: momentum at the decay point and of its charged products at SST1}
 \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
