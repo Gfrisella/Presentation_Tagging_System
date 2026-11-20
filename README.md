@@ -68,3 +68,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   results_rerun/reco/r1_v0rule, r23_nov0rule, tiles_x34; R3 with V0 from the GA seed evaluation). Z2 / Z3 tables: same
   rows as R1 / R2, 90 % CL where nothing is left, n.e. where the design was not evaluated (rock, product pairs, ν MS7 / SBT,
   partial IP).
+- 20 Nov 2026: slide 19 combinatorial table: single-track MS7 / vessel μ and ν interactions × μ, interaction × interaction, rock marked 'model under review' (veto results_rerun/combi_single); back-up cut-flow slide (p42).

@@ -69,6 +69,28 @@ cross the vessel region, miss SST1 & 2.49×10\textsuperscript{4} \\\rowrule
 \slidenote{Nov-4: all 23 train chunks of the source pool (2.2×10\textsuperscript{9} muons); 2018: all 506 M muons (reference\_2018.h5), weights ×0.8 to 4×10\textsuperscript{13} PoT. 2018 selection emulated with bin/old\_convention.py, 2018 weighting per muon with compare\_inventory\_2018.classify. Source: veto results\_rerun/nov4\_vs\_2018 (README.md, numbers.json).}
 \end{btframe}
 
+% ---------------------------------------------------------------- back-up: combinatorial cut flow (20 Nov 2026)
+\begin{btframe}{7 · Back-up · combinatorial cut flow}{Combinatorial pairs: cut flow of μ × μ and of the single-track interactions × μ}
+{\fontsize{5.4pt}{7.2pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.42}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrrrr}
+\textcolor{muted}{per spill → per 15 y (× 6×10\textsuperscript{-3})} & \textcolor{muted}{μ × μ} & \textcolor{muted}{MS7 μ × μ} & \textcolor{muted}{MS7 ν × μ} & \textcolor{muted}{vessel μ × μ} & \textcolor{muted}{vessel ν × μ} \\\headrule
+all pairs of good tracks & 3.5×10\textsuperscript{7} → 2.1×10\textsuperscript{5} & 4.1×10\textsuperscript{7} → 2.4×10\textsuperscript{5} & 1 077 → 6.5 & 1 015 → 6.1 & 20 → 0.12 \\\rowrule
+opposite charge & 1.7×10\textsuperscript{7} → 1.0×10\textsuperscript{5} & 2.0×10\textsuperscript{7} → 1.2×10\textsuperscript{5} & 547 → 3.3 & 490 → 2.9 & 10 → 0.061 \\\rowrule
+DOCA < 2 cm & 9.8×10\textsuperscript{5} → 5.9×10\textsuperscript{3} & 3.3×10\textsuperscript{5} → 2.0×10\textsuperscript{3} & 10 → 0.060 & 10 → 0.061 & 0.14 → 8.4×10\textsuperscript{-4} \\\rowrule
+vertex in the vessel & 5 969 → 35.8 & 1.2×10\textsuperscript{5} → 714 & 1.9 → 0.011 & 5.8 → 0.035 & 0.049 → 2.9×10\textsuperscript{-4} \\\rowrule
+IP < 2.5 m & 5 733 → 34.4 & 8.5×10\textsuperscript{4} → 508 & 1.6 → 0.0098 & 4.7 → 0.028 & 0.037 → 2.2×10\textsuperscript{-4} \\\rowrule
+\rowcolor{tint}\bfseries IP < 10 cm & \bfseries 393 → 2.36 & \bfseries 9.3×10\textsuperscript{3} → 56 & \bfseries 0.11 → 6.7×10\textsuperscript{-4} & \bfseries 0.57 → 0.0034 & \bfseries 0.003 → 1.8×10\textsuperscript{-5} \\\rowrule
+\end{tabularx}\par}
+\vspace{3pt}
+{\fontsize{6.0pt}{8.2pt}\selectfont
+\begin{itemize}
+  \item \textbf{μ × μ}: the shield sorts the muons by charge (89 \% of μ\textsuperscript{+} at x < 0, μ\textsuperscript{−} at x > 0); opposite-charge pairs converge back towards the shield: 97.7 \% of their vertices are upstream of the vessel
+  \item \textbf{MS7 × μ}: soft tracks (median 2.6 GeV) starting on axis at the shield exit; 59 \% of the DOCA < 2 cm vertices fall inside the vessel → 25 × μ × μ at IP < 10 cm
+  \item \textbf{Interaction × interaction} (MS7 × MS7): 82 / 0.24 at pair cuts / IP < 10 cm, 10 \% of μ × μ there: not negligible before tagging
+\end{itemize}}
+\slidenote{Single-track interactions only, scattered parent muon excluded. Late steps from 4×10\textsuperscript{8} random opposite-charge pairs per term (MS7 IP < 10 cm: 56 sampled, 62.5 exact). μ × μ: exact numbers of slide 18. Source: veto results\_rerun/combi\_single/cutflow.json (bin/combi\_cutflow.py).}
+\end{btframe}
+
 % ---------------------------------------------------------------- slide 40: MS7 KL: from production to SST1, and the comparison with data
 \begin{btframe}{7 · Back-up · MS7 K\textsubscript{L}}{MS7 K\textsubscript{L}: from production to SST1, and the comparison with data}
 \noindent \begin{minipage}[t]{\dimexpr(0.5556\linewidth-0.5556\dimexpr9.67pt\relax)}\vspace{0pt}\raggedright
