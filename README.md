@@ -80,3 +80,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   dis_combinatorial gives a μ inefficiency 0.48-0.50 for R2/R3 noV0, Z2, Z3 (17 Nov R2 run: 0.062, and the optimiser's
   single-SST1 tagging is 90-95 %), and sbt_eval's veto fields differ from the 17 Nov reference -> under check.
 - V0 rule p_vis < 20 GeV stated on the R2 / Z2 bullets and in the R1-R3 / Z2-Z3 notes.
+- 20 Nov 2026: back-up slide "MS7 K_L: Q² and W of the muon interaction that made it, PASS vs FAIL" after the species slide (main p49, no-MSMS p45): 2D Q²–W FAIL | PASS (figs/s40d_kl_q2_vs_w.{pdf,png}) + table PASS / FAIL / all MS7 interactions; from veto results_rerun/kl_distributions/q2w. Backups sections*/06_backup.tex.bak_20261120_q2w. main 53, no-MSMS 49 pages. Not committed / pushed.

@@ -210,6 +210,33 @@ Pythia 6 & 0.153 & 0.090 & 0.0058 \\\rowrule
 \slidenote{Fractions of each set's weight; numbers on the bars are raw simulated counts. π\textsuperscript{0} are stored as photon pairs. Neutral particles and neutrinos are shown but the straws see only charged tracks. Source: veto results\_rerun/kl\_distributions/numbers.json.}
 \end{btframe}
 
+% ---------------------------------------------------------------- slide 40d: Q2 and W of the parent interaction, PASS vs FAIL (20 Nov 2026)
+\begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} parent DIS}{MS7 K\textsubscript{L}: Q\textsuperscript{2} and W of the muon interaction that made it, PASS vs FAIL}
+{\centering \includegraphics[width=0.80\linewidth,height=100pt,keepaspectratio]{figs/s40d_kl_q2_vs_w.pdf}\par}
+\vspace{2pt}
+\begin{minipage}[t]{0.52\linewidth}\vspace{0pt}
+{\fontsize{5.02pt}{6.52pt}\selectfont\setlength{\tabcolsep}{3.51pt}\renewcommand{\arraystretch}{1.30}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrr}
+\textcolor{muted}{weighted, per 15 y} & \textcolor{muted}{PASS} & \textcolor{muted}{FAIL} & \textcolor{muted}{all MS7 μ int.} \\\headrule
+simulated / per 15 y & 74 / 1.44×10\textsuperscript{4} & 4.9×10\textsuperscript{5} / 1.06×10\textsuperscript{8} & 6×10\textsuperscript{7} / 1.4×10\textsuperscript{13} \\\rowrule
+Q\textsuperscript{2} median [GeV\textsuperscript{2}] & 0.012 & 0.028 & 0.0011 \\\rowrule
+Q\textsuperscript{2} < 0.01 / < 0.1 / > 1 GeV\textsuperscript{2} & 48 / 90 / 0 \% & 28 / 76 / 3.6 \% & 76 / 96 / 0.3 \% \\\rowrule
+W median (10–90 \%) [GeV] & 8.6 (6.0–13.9) & 8.7 (5.7–13.4) & 1.5 (1.2–3.7) \\\rowrule
+W < 3.5 / 3.5–5 / > 5 GeV & 0 / 1.6 / 98 \% & 0.6 / 4.3 / 95 \% & 89 / 5.4 / 5.6 \% \\\rowrule
+ν / y / E\textsubscript{μ} median & 39 GeV / 0.29 / 122 GeV & 40 GeV / 0.40 / 106 GeV & 0.7 GeV / 0.017 / 70 GeV \\\rowrule
+\end{tabularx}\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\linewidth}\vspace{0pt}
+{\fontsize{5.9pt}{7.9pt}\selectfont
+\begin{itemize}
+  \item \textcolor{cern}{\textbf{PASS and FAIL come from the same region: W > 5 GeV, quasi-real photon (Q\textsuperscript{2} < 0.1 GeV\textsuperscript{2})}}, ν ≈ 40 GeV: 5 \% of the MS7 interactions
+  \item PASS is at \textbf{lower Q\textsuperscript{2} and y} and harder muons: a forward K\textsubscript{L} whose decay pair points back to the target (IP < 10 cm)
+  \item No PASS event below W = 3.5 GeV: the data-poor low-W region does not affect the selected background
+\end{itemize}}
+\end{minipage}
+\slidenote{K\textsubscript{L} copies of kl\_distributions (same PASS / FAIL) traced back to their MS7 interaction; the library event (Geant4 11.2 muonNuclear, V0-stable) was recovered by replaying the vertex draw of each production file (exact match on all 160 files). Q\textsuperscript{2} from the scattered muon, at the library grid energy. Dots: the 74 PASS events. Source: veto results\_rerun/kl\_distributions/q2w (replay\_lib.py, q2w\_kl.py, table\_q2w.md).}
+\end{btframe}
+
 % ---------------------------------------------------------------- slide 40e: who sees the parent (19 Nov 2026)
 \begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} parent}{Selected MS7 K\textsubscript{L}: which detector sees the parent interaction (R3, own hits only)}
 {\centering \includegraphics[width=0.84\linewidth]{figs/s40e_categories.png}\par}
