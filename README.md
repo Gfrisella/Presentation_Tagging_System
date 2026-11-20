@@ -69,3 +69,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   rows as R1 / R2, 90 % CL where nothing is left, n.e. where the design was not evaluated (rock, product pairs, ν MS7 / SBT,
   partial IP).
 - 20 Nov 2026: slide 19 combinatorial table: single-track MS7 / vessel μ and ν interactions × μ, interaction × interaction, rock marked 'model under review' (veto results_rerun/combi_single); back-up cut-flow slide (p42).
+- 20 Nov 2026: R1 'μ in the vessel' = 86 ± 22 in both columns (the V0 run's 96 ± 21 is random-hit noise; footnote).
