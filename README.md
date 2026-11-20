@@ -85,3 +85,7 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   how the SBT walls fire for nu DIS, mu DIS and mu x mu (R2, own deposits only): method, rate per ring, wall maps,
   selected-candidate table, shapes; figs/s41_sbt_firing_*.png from veto results_rerun/sbt_firing. DRAFT: mu x mu numbers
   in, nu / mu DIS cells marked "tbd" (runs in progress).
+- 20 Nov 2026 (later): SBT-firing back-up filled with the final numbers (rate per ring: MS7 mu DIS products +0.38 MHz = +18 %
+  of the muon map; selected-candidate table per source; shapes) and two mu x mu slides (top view x-z and +x / -x walls with
+  the SBT entry points of the pair muons: mu+ -> -x wall, mu- -> +x wall). DIS seen by SBT / UBT slides written but
+  \iffalse'd until the hit runs finish. main 60 pages, main_nomsms 56.

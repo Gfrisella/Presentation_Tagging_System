@@ -1,5 +1,6 @@
 % ================================================================ Back-up: SBT walls fired by nu DIS, mu DIS, mu x mu (20 Nov 2026)
-% Source: veto results_rerun/sbt_firing (bin/sbt_firing.py, bin/sbt_firing_plots.py, branch veto-nov4-source). R2, own deposits only.
+% Source: veto results_rerun/sbt_firing (bin/sbt_firing.py, sbt_firing_plots.py, sbt_firing_hits.py, sbt_firing_hits_plots.py;
+% branch veto-nov4-source). R2, own deposits only.
 \providecommand{\tbd}{\textcolor{red}{\textbf{tbd}}}
 
 % ---------------------------------------------------------------- slide 41a: method
@@ -8,53 +9,101 @@
 \begin{itemize}
   \item \textbf{Question}: for each background class, which SBT cells fire, how many, where with respect to the vertex, and how much rate the class adds to the cells
   \item \textbf{Sources} (existing stores, no new production): ν DIS in the vessel (He, walls, air, planes), in the last 50 cm of MS7 and in the SBT material; μ DIS in the same three places (parent muon from its 30.6 m state to the vertex added); μ × μ = good SST1 muons of Nov-4 (300 k rows) and their opposite-charge pairs
-  \item \textbf{Response}: energy in the liquid scintillator per event and cell (charged dE/dx, photon conversions, neutral-hadron interactions), threshold 30 MeV, efficiency 99.3 \%; each fired cell attributed to the part that deposited most: products, scattered muon, parent muon
+  \item \textbf{Response}: energy in the liquid scintillator per event and cell (charged dE/dx, photon conversions, neutral-hadron interactions), threshold 30 MeV, efficiency 99.3 \%; each fired cell attributed to the part that deposited most: products, scattered muon (ν: outgoing lepton), parent muon
   \item \textbf{Two event sets}: all events (per spill: the rate) and the selected candidates before tagging (≤ 2 tracks in SST1, pair cuts, IP < 2.5 m / < 10 cm; per 15 years)
 \end{itemize}}
-\slidenote{No random hits (background tagged with its own hits only, 20 Nov 2026). Rate reference: the muon-crossing map that sets the SBT random rate now (2.07 MHz > 30 MeV, ×4 in R2). Source: veto results\_rerun/sbt\_firing.}
+\slidenote{No random hits (background tagged with its own hits only, 20 Nov 2026). Rate reference: the muon-crossing map that sets the SBT random rate now (2.07 MHz > 30 MeV, ×4 in R2). Straight-line transport of the products (no interaction in air or in the vessel wall before the SBT). Source: veto results\_rerun/sbt\_firing.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 41b: rate per ring
 \begin{btframe}{7 · Back-up · SBT firing rate}{Rate: what ν DIS and μ DIS add to the SBT cells, next to the muons crossing the shell}
-{\centering \includegraphics[width=0.80\linewidth]{figs/s41_sbt_firing_rate_per_ring.png}\par}
+{\centering \includegraphics[width=0.74\linewidth,height=118pt,keepaspectratio]{figs/s41_sbt_firing_rate_per_ring.png}\par}
 \vspace{2.46pt}
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
-  \item Muons crossing the shell: 2.07 MHz of fired cells (×4 in R2 for back-scatter and e / γ)
-  \item ν DIS products: \tbd{} Hz; μ DIS products: \tbd{} Hz
+  \item Muons crossing the shell: \textbf{2.07 MHz} of fired cells, hottest cell 23 kHz (×4 in R2 for back-scatter and e / γ)
+  \item \textbf{μ DIS in the last 50 cm of MS7: +0.38 MHz (+18 \%)}, hottest cell 4.3 kHz: π\textsuperscript{±} (49 \%), p (18 \%), μ from π decays (12 \%), e\textsuperscript{±} and γ (8 \% each) of 1--2 GeV leaving the MS7 face at wide angle; 80 \% on the ±x walls, median z 40 m. Covered by the ×4, not by the muon map
+  \item μ DIS in the SBT material: 13.9 kHz of products (LS 9.8 kHz); in the vessel 12 Hz. ν DIS (all places): 15 Hz -- negligible
 \end{itemize}}
-\slidenote{All events, 4×10\textsuperscript{13} PoT per 1 s spill; per cell ring (all four faces). Source: veto results\_rerun/sbt\_firing/summary.md.}
+\slidenote{All events, 4×10\textsuperscript{13} PoT per 1 s spill, per cell ring (all four faces); products only (the scattered / parent muon are in the muon map). MS7: 9.3×10\textsuperscript{5} interactions / spill, 8 \% fire a cell. Source: veto results\_rerun/sbt\_firing/summary.md.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 41c: wall maps
 \begin{btframe}{7 · Back-up · SBT firing maps}{Where on the walls: fired cells per class (faces unrolled)}
-{\centering \includegraphics[width=0.86\linewidth]{figs/s41_sbt_firing_wall_map_all.png}\par}
+{\centering \includegraphics[width=0.90\linewidth,height=205pt,keepaspectratio]{figs/s41_sbt_firing_wall_map_all.png}\par}
 \slidenote{Rows: +x and −x faces (4 cells across), +y and −y (3 cells); columns: the 61 cell rings. Muons and DIS: all events, per spill; μ × μ: the SST1 muons. Source: veto results\_rerun/sbt\_firing/figures.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 41d: response of the selected candidates
 \begin{btframe}{7 · Back-up · SBT firing, selected}{Selected candidates: how often their own particles fire the SBT}
-{\fontsize{4.92pt}{6.40pt}\selectfont\setlength{\tabcolsep}{3.06pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xlrrlr}
-\textcolor{muted}{class} & \textcolor{muted}{IP cut} & \textcolor{muted}{/ 15 y} & \textcolor{muted}{≥ 1 cell fired} & \textcolor{muted}{fired by} & \textcolor{muted}{mean cells} \\\headrule
-ν DIS & < 2.5 m & \tbd & \tbd & \tbd & \tbd \\\rowrule
-ν DIS & < 10 cm & \tbd & \tbd & \tbd & \tbd \\\rowrule
-μ DIS & < 2.5 m & \tbd & \tbd & \tbd & \tbd \\\rowrule
-μ DIS & < 10 cm & \tbd & \tbd & \tbd & \tbd \\\rowrule
-μ × μ & < 2.5 m & 31.6 & 97.7 \% & μ\textsuperscript{+} 86 \%, μ\textsuperscript{−} 82 \%, both 71 \% & 7.5 \\\rowrule
-\rowcolor{tint}μ × μ & < 10 cm & 1.68 & 98.0 \% & μ\textsuperscript{+} 91 \%, μ\textsuperscript{−} 26 \%, both 19 \% & 5.1 \\\rowrule
+{\fontsize{4.55pt}{5.92pt}\selectfont\setlength{\tabcolsep}{2.6pt}\renewcommand{\arraystretch}{1.36}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrrrrr}
+\textcolor{muted}{source} & \textcolor{muted}{/ 15 y, IP < 2.5 m (MC)} & \textcolor{muted}{≥ 1 cell} & \textcolor{muted}{parent μ fires} & \textcolor{muted}{/ 15 y, IP < 10 cm (MC)} & \textcolor{muted}{≥ 1 cell} & \textcolor{muted}{mean cells} \\\headrule
+ν DIS, vessel & 660 (52 752) & 96.4 \% & -- & 7.0 (432) & \textbf{73.0 \%} & 11.9 \\\rowrule
+ν DIS, MS7 & 1.39×10\textsuperscript{3} (13 121) & 94.2 \% & -- & 9.9 (121) & 99.4 \% & 9.6 \\\rowrule
+ν DIS, SBT material & 1.11×10\textsuperscript{3} (467) & 99.8 \% & -- & 0 (0) & & \\\rowrule
+μ DIS, vessel & 2.21×10\textsuperscript{4} (12 114) & 99.7 \% & 85.8 \% & 2.37×10\textsuperscript{3} (1 426) & 100 \% & 18.4 \\\rowrule
+μ DIS, MS7 & 1.39×10\textsuperscript{7} (399) & 92.3 \% & -- & 6.1×10\textsuperscript{4} (2) & 19.7 \% & 0.2 \\\rowrule
+μ DIS, SBT material & 1.89×10\textsuperscript{6} (295) & 100 \% & 89--98 \% & 8.5×10\textsuperscript{3} (9) & 100 \% & 30.9 \\\rowrule
+μ × μ & 31.6 (95 083) & 97.7 \% & -- & 1.68 (14 166) & 98.0 \% & 5.1 \\\rowrule
 \end{tabularx}\par}
 \vspace{3pt}
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
-  \item μ × μ: every fired cell is upstream of the vertex (the muons come from upstream), where the pointing rule looks; muon deposits sit at the 123 MeV cap of a grazing track (one ring length)
-  \item μ × μ at IP < 10 cm: the μ\textsuperscript{+} leg fires the SBT 3.5 × more often than the μ\textsuperscript{−} leg (field polarity of the shield; to be checked)
+  \item μ DIS in the vessel / SBT material: the \textbf{parent muon} fires cells upstream of the vertex in 82--98 \% of the events; ν and MS7 events fire only downstream (products), in time with the vertex (zone window)
+  \item ν DIS in the vessel at IP < 10 cm: \textbf{27 \% fire no cell} (forward products through the window only)
+  \item μ × μ: the μ\textsuperscript{+} leg fires in 91 \%, the μ\textsuperscript{−} leg in 26 \% at IP < 10 cm (next slides)
 \end{itemize}}
-\slidenote{Before tagging. μ × μ weight = w\textsubscript{a} w\textsubscript{b} × 2 Δt / T\textsubscript{spill} × spills in 15 y (Δt = ±200 ps); 95 k / 14 k MC pairs. Source: veto results\_rerun/sbt\_firing/summary.md.}
+\slidenote{Before tagging. "≥ 1 cell": own particles fire at least one cell (no association, no timing). MS7 μ at IP < 10 cm: 2 MC events of ms7\_muon\_v0s (natural decays) -- use the forced-decay stores for this row. Source: veto results\_rerun/sbt\_firing/*.json.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 41e: shapes
 \begin{btframe}{7 · Back-up · SBT firing shapes}{How many cells, where with respect to the vertex, how much energy}
-{\centering \includegraphics[width=0.90\linewidth]{figs/s41_sbt_firing_shapes.png}\par}
-\slidenote{Top: all events; bottom: selected, IP < 2.5 m. Normalised, weighted. Source: veto results\_rerun/sbt\_firing/figures/shapes.png.}
+{\centering \includegraphics[width=0.86\linewidth]{figs/s41_sbt_firing_shapes.png}\par}
+\slidenote{Top: all events; bottom: selected, IP < 2.5 m. Normalised, weighted. Muons: 123 MeV cap = one ring length of a grazing track. Source: veto results\_rerun/sbt\_firing/figures/shapes.png.}
 \end{btframe}
+
+% ---------------------------------------------------------------- slide 41f: mu x mu top view
+\begin{btframe}{7 · Back-up · μ × μ in the SBT}{μ × μ: where the two muons of a pair enter the SBT side walls (top view)}
+{\centering \includegraphics[width=0.86\linewidth]{figs/s41_hits_mumu_topview.png}\par}
+\vspace{2.46pt}
+{\fontsize{6.15pt}{8.60pt}\selectfont
+\begin{itemize}
+  \item \textbf{μ\textsuperscript{+} legs enter the −x wall} (87 \% at IP < 2.5 m, 90 \% at IP < 10 cm), \textbf{μ\textsuperscript{−} legs the +x wall} (82 \% at IP < 2.5 m)
+  \item Most enter at the upstream edge of the shell (z = 31.13 m) and run along it inside the 21.6 cm of cells: the 123 MeV deposits
+  \item At IP < 10 cm \textbf{74 \% of the μ\textsuperscript{−} legs never enter the SBT}: they come through the entrance window (UBT)
+\end{itemize}}
+\slidenote{60 pairs drawn by weight out of 14 166 MC pairs (IP < 10 cm); filled circle: the entered cell fires (> 30 MeV). Source: veto results\_rerun/sbt\_firing/hits\_mumu.json (bin/sbt\_firing\_hits.py).}
+\end{btframe}
+
+% ---------------------------------------------------------------- slide 41g: mu x mu on the walls
+\begin{btframe}{7 · Back-up · μ × μ in the SBT}{μ × μ: entry points on the +x and −x walls (z along the beam, y up the wall)}
+{\centering \includegraphics[width=0.88\linewidth]{figs/s41_hits_mumu_walls.png}\par}
+\slidenote{Weighted pair legs per 15 y (w\textsubscript{a} w\textsubscript{b} × 2 Δt / T\textsubscript{spill} × spills). Source: veto results\_rerun/sbt\_firing/hits\_mumu.npz.}
+\end{btframe}
+
+\iffalse  % DIS hit slides: enabled when the hit runs finish (20 Nov 2026)
+% ---------------------------------------------------------------- slide 41h: DIS seen by SBT / UBT
+\begin{btframe}{7 · Back-up · DIS in SBT and UBT}{Selected ν and μ DIS: seen by the SBT, the UBT, both or neither (own hits)}
+{\centering \includegraphics[width=0.80\linewidth]{figs/s41_hits_seen_by.png}\par}
+\vspace{2.46pt}
+{\fontsize{6.15pt}{8.60pt}\selectfont
+\begin{itemize}
+  \item \tbd
+\end{itemize}}
+\slidenote{SBT: fired cells of the event's own particles (incl. the parent muon); UBT: geometric crossing of any charged particle of the event (incl. the parent muon) with the straws (30.73 m) or tiles (31.13 m) of R2, no efficiency. Source: veto results\_rerun/sbt\_firing/hits\_summary.md.}
+\end{btframe}
+
+% ---------------------------------------------------------------- slide 41i: DIS hit maps
+\begin{btframe}{7 · Back-up · DIS in SBT and UBT}{Selected DIS events: fired cells on the side walls and UBT crossings}
+\begin{minipage}[t]{0.49\linewidth}
+{\centering \includegraphics[width=\linewidth]{figs/s41_hits_nu_walls.png}\par}
+{\centering \includegraphics[width=\linewidth]{figs/s41_hits_nu_ubt.png}\par}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}
+{\centering \includegraphics[width=\linewidth]{figs/s41_hits_mu_walls.png}\par}
+{\centering \includegraphics[width=\linewidth]{figs/s41_hits_mu_ubt.png}\par}
+\end{minipage}
+\slidenote{Left: ν DIS, right: μ DIS; selected, IP < 2.5 m, per 15 y. Source: veto results\_rerun/sbt\_firing/figures/hits\_*.png.}
+\end{btframe}
+\fi
