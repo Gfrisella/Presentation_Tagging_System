@@ -89,3 +89,6 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   of the muon map; selected-candidate table per source; shapes) and two mu x mu slides (top view x-z and +x / -x walls with
   the SBT entry points of the pair muons: mu+ -> -x wall, mu- -> +x wall). DIS seen by SBT / UBT slides written but
   \iffalse'd until the hit runs finish. main 60 pages, main_nomsms 56.
+- 20 Nov 2026 (evening): SBT-firing DIS slides switched on (pages 61-62): selected nu / mu DIS seen by SBT, UBT, both or
+  neither (own hits; UBT = geometric crossing incl. the parent muon) and their hit maps (side walls, UBT straws / tiles).
+  main 62 pages, main_nomsms 58.
