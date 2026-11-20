@@ -92,3 +92,6 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 20 Nov 2026 (evening): SBT-firing DIS slides switched on (pages 61-62): selected nu / mu DIS seen by SBT, UBT, both or
   neither (own hits; UBT = geometric crossing incl. the parent muon) and their hit maps (side walls, UBT straws / tiles).
   main 62 pages, main_nomsms 58.
+- 20 Nov evening: rock x mu rows -> "model under review" in every column (R1-R3, Z2/Z3, summary; both decks): the rock library
+  gives ~28x more concrete-made tracks at SST1 than FairShip (veto docs/investigations_2026-11-20/cavern_rock). The other n.e.
+  cells stay until the own-hits rerun (Slurm 2164033); then all R / Z tables are rebuilt from it.
