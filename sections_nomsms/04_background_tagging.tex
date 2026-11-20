@@ -203,14 +203,14 @@
 {\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabular}{lrr}
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{without V0 rule} & \textcolor{muted}{with V0 rule} \\\headrule
-signal lost, full / partial IP cut & 2.45 / 2.24 \% & 4.35 \% / \textcolor{muted}{n.e.} \\\rowrule
+signal lost, full / partial IP cut & 2.45 / 2.24 \% & 4.35 / 7.06 \% \\\rowrule
 μμ pairs & < 0.26 (90 \% CL) & < 0.26 (90 \% CL) \\\rowrule
 rock × μ pairs & 0.59 ± 0.09 & \textcolor{muted}{n.e.} \\\rowrule
 interaction product × μ pairs & 0.019 ± 0.002 & \textcolor{muted}{n.e.} \\\rowrule
 μ in the vessel \textsuperscript{*} & 86 ± 22 & 86 ± 22 \\\rowrule
 ν in the vessel & 3.38 ± 0.18 & 3.37 ± 0.18 \\\rowrule
 \rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries (1.67 ± 0.24)×10\textsuperscript{4} & \bfseries 189 ± 91 (16 ev.) \\\rowrule
-ν in MS7 & 2.6 & \textcolor{muted}{n.e.} \\\rowrule
+ν in MS7 & 2.6 & 0.86 \\\rowrule
 single SST1 μ tagged, all / bounced & 64 / 34 \% & 63 / 30 \% \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
@@ -223,7 +223,7 @@ single SST1 μ tagged, all / bounced & 64 / 34 \% & 63 / 30 \% \\\rowrule
   \item Signal loss: 1.5 points EM debris on the straws, 1 point muons in the flame tiles
 \end{itemize}}
 \end{minipage}\par
-\slidenote{* The V0 rule can only add tags: its run gave 96 ± 21 (99 vs 103 MC events, different random-hit draws), so the value without it is shown in both columns. Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Rock and interaction-product pairs, ν in MS7 / SBT and the partial IP cut: full chain, reference configuration only (n.e. = not evaluated). “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
+\slidenote{* The V0 rule can only add tags: its run gave 96 ± 21 (99 vs 103 MC events, different random-hit draws), so the value without it is shown in both columns. Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Rock and interaction-product pairs, SBT ν: full chain, reference only (n.e. = not evaluated); partial IP cut and ν in MS7: full chain (20 Nov). V0 rule only for p\textsubscript{vis} < 20 GeV. “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 28: R2: SBT + UBT + V0 rule — 333.5 drachmas (the budget), 31 764 channels
@@ -234,7 +234,7 @@ single SST1 μ tagged, all / bounced & 64 / 34 \% & 63 / 30 \% \\\rowrule
 {\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabular}{lrr}
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{without V0 rule} & \textcolor{muted}{with V0 rule} \\\headrule
-signal lost, full / partial IP cut & 5.00 \% / \textcolor{muted}{n.e.} & 6.74 / 9.71 \% \\\rowrule
+signal lost, full / partial IP cut & 5.00 / 5.19 \% & 6.74 / 9.71 \% \\\rowrule
 μμ pairs & < 0.052 (90 \% CL) & < 0.052 (90 \% CL) \\\rowrule
 rock × μ pairs & \textcolor{muted}{n.e.} & < 0.018 (90 \% CL) \\\rowrule
 interaction product × μ pairs & \textcolor{muted}{n.e.} & < 1.1×10\textsuperscript{-4} (90 \% CL) \\\rowrule
@@ -242,7 +242,7 @@ interaction product × μ pairs & \textcolor{muted}{n.e.} & < 1.1×10\textsupers
 ν in the vessel & 1.08 ± 0.10 & 1.07 ± 0.10 \\\rowrule
 SBT material μ & 122 ± 24 & 2.95 ± 2.8 (1 heavy ev.) \\\rowrule
 \rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries (1.37 ± 0.24)×10\textsuperscript{4} & \bfseries 0.48 ± 0.34 \\\rowrule
-ν in MS7 / SBT material ν & \textcolor{muted}{n.e.} & 0.70 / 0.05 \\\rowrule
+ν in MS7 / SBT material ν & 1.73 / \textcolor{muted}{n.e.} & 0.70 / 0.05 \\\rowrule
 single SST1 μ tagged, all / bounced & 95 / 87 \% & 95 / 84 \% \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
@@ -252,11 +252,11 @@ single SST1 μ tagged, all / bounced & 95 / 87 \% & 95 / 84 \% \\\rowrule
 \begin{itemize}
   \item Removes everything entering through the walls: pairs, rock, vessel μ
   \item Single SST1 muons tagged 95 \%
-  \item \textbf{V0 rule} (A+C, software only): MS7 1.8×10\textsuperscript{4} → \textbf{0.67}, SBT-material K\textsubscript{L} 112 → < 13
+  \item \textbf{V0 rule} (A+C, software only, p\textsubscript{vis} < 20 GeV): MS7 1.8×10\textsuperscript{4} → \textbf{0.67}, SBT-material K\textsubscript{L} 112 → < 13
   \item Cost of the V0 rule: signal 5.0 / 5.2 → 6.7 / 9.7 \%
 \end{itemize}}
 \end{minipage}\par
-\slidenote{Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Rock and interaction-product pairs, ν in MS7 / SBT and the partial IP cut: full chain, reference configuration only (n.e. = not evaluated). “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
+\slidenote{Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Rock and interaction-product pairs, SBT ν: full chain, reference only (n.e. = not evaluated); partial IP cut and ν in MS7: full chain (20 Nov). V0 rule only for p\textsubscript{vis} < 20 GeV. “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 30: R1, R2: background left in 15 years and signal lost

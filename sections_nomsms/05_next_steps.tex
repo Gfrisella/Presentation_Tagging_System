@@ -42,7 +42,7 @@
 {\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabular}{lr}
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{Z2} \\\headrule
-signal lost, full / partial IP cut & 2.71 \% / \textcolor{muted}{n.e.} \\\rowrule
+signal lost, full / partial IP cut & 2.71 / 4.37 \% \\\rowrule
 μμ pairs & < 0.052 (90 \% CL) \\\rowrule
 rock × μ pairs & \textcolor{muted}{n.e.} \\\rowrule
 interaction product × μ pairs & \textcolor{muted}{n.e.} \\\rowrule
@@ -50,7 +50,7 @@ interaction product × μ pairs & \textcolor{muted}{n.e.} \\\rowrule
 ν in the vessel & 1.13 ± 0.11 \\\rowrule
 SBT material μ & 0.004 ± 0.003 \\\rowrule
 \rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries 0.80 ± 0.34 \\\rowrule
-ν in MS7 / SBT material ν & \textcolor{muted}{n.e.} \\\rowrule
+ν in MS7 / SBT material ν & 0.84 / \textcolor{muted}{n.e.} \\\rowrule
 single SST1 μ tagged, all / bounced & 91 / 84 \% \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
@@ -60,11 +60,11 @@ single SST1 μ tagged, all / bounced & 91 / 84 \% \\\rowrule
 \begin{itemize}
   \item Best design of the genetic-algorithm search (section 6): R2 with 6 of the 10 SBT rings (no 0, 1, 3, 4)
   \item UBT straws with t\textsubscript{0} and the segment cut; tile plane |x| < 1.7 m, 2×2 cm only on the cavern side
-  \item V0 rule with a 15.7 mrad cone, no K\textsubscript{L} time-of-flight window, p\textsubscript{max} kept
+  \item V0 rule with a 15.7 mrad cone, no K\textsubscript{L} time-of-flight window, only for p\textsubscript{vis} < 20 GeV
   \item \textbf{Signal loss 2.7 \%} (R2: 6.7 \%), 68 \% of the budget; every plane within its rate limit
 \end{itemize}}
 \end{minipage}\par
-\slidenote{Optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1); n.e. = not evaluated for this design yet. “<”: no simulated event left, 90 \% CL. Design file: results\_rerun/evolve/Z2\_opt\_ga7c3.json.}
+\slidenote{Optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1); Partial IP cut and ν in MS7: full chain, 20 Nov (results\_rerun/full\_chain\_extra); n.e. = not evaluated (rock pairs not rerun, model under review; interaction-product pairs and SBT-material ν under check). V0 rule applied only to candidates with p\textsubscript{vis} < 20 GeV (selected MS7 V0: 3–9 GeV; signal: 43–94 GeV). “<”: no simulated event left, 90 \% CL. Design file: results\_rerun/evolve/Z2\_opt\_ga7c3.json.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 32: Z3 (optimised)
@@ -75,7 +75,7 @@ single SST1 μ tagged, all / bounced & 91 / 84 \% \\\rowrule
 {\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabular}{lr}
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{Z3} \\\headrule
-signal lost, full / partial IP cut & 3.01 \% / \textcolor{muted}{n.e.} \\\rowrule
+signal lost, full / partial IP cut & 3.01 / 4.75 \% \\\rowrule
 μμ pairs & < 0.052 (90 \% CL) \\\rowrule
 rock × μ pairs & \textcolor{muted}{n.e.} \\\rowrule
 interaction product × μ pairs & \textcolor{muted}{n.e.} \\\rowrule
@@ -83,7 +83,7 @@ interaction product × μ pairs & \textcolor{muted}{n.e.} \\\rowrule
 ν in the vessel & 1.05 ± 0.10 \\\rowrule
 SBT material μ & 0.004 ± 0.003 \\\rowrule
 \rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries 0.61 ± 0.27 \\\rowrule
-ν in MS7 / SBT material ν & \textcolor{muted}{n.e.} \\\rowrule
+ν in MS7 / SBT material ν & 1.00 / \textcolor{muted}{n.e.} \\\rowrule
 single SST1 μ tagged, all / bounced & 94 / 84 \% \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
@@ -96,7 +96,7 @@ single SST1 μ tagged, all / bounced & 94 / 84 \% \\\rowrule
   \item \textbf{Signal loss 3.0 \%}, 73 \% of the budget
 \end{itemize}}
 \end{minipage}\par
-\slidenote{Optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1); n.e. = not evaluated for this design yet. “<”: no simulated event left, 90 \% CL. Design file: results\_rerun/evolve/Z3\_opt\_ga8c8.json.}
+\slidenote{Optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1); Partial IP cut and ν in MS7: full chain, 20 Nov (results\_rerun/full\_chain\_extra); n.e. = not evaluated (rock pairs not rerun, model under review; interaction-product pairs and SBT-material ν under check). V0 rule applied only to candidates with p\textsubscript{vis} < 20 GeV (selected MS7 V0: 3–9 GeV; signal: 43–94 GeV). “<”: no simulated event left, 90 \% CL. Design file: results\_rerun/evolve/Z3\_opt\_ga8c8.json.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 35b: optimisation result

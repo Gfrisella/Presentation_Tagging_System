@@ -70,3 +70,13 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   partial IP).
 - 20 Nov 2026: slide 19 combinatorial table: single-track MS7 / vessel μ and ν interactions × μ, interaction × interaction, rock marked 'model under review' (veto results_rerun/combi_single); back-up cut-flow slide (p42).
 - 20 Nov 2026: R1 'μ in the vessel' = 86 ± 22 in both columns (the V0 run's 96 ± 21 is random-hit noise; footnote).
+
+## 2026-11-20 afternoon: full-chain results for the new columns
+- Filled from results_rerun/full_chain_extra + reco/reco_x_* (Slurm 2149071, 2156964, 2157043, 2157083), both decks:
+  partial-IP signal loss R1+V0 7.06, R2 noV0 5.19, R3 noV0 6.11, Z2 4.37, Z3 4.75 %
+  (full-IP column reproduces the optimiser numbers exactly; Z from the *_full design files);
+  ν in MS7 (v0rule_study ms7_nu2026/full, same definition as R2's 0.70): R1+V0 0.86, R2/R3 noV0 1.73, Z2 0.84, Z3 1.00.
+- Still n.e.: rock x μ (not rerun, model under review); interaction product x μ and SBT-material ν for the new columns:
+  dis_combinatorial gives a μ inefficiency 0.48-0.50 for R2/R3 noV0, Z2, Z3 (17 Nov R2 run: 0.062, and the optimiser's
+  single-SST1 tagging is 90-95 %), and sbt_eval's veto fields differ from the 17 Nov reference -> under check.
+- V0 rule p_vis < 20 GeV stated on the R2 / Z2 bullets and in the R1-R3 / Z2-Z3 notes.
