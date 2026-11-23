@@ -109,3 +109,6 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   + timing detector), table MS7 (μ flux 1.04, π at SST1 1.05, K_L-decay tracks 0.7) and cavern (p > 1: 1.7, good: 1.6 ± 0.4,
   good + real TD hit: 2.7) ours / FairShip at 4e13; plot figs/s45_fairship_cavern_p.pdf (cavern p spectrum at SST1, all and good).
   Source: FairShip_TRY2026_EM_SST1/comparison_noSBT (scripts/slide_plot.py, results/slide_numbers.json). main 65 pages, main_nomsms 61.
+- 23 Nov 2026 (afternoon): last n.e. cells filled from the one-track-at-SST1 reruns (veto results_rerun/sst1one_23nov, MS7 part;
+  vessel μ part < 1e-4): R1 product × μ 0.0030 (706 MC) both columns (was 0.019, old definition), summary row too; R2 / R3
+  without V0 rule 0 MC -> < 1.1e-3 (90 % CL, limit of the larger 20 Nov sample). No n.e. left in either deck.
