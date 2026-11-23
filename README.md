@@ -121,3 +121,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   plot_z2_design.py): why the GA keeps ring 2 and drops 0, 1, 4 (ring 0: one heavy SBT-LS MC event; x11 LS statistics
   running, Slurm 2205690). Back-up divider rewritten as the list of all back-up chapters in page order (8 in main, 7 in
   nomsms). main 63 pages, main_nomsms 60.
+- 23 Nov 2026 (night): slide 19 (combinatorial, before tagging): cavern-rock × μ row keeps 634 / 211 / 626 (old SST1 + TD), note † with the 4-station + TD values 213 / 84 / 208 (400k muons, preliminary; veto results_rerun/rock_vertices).
