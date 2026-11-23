@@ -104,3 +104,8 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   charged tracks at SST1 per interaction (incoming muon excluded), μ and ν interactions per location: MS7, cavern rock,
   air upstream, UBT planes, vessel wall / air / helium, SBT Al inner / LS / ribs (frame) / Al outer; plus the "1 good, alone"
   and "≥ 2 good" rates. From veto results_rerun/sst1one_23nov/multiplicity.json. main 64 pages, main_nomsms 60.
+- 23 Nov 2026: back-up "FairShip cross-check" (sections/09_backup_fairship_crosscheck.tex, both decks, last page): FairShip
+  TRY_2026_EM_noSBT_full (full Geant4, no SBT) vs our chain, setting + good-track definition (p > 1 GeV, all 4 straw stations
+  + timing detector), table MS7 (μ flux 1.04, π at SST1 1.05, K_L-decay tracks 0.7) and cavern (p > 1: 1.7, good: 1.6 ± 0.4,
+  good + real TD hit: 2.7) ours / FairShip at 4e13; plot figs/s45_fairship_cavern_p.pdf (cavern p spectrum at SST1, all and good).
+  Source: FairShip_TRY2026_EM_SST1/comparison_noSBT (scripts/slide_plot.py, results/slide_numbers.json). main 65 pages, main_nomsms 61.
