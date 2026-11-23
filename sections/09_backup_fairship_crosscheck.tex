@@ -8,23 +8,24 @@
 \begin{itemize}
   \item \textbf{FairShip:} TRY\_2026 shield, full physics, 2018 muons (4.1×10\textsuperscript{8} μ), He balloon, \textbf{no SBT}; 2 671 / 3 086 of 4 119 files
   \item \textbf{Ours:} MS7 Geant4 interaction chain; cavern-rock library (straight lines from the rock surface)
-  \item \textbf{Good track:} p > 1 GeV, inside the straw aperture (4 × 6 m) at \textbf{all 4 stations} and in the timing detector (5.5 × 6.5 m), field map
+  \item \textbf{Good track:} p > 1 GeV, inside the straw aperture (4 × 6 m) at \textbf{all 4 stations} and in the timing detector (5.5 × 6.5 m), field map; the same filter on both
 \end{itemize}
 \vspace{2pt}
 {\fontsize{5.02pt}{6.52pt}\selectfont\setlength{\tabcolsep}{3.2pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrr}
-\textcolor{muted}{per spill (4×10\textsuperscript{13} PoT)} & \textcolor{muted}{FairShip} & \textcolor{muted}{ours} & \textcolor{muted}{ours / FS} \\\headrule
-μ leaving MS7 (\textbar{}x\textbar{} < 1.71, \textbar{}y\textbar{} < 1.27 m) & 1.9×10\textsuperscript{8} & 2.0×10\textsuperscript{8} & 1.04 \\\rowrule
-π from MS7 at SST1 & 4.5×10\textsuperscript{3} & 4.7×10\textsuperscript{3} & 1.05 ± 0.24 \\\rowrule
-K\textsubscript{L}-decay tracks from MS7 at SST1 & 115 & 78 & 0.7 ± 0.2 \\\rowrule
-cavern, charged, p > 1 GeV & 4.6×10\textsuperscript{4} & 7.7×10\textsuperscript{4} & 1.7 ± 0.2 \\\rowrule
-\rowcolor{tint}\bfseries cavern, good tracks & \bfseries 9.1×10\textsuperscript{3} & \bfseries 1.5×10\textsuperscript{4} & \bfseries 1.6 ± 0.4 \\\rowrule
-cavern, good + real FairShip TD hit & 5.5×10\textsuperscript{3} & – & 2.7 ± 0.7 \\\rowrule
+\textcolor{muted}{good tracks at SST1 [kHz, 4×10\textsuperscript{13} PoT]} & \textcolor{muted}{FairShip} & \textcolor{muted}{ours} & \textcolor{muted}{ours / FS} \\\headrule
+MS7: π\textsuperscript{±} & 3.6 ± 1.0 & 3.4 & 0.96 ± 0.27 \\\rowrule
+MS7: p & 0.76 ± 0.08 & 0.81 & 1.08 ± 0.11 \\\rowrule
+MS7: K\textsuperscript{±} & 0.06 ± 0.02 & 0.26 & 4.6 ± 1.8 \\\rowrule
+MS7: e\textsuperscript{±} & 3.2 ± 1.0 & 0.24 & 0.08 ± 0.02 \\\rowrule
+MS7: K\textsubscript{L}-decay tracks & 0.05 ± 0.02 & 0.04 & 0.7 ± 0.3 \\\rowrule
+\rowcolor{tint}\bfseries cavern concrete: all charged & \bfseries 9.1 ± 2.1 & \bfseries 14.7 & \bfseries 1.6 ± 0.4 \\\rowrule
+\textcolor{muted}{cavern, + FairShip's own G4 TD hit} & \textcolor{muted}{5.5 ± 1.4} & \textcolor{muted}{–} & \textcolor{muted}{2.7 ± 0.7} \\\rowrule
 \end{tabularx}\par}
 \vspace{2pt}
 \begin{itemize}
-  \item MS7: FairShip agrees with our chain at every step
-  \item Cavern: FairShip's bulk is soft e\textsuperscript{±} (< 0.1 GeV); above 1 GeV same spectrum, ours ×1.6 higher
+  \item MS7 hadrons agree (π, p); FairShip's extra e\textsuperscript{±} are EM (δ-rays, conversions), not in our DIS chain
+  \item Cavern: same spectrum above 1 GeV (left), ours ×1.6 higher
 \end{itemize}
 \end{minipage}\par
 \end{btframe}

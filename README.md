@@ -112,3 +112,6 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 23 Nov 2026 (afternoon): last n.e. cells filled from the one-track-at-SST1 reruns (veto results_rerun/sst1one_23nov, MS7 part;
   vessel μ part < 1e-4): R1 product × μ 0.0030 (706 MC) both columns (was 0.019, old definition), summary row too; R2 / R3
   without V0 rule 0 MC -> < 1.1e-3 (90 % CL, limit of the larger 20 Nov sample). No n.e. left in either deck.
+- 23 Nov 2026 (later): FairShip back-up table now shows GOOD-track rates at SST1 in kHz, FairShip vs ours, per MS7 species (π, p, K, e,
+  K_L-decay) and cavern; TD hit row labelled as FairShip's own G4 hit. The previous "ours" MS7 values were ×0.8 too low
+  (generators_natural.md is already per 4e13). Source: comparison_noSBT/results/ms7_good_tracks.json.
