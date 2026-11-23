@@ -1,42 +1,42 @@
-%% Backgrounds of the SHiP decay volume and the Background Tagging System
-%% LuaLaTeX (latexmkrc). Overleaf: Menu -> Compiler -> LuaLaTeX.
-\documentclass[aspectratio=169,10pt]{beamer}
-\usepackage{beamerthemebt}
-\usetikzlibrary{calc}
-\input{sketch_design}
-\renewcommand{\btshort}{Backgrounds and tagging}
-\renewcommand{\btdate}{19 Nov 2026}
+% %% Backgrounds of the SHiP decay volume and the Background Tagging System
+% %% LuaLaTeX (latexmkrc). Overleaf: Menu -> Compiler -> LuaLaTeX.
+% \documentclass[aspectratio=169,10pt]{beamer}
+% \usepackage{beamerthemebt}
+% \usetikzlibrary{calc}
+% \input{sketch_design}
+% \renewcommand{\btshort}{Backgrounds and tagging}
+% \renewcommand{\btdate}{19 Nov 2026}
 
 
-\begin{document}
+% \begin{document}
 
-% ---------------------------------------------------------------- cover
-{\setbeamertemplate{footline}{}
-\begin{frame}[plain]
-\begin{tikzpicture}[remember picture,overlay]
-  \fill[cern] (current page.south west) rectangle (current page.north east);
-  \node[anchor=north west,text width=330pt,align=left,text=white,inner sep=0,font=\fontsize{16.4pt}{18pt}\selectfont]
-    at ([xshift=22.8pt,yshift=-70pt]current page.north west) {Backgrounds of the SHiP decay volume and the Background Tagging System};
-  \node[anchor=north west,text width=380pt,align=left,text=white!88!cern,inner sep=0,font=\fontsize{7.74pt}{9.5pt}\selectfont]
-    at ([xshift=22.8pt,yshift=-118pt]current page.north west) {Simulation chain, selection, the backgrounds in 15 years, and the tagging designs R1–R3 and Z2–Z3};
-  \node[anchor=north west,text width=380pt,align=left,text=white,inner sep=0,font=\fontsize{6.6pt}{10.5pt}\selectfont]
-    at ([xshift=22.8pt,yshift=-150pt]current page.north west) {\underline{Guglielmo Frisella}\textsuperscript{1, 2}, Shah Rukh Qasim\textsuperscript{1}\par\vspace{2.7pt}{\fontsize{4.78pt}{7.2pt}\selectfont\color{white!78!cern}\textsuperscript{1}University of Zurich\newline{}\textsuperscript{2}European Organization for Nuclear Research (CERN)}};
-  \node[anchor=south west,inner sep=0,text=white!78!cern,font=\fontsize{5.2pt}{6pt}\selectfont]
-    at ([xshift=22.8pt,yshift=17.3pt]current page.south west) {19 November 2026};
-  \node[anchor=south east,inner sep=0] at ([xshift=-22.8pt,yshift=15.5pt]current page.south east)
-    {\includegraphics[height=13.7pt]{figs/logo_uzh.png}\hspace{9pt}\includegraphics[height=20pt]{figs/logo_ship.png}};
-\end{tikzpicture}
-\end{frame}}
+% % ---------------------------------------------------------------- cover
+% {\setbeamertemplate{footline}{}
+% \begin{frame}[plain]
+% \begin{tikzpicture}[remember picture,overlay]
+%   \fill[cern] (current page.south west) rectangle (current page.north east);
+%   \node[anchor=north west,text width=330pt,align=left,text=white,inner sep=0,font=\fontsize{16.4pt}{18pt}\selectfont]
+%     at ([xshift=22.8pt,yshift=-70pt]current page.north west) {Backgrounds of the SHiP decay volume and the Background Tagging System};
+%   \node[anchor=north west,text width=380pt,align=left,text=white!88!cern,inner sep=0,font=\fontsize{7.74pt}{9.5pt}\selectfont]
+%     at ([xshift=22.8pt,yshift=-118pt]current page.north west) {Simulation chain, selection, the backgrounds in 15 years, and the tagging designs R1–R3 and Z2–Z3};
+%   \node[anchor=north west,text width=380pt,align=left,text=white,inner sep=0,font=\fontsize{6.6pt}{10.5pt}\selectfont]
+%     at ([xshift=22.8pt,yshift=-150pt]current page.north west) {\underline{Guglielmo Frisella}\textsuperscript{1, 2}, Shah Rukh Qasim\textsuperscript{1}\par\vspace{2.7pt}{\fontsize{4.78pt}{7.2pt}\selectfont\color{white!78!cern}\textsuperscript{1}University of Zurich\newline{}\textsuperscript{2}European Organization for Nuclear Research (CERN)}};
+%   \node[anchor=south west,inner sep=0,text=white!78!cern,font=\fontsize{5.2pt}{6pt}\selectfont]
+%     at ([xshift=22.8pt,yshift=17.3pt]current page.south west) {19 November 2026};
+%   \node[anchor=south east,inner sep=0] at ([xshift=-22.8pt,yshift=15.5pt]current page.south east)
+%     {\includegraphics[height=13.7pt]{figs/logo_uzh.png}\hspace{9pt}\includegraphics[height=20pt]{figs/logo_ship.png}};
+% \end{tikzpicture}
+% \end{frame}}
 
-\input{sections_withmsms/00_introduction}
-\input{sections_withmsms/01_simulation}
-\input{sections_withmsms/02_selection}
-\input{sections_withmsms/03_backgrounds_before_tagging}
-\input{sections_withmsms/04_background_tagging}
-\input{sections_withmsms/05_next_steps}
-\input{sections_withmsms/06_backup}
-\input{sections_withmsms/07_backup_sbt_firing}
-\input{sections_withmsms/08_backup_sst1_multiplicity}
-\input{sections_withmsms/09_backup_fairship_crosscheck}
-\input{sections_withmsms/10_backup_z2_rings}
-\end{document}
+% \input{sections_withmsms/00_introduction}
+% \input{sections_withmsms/01_simulation}
+% \input{sections_withmsms/02_selection}
+% \input{sections_withmsms/03_backgrounds_before_tagging}
+% \input{sections_withmsms/04_background_tagging}
+% \input{sections_withmsms/05_next_steps}
+% \input{sections_withmsms/06_backup}
+% \input{sections_withmsms/07_backup_sbt_firing}
+% \input{sections_withmsms/08_backup_sst1_multiplicity}
+% \input{sections_withmsms/09_backup_fairship_crosscheck}
+% \input{sections_withmsms/10_backup_z2_rings}
+% \end{document}
