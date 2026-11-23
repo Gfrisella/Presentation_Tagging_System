@@ -100,3 +100,7 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   the old R2 / R3 0.05 replaced. Z2 / Z3 interaction product × μ 0.014 ± 0.002 / 0.010 ± 0.001 (ownhits_20nov dis_comb, old
   single-good-track definition). Pending (Slurm 2203236, veto results_rerun/sst1one_23nov): every interaction × μ number
   (slide 19, R1-R3 / Z2-Z3 rows) redone with ONE charged track at SST1 per interaction; 3 R-table cells still n.e. until then.
+- 23 Nov 2026: back-up "SST1 multiplicity" (sections/08_backup_sst1_multiplicity.tex, both decks, after the SBT-firing back-up):
+  charged tracks at SST1 per interaction (incoming muon excluded), μ and ν interactions per location: MS7, cavern rock,
+  air upstream, UBT planes, vessel wall / air / helium, SBT Al inner / LS / ribs (frame) / Al outer; plus the "1 good, alone"
+  and "≥ 2 good" rates. From veto results_rerun/sst1one_23nov/multiplicity.json. main 64 pages, main_nomsms 60.
