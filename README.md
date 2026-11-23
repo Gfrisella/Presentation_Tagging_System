@@ -115,3 +115,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 23 Nov 2026 (later): FairShip back-up table now shows GOOD-track rates at SST1 in kHz, FairShip vs ours, per MS7 species (π, p, K, e,
   K_L-decay) and cavern; TD hit row labelled as FairShip's own G4 hit. The previous "ours" MS7 values were ×0.8 too low
   (generators_natural.md is already per 4e13). Source: comparison_noSBT/results/ms7_good_tracks.json.
+- 23 Nov 2026 (15 h): R2 / R3 product × μ without V0 rule from their own runs: < 1.2e-3 / < 1.3e-3 (90 % CL; vessel μ part ~1e-7).
