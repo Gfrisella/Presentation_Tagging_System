@@ -4,13 +4,12 @@
 \begin{btframe}{}{Back-up}
 \begin{outlinelist}
 \outlineitem{1}{Simulation inputs}{inelastic interactions per target, muon categories, Nov-4 flux vs 2018}{1.00}
-\outlineitem{2}{Combinatorial pairs}{cut flow of μ × μ and of the single-track interactions × μ}{1.00}
-\outlineitem{3}{MS7 K\textsubscript{L}}{from production to SST1, Q\textsuperscript{2} and W, comparison with data}{1.00}
-\outlineitem{4}{Tagging rules}{all rules on every candidate, tagged = OR}{1.00}
-\outlineitem{5}{SBT firing}{what ν DIS, μ DIS and μ × μ fire in the SBT; seen by SBT / UBT}{1.00}
-\outlineitem{6}{SST1 multiplicity}{charged tracks at SST1 per interaction, per location}{1.00}
-\outlineitem{7}{FairShip cross-check}{MS7 production and cavern tracks at SST1, good-track rates}{1.00}
-\outlineitem{8}{Z2 SBT rings}{which rings the optimiser keeps, and why}{1.00}
+\outlineitem{2}{MS7 K\textsubscript{L}}{from production to SST1, Q\textsuperscript{2} and W, comparison with data}{1.00}
+\outlineitem{3}{Tagging rules}{all rules on every candidate, tagged = OR}{1.00}
+\outlineitem{4}{SBT firing}{what ν DIS, μ DIS and μ × μ fire in the SBT; seen by SBT / UBT}{1.00}
+\outlineitem{5}{SST1 multiplicity}{charged tracks at SST1 per interaction, per location}{1.00}
+\outlineitem{6}{FairShip cross-check}{MS7 production and cavern tracks at SST1, good-track rates}{1.00}
+\outlineitem{7}{Z2 SBT rings}{which rings the optimiser keeps, and why}{1.00}
 \end{outlinelist}
 \end{btframe}
 
@@ -71,28 +70,6 @@ cross the vessel region, miss SST1 & 2.49×10\textsuperscript{4} \\\rowrule
   \item p\textsubscript{T} is not like-for-like: Nov-4 keeps only the direction after the target (dashed: 2018 with approximate target scattering)
 \end{itemize}}
 \slidenote{Nov-4: all 23 train chunks of the source pool (2.2×10\textsuperscript{9} muons); 2018: all 506 M muons (reference\_2018.h5), weights ×0.8 to 4×10\textsuperscript{13} PoT. 2018 selection emulated with bin/old\_convention.py, 2018 weighting per muon with compare\_inventory\_2018.classify. Source: veto results\_rerun/nov4\_vs\_2018 (README.md, numbers.json).}
-\end{btframe}
-
-% ---------------------------------------------------------------- back-up: combinatorial cut flow (20 Nov 2026)
-\begin{btframe}{7 · Back-up · combinatorial cut flow}{Combinatorial pairs: cut flow of μ × μ and of the single-track interactions × μ}
-{\fontsize{5.4pt}{7.2pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrrrr}
-\textcolor{muted}{per spill → per 15 y (× 6×10\textsuperscript{-3})} & \textcolor{muted}{μ × μ} & \textcolor{muted}{MS7 μ × μ} & \textcolor{muted}{MS7 ν × μ} & \textcolor{muted}{vessel μ × μ} & \textcolor{muted}{vessel ν × μ} \\\headrule
-all pairs of good tracks & 3.5×10\textsuperscript{7} → 2.1×10\textsuperscript{5} & 4.1×10\textsuperscript{7} → 2.4×10\textsuperscript{5} & 1 077 → 6.5 & 1 015 → 6.1 & 20 → 0.12 \\\rowrule
-opposite charge & 1.7×10\textsuperscript{7} → 1.0×10\textsuperscript{5} & 2.0×10\textsuperscript{7} → 1.2×10\textsuperscript{5} & 547 → 3.3 & 490 → 2.9 & 10 → 0.061 \\\rowrule
-DOCA < 2 cm & 9.8×10\textsuperscript{5} → 5.9×10\textsuperscript{3} & 3.3×10\textsuperscript{5} → 2.0×10\textsuperscript{3} & 10 → 0.060 & 10 → 0.061 & 0.14 → 8.4×10\textsuperscript{-4} \\\rowrule
-vertex in the vessel & 5 969 → 35.8 & 1.2×10\textsuperscript{5} → 714 & 1.9 → 0.011 & 5.8 → 0.035 & 0.049 → 2.9×10\textsuperscript{-4} \\\rowrule
-IP < 2.5 m & 5 733 → 34.4 & 8.5×10\textsuperscript{4} → 508 & 1.6 → 0.0098 & 4.7 → 0.028 & 0.037 → 2.2×10\textsuperscript{-4} \\\rowrule
-\rowcolor{tint}\bfseries IP < 10 cm & \bfseries 393 → 2.36 & \bfseries 9.3×10\textsuperscript{3} → 56 & \bfseries 0.11 → 6.7×10\textsuperscript{-4} & \bfseries 0.57 → 0.0034 & \bfseries 0.003 → 1.8×10\textsuperscript{-5} \\\rowrule
-\end{tabularx}\par}
-\vspace{3pt}
-{\fontsize{6.0pt}{8.2pt}\selectfont
-\begin{itemize}
-  \item \textbf{μ × μ}: the shield sorts the muons by charge (89 \% of μ\textsuperscript{+} at x < 0, μ\textsuperscript{−} at x > 0); opposite-charge pairs converge back towards the shield: 97.7 \% of their vertices are upstream of the vessel
-  \item \textbf{MS7 × μ}: soft tracks (median 2.6 GeV) starting on axis at the shield exit; 59 \% of the DOCA < 2 cm vertices fall inside the vessel → 25 × μ × μ at IP < 10 cm
-  \item \textbf{Interaction × interaction} (MS7 × MS7): 82 / 0.24 at pair cuts / IP < 10 cm, 10 \% of μ × μ there: not negligible before tagging
-\end{itemize}}
-\slidenote{Single-track interactions only, scattered parent muon excluded. Late steps from 4×10\textsuperscript{8} random opposite-charge pairs per term (MS7 IP < 10 cm: 56 sampled, 62.5 exact). μ × μ: exact numbers of slide 18. Source: veto results\_rerun/combi\_single/cutflow.json (bin/combi\_cutflow.py).}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 40: MS7 KL: from production to SST1, and the comparison with data
@@ -214,6 +191,7 @@ Pythia 6 & 0.153 & 0.090 & 0.0058 \\\rowrule
 \slidenote{Fractions of each set's weight; numbers on the bars are raw simulated counts. π\textsuperscript{0} are stored as photon pairs. Neutral particles and neutrinos are shown but the straws see only charged tracks. Source: veto results\_rerun/kl\_distributions/numbers.json.}
 \end{btframe}
 
+
 % ---------------------------------------------------------------- slide 40d: Q2 and W of the parent interaction, PASS vs FAIL (20 Nov 2026)
 \begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} parent DIS}{MS7 K\textsubscript{L}: Q\textsuperscript{2} and W of the muon interaction that made it, PASS vs FAIL}
 {\centering \includegraphics[width=0.80\linewidth,height=100pt,keepaspectratio]{figs/s40d_kl_q2_vs_w.pdf}\par}
@@ -242,32 +220,71 @@ W < 3.5 / 3.5–5 / > 5 GeV & 0 / 1.6 / 98 \% & 0.6 / 4.3 / 95 \% & 89 / 5.4 / 5
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 40e: who sees the parent (19 Nov 2026)
-\begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} parent}{Selected MS7 K\textsubscript{L}: which detector sees the parent interaction (R3, own hits only)}
-{\centering \includegraphics[width=0.84\linewidth]{figs/s40e_categories.png}\par}
+\begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} parent}{Selected MS7 K\textsubscript{L}: which detector sees the parent interaction (R2, own hits only)}
+{\centering \includegraphics[width=0.84\linewidth]{figs/s40e_categories_nomsms.png}\par}
 \vspace{2.46pt}
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item \textbf{UBT V0 rule tags 70 / 74} selected K\textsubscript{L} (FAIL 98.7 \%); the 4 it misses have p\textsubscript{vis} > 20 GeV (p\textsubscript{max} gate) and are tagged by the SBT
-  \item SBT rules 28 / 74 (V0 line 18, zone 11, pointing 14); MS7 strip rule only \textbf{7 / 74}, although 59 / 74 leave a hit on a station: the 10 mrad strip cone is narrower than the ~20 mrad back-trace error
-  \item Every selected K\textsubscript{L} is tagged by the OR of the R3 rules (74 / 74); none is seen only by MS7
+  \item SBT rules 28 / 74 (V0 line 18, zone 11, pointing 14); 4 are seen by the SBT only, 46 by the UBT only
+  \item Every selected K\textsubscript{L} is tagged by the OR of the R2 rules (74 / 74; FAIL 99.7 \%)
 \end{itemize}}
-\slidenote{No random hits anywhere (own hits of the event only); SBT with the event's own scintillator deposits (R2 config). Left: rules fire; right: any own hit. PASS = 74 simulated events (1.44×10\textsuperscript{4} / 15 y), FAIL weighted. Source: veto results\_rerun/kl\_distributions/seen\_by/numbers.json.}
+\slidenote{No random hits anywhere (own hits of the event only); SBT with the event's own scintillator deposits (R2 config). Left: rules fire; right: any own hit. PASS = 74 simulated events (1.44×10\textsuperscript{4} / 15 y), FAIL weighted. Source: veto results\_rerun/kl\_distributions/seen\_by/numbers\_nomsms.json (plot\_seen\_by\_nomsms.py).}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 40f: z dependence in MS7 (19 Nov 2026)
 \begin{btframe}{7 · Back-up · MS7 K\textsubscript{L} production z}{Does it depend on where in MS7 the K\textsubscript{L} is made?}
-{\centering \includegraphics[width=0.90\linewidth]{figs/s40f_z_dependence.png}\par}
+{\centering \includegraphics[width=0.90\linewidth,height=125pt,keepaspectratio]{figs/s40f_z_dependence_nomsms.png}\par}
 \vspace{2.46pt}
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item \textbf{UBT}: any own hit 100 \% at every z; rule 88–100 \% (the misses are the p\textsubscript{vis} > 20 GeV events)
   \item \textbf{SBT}: more often seen for K\textsubscript{L} made at the end of the iron (FAIL 57 → 73 \%), probably because less iron is left to absorb the products (not yet checked)
-  \item \textbf{Strips}: flat ~20 \% (FAIL); interactions after the last layer (29.79 m) have no layer downstream to see their products
   \item 95 \% of the K\textsubscript{L} come from the muon vertex itself (the rest from the shower, within 7 mm of it)
 \end{itemize}}
 \slidenote{10 cm bins of the muon interaction z in the last 50 cm of MS7; PASS 8 / 12 / 11 / 25 / 18 events per bin (statistics-limited). Source: veto results\_rerun/kl\_distributions/seen\_by.}
 \end{btframe}
 
+% ---------------------------------------------------------------- slide 25: Slow MS7 KL escaped the 25 mrad cone: three fixes, A + C adopted
+\begin{btframe}{5 · Background tagging · V0 rule fixes}{Slow MS7 K\textsubscript{L} escaped the 25 mrad cone: three fixes, A + C adopted}
+\noindent \begin{minipage}[t]{\dimexpr(0.2500\linewidth-0.2500\dimexpr14.22pt\relax)}\vspace{0pt}\raggedright
+{\centering \fontsize{4.55pt}{6.15pt}\selectfont \textcolor{purple}{\textbf{25 mrad cone: misses (slow K\textsubscript{L})}}\par}
+\vspace{0.27pt}
+{\centering \includegraphics[width=1.00\linewidth,height=63.73pt,keepaspectratio]{figs/s24_sk1.pdf}\par}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{\dimexpr(0.2500\linewidth-0.2500\dimexpr14.22pt\relax)}\vspace{0pt}\raggedright
+{\centering \fontsize{4.55pt}{6.15pt}\selectfont \textcolor{purple}{\textbf{A: cone max(25 mrad, 0.25 GeV / p\textsubscript{vis})}}\par}
+\vspace{0.27pt}
+{\centering \includegraphics[width=1.00\linewidth,height=63.73pt,keepaspectratio]{figs/s24_sk2.pdf}\par}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{\dimexpr(0.2500\linewidth-0.2500\dimexpr14.22pt\relax)}\vspace{0pt}\raggedright
+{\centering \fontsize{4.55pt}{6.15pt}\selectfont \textcolor{purple}{\textbf{B: extra lines to the yoke legs}}\par}
+\vspace{0.27pt}
+{\centering \includegraphics[width=1.00\linewidth,height=63.73pt,keepaspectratio]{figs/s24_sk3.pdf}\par}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{\dimexpr(0.2500\linewidth-0.2500\dimexpr14.22pt\relax)}\vspace{0pt}\raggedright
+{\centering \fontsize{4.55pt}{6.15pt}\selectfont \textcolor{purple}{\textbf{C: window opened by the K\textsubscript{L} flight time}}\par}
+\vspace{0.27pt}
+{\centering \includegraphics[width=1.00\linewidth,height=63.73pt,keepaspectratio]{figs/s24_sk4.pdf}\par}
+\end{minipage}\par
+\vspace{2.46pt}
+{\fontsize{4.37pt}{5.68pt}\selectfont\setlength{\tabcolsep}{3.06pt}\renewcommand{\arraystretch}{1.42}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrrr}
+\textcolor{muted}{variant} & \textcolor{muted}{signal lost F / P} & \textcolor{muted}{MS7 μ tagged} & \textcolor{muted}{own hits only} & \textcolor{muted}{MS7 μ left / 15 y} \\\headrule
+25 mrad (before the fix) & 5.3 / 9.4 \% & 66 \% & 63 \% & 8.1×10\textsuperscript{3} \\\rowrule
+A: 1/p cone & 5.4 / 10.5 \% & 100 \% & 100 \% & 0.63 \\\rowrule
+B: yoke lines & 12.1 / 25.1 \% & 100 \% & 100 \% & 0.48 \\\rowrule
+C: time of flight & 4.9 / 7.6 \% & 68 \% & 67 \% & 7.8×10\textsuperscript{3} \\\rowrule
+\rowcolor{tint}\bfseries A + C (adopted) & \bfseries 5.0 / 8.4 \% & \bfseries 100 \% & \bfseries 100 \% & \bfseries 0.67 \\\rowrule
+B + C & 11.5 / 21.8 \% & 100 \% & 100 \% & 0.48 \\\rowrule
+\end{tabularx}\par}
+\slidenote{Source: results\_rerun/r3\_escapes/variants/v0study\_variants.json and v0study\_variants\_ownhits.json (bin/v0rule\_study.py, code 2e228bf); signal: results\_rerun/reco/r3var\_*.json (bin/run\_reco.py). Before the D19 energy loss and SBT ×4. Study made on R2 + the MS7 strips; with the V0 rule the strips add no selected K\textsubscript{L} that UBT + SBT miss.}
+\end{btframe}
+
+% 
 
 % ---------------------------------------------------------------- slide 42: the OR of the rules (19 Nov 2026)
 \begin{btframe}{7 · Back-up · OR of the rules}{All rules run on every candidate, in parallel: tagged = OR}
@@ -279,7 +296,7 @@ W < 3.5 / 3.5–5 / > 5 GeV & 0 / 1.6 / 98 \% & 0.6 / 4.3 / 95 \% & 89 / 5.4 / 5
     {\textbf{\textcolor{cern}{candidate}}\\2 tracks at SST1\\vertex in the vessel};
   \node[box,draw=cern] (t) at (135,32) {\textbf{\textcolor{cern}{Track rule}} -- each track separately\\line from SST1 back\\r = 5 cm + (0.5 + 6 GeV/p) mrad · d};
   \node[box,draw=purple] (v) at (135,0) {\textbf{\textcolor{purple}{V0 rule}} -- the pair as one neutral (p\textsubscript{vis} < 20 GeV)\\line from the vertex along p\textsubscript{vis}, early time window};
-  \node[box,draw=green] (s) at (135,-32) {\textbf{\textcolor{green}{SBT rules}} -- pointing, V0 line, zone\\(MSMS strips in R3: same idea, in MS7)};
+  \node[box,draw=green] (s) at (135,-32) {\textbf{\textcolor{green}{SBT rules}} -- pointing, V0 line, zone};
   \node[circle,draw=ink,line width=0.6pt,fill=white,inner sep=1.2pt,font=\fontsize{6pt}{7pt}\selectfont\bfseries] (or) at (250,0) {OR};
   \node[draw=red,fill=red!8,line width=0.5pt,rounded corners=1.5pt,align=center,inner sep=2.5pt,text width=52pt] (out) at (310,0)
     {\textbf{\textcolor{red}{tagged}}\\any rule found a hit};

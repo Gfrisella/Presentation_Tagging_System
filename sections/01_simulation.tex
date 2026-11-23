@@ -7,7 +7,7 @@
 \outlineitem{2}{Simulation}{transport, inelastic scattering, technologies, hits and digitisation, signal generation}{1.00}
 \outlineitem{3}{Selection}{track cuts, pair cuts and time coincidence}{0.35}
 \outlineitem{4}{Backgrounds before tagging}{μ and ν inelastic scattering, MS7 K\textsubscript{L}, combinatorial pairs}{0.35}
-\outlineitem{5}{Background tagging}{rules, V0 rule, SBT model, R1–R3, summary}{0.35}
+\outlineitem{5}{Background tagging}{rules, V0 rule, SBT model, R1, R2, summary}{0.35}
 \outlineitem{6}{Optimisation and conclusion}{genetic-algorithm search, the optimised designs Z2 and Z3}{0.35}
 \end{outlinelist}
 \end{btframe}
@@ -82,14 +82,14 @@
 % ---------------------------------------------------------------- slide 9: Detector technologies and the cost unit: the drachma
 \begin{btframe}{2 · Simulation · technologies}{Detector technologies and the cost unit: the drachma}
 {\fontsize{6.36pt}{8.66pt}\selectfont\setlength{\tabcolsep}{3.05pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrrrr}
-\textcolor{muted}{} & \textcolor{muted}{straw (UBT)} & \textcolor{muted}{tile} & \textcolor{muted}{tile2 (flames)} & \textcolor{muted}{LS + WOM (SBT)} & \textcolor{muted}{Si strips (MSMS)} \\\headrule
-layers & 6 (vertical) & 1 & 1 & LS cell 20 cm & 300 µm Si, 2 views \\\rowrule
-cell & 5 mm & 4 × 4 cm\textsuperscript{2} & 2 × 2 cm\textsuperscript{2} & 80 × ≤150 cm\textsuperscript{2} & 187.5 µm pitch \\\rowrule
-σ\textsubscript{t} / window & drift, ±25 ns & 120 ps, ±3σ & 90 ps, ±3σ & \textasciitilde{}1 ns, ±3 ns & ±1.5 ns \\\rowrule
-efficiency & 99.9 \% & 99.9 \% & 99.9 \% & 99.3 \% & 99 \% \\\rowrule
-X / X\textsubscript{0} & 0.12 \% & 2.4 \% & 2.4 \% & \textasciitilde{}40 \% & 0.3 \% \\\rowrule
-cost / m\textsuperscript{2} (drachmas) & 2.9 & 4.0 & 16.9 & \textasciitilde{}0.34 & ≈ 15 (per 30 × 30 cm\textsuperscript{2} station 1.3 – 1.9) \\\rowrule
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrrr}
+\textcolor{muted}{} & \textcolor{muted}{straw (UBT)} & \textcolor{muted}{tile} & \textcolor{muted}{tile2 (flames)} & \textcolor{muted}{LS + WOM (SBT)} \\\headrule
+layers & 6 (vertical) & 1 & 1 & LS cell 20 cm \\\rowrule
+cell & 5 mm & 4 × 4 cm\textsuperscript{2} & 2 × 2 cm\textsuperscript{2} & 80 × ≤150 cm\textsuperscript{2} \\\rowrule
+σ\textsubscript{t} / window & drift, ±25 ns & 120 ps, ±3σ & 90 ps, ±3σ & \textasciitilde{}1 ns, ±3 ns \\\rowrule
+efficiency & 99.9 \% & 99.9 \% & 99.9 \% & 99.3 \% \\\rowrule
+X / X\textsubscript{0} & 0.12 \% & 2.4 \% & 2.4 \% & \textasciitilde{}40 \% \\\rowrule
+cost / m\textsuperscript{2} (drachmas) & 2.9 & 4.0 & 16.9 & \textasciitilde{}0.34 \\\rowrule
 \end{tabularx}\par}
 
 \vspace{2.46pt}
@@ -99,7 +99,7 @@ cost / m\textsuperscript{2} (drachmas) & 2.9 & 4.0 & 16.9 & \textasciitilde{}0.3
     {\fontsize{6.15pt}{8.30pt}\selectfont
     \textcolor{cern}{\textbf{R2 = 333.5 drachmas = the budget
     \textcolor{muted}{{\fontsize{4.61pt}{5.99pt}\selectfont
-    (R1 99.7 · R3 378.7)}}}}\par}
+    (R1 99.7)}}}}\par}
     \vspace{2.46pt}
     {\centering
     \includegraphics[width=\linewidth,keepaspectratio]
@@ -145,7 +145,6 @@ cost / m\textsuperscript{2} (drachmas) & 2.9 & 4.0 & 16.9 & \textasciitilde{}0.3
 UBT straws & 6 layers, vertical, 5 mm & 50 ns drift: ±25 ns & no position along the 0.9 m section & 99.9 \% \\\rowrule
 UBT tiles & 4 × 4 cm\textsuperscript{2} (2 × 2 cm\textsuperscript{2} in the flames) & ±3σ (σ 120 / 90 ps) & cell centre & 99.9 \% \\\rowrule
 SBT cells & 854 LS cells, 20 cm, 30 MeV threshold & \textasciitilde{}1 ns, ±3 ns & cell + pointing along the wall & 99.3 \% \\\rowrule
-MSMS strips & 300 µm Si, 187.5 µm pitch, 30 × 30 cm\textsuperscript{2} & ±1.5 ns & strip crossing & 99 \% \\\rowrule
 \end{tabularx}\par}
 \vspace{2.46pt}
 \noindent \begin{minipage}[c]{0.5\linewidth}

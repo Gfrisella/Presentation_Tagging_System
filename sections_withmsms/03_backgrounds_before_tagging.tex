@@ -7,7 +7,7 @@
 \outlineitem{2}{Simulation}{transport, inelastic scattering, technologies, hits and digitisation, signal generation}{0.35}
 \outlineitem{3}{Selection}{track cuts, pair cuts and time coincidence}{0.35}
 \outlineitem{4}{Backgrounds before tagging}{μ and ν inelastic scattering, MS7 K\textsubscript{L}, combinatorial pairs}{1.00}
-\outlineitem{5}{Background tagging}{rules, V0 rule, SBT model, R1, R2, summary}{0.35}
+\outlineitem{5}{Background tagging}{rules, V0 rule, SBT model, R1–R3, summary}{0.35}
 \outlineitem{6}{Optimisation and conclusion}{genetic-algorithm search, the optimised designs Z2 and Z3}{0.35}
 \end{outlinelist}
 \end{btframe}
@@ -91,26 +91,30 @@ pair & time coincidence ±200 ps (× 4×10\textsuperscript{-10}) & 1.6×10\texts
 
 \end{btframe}
 
-% \begin{btframe}{4 · Backgrounds before tagging · combinatorial (2)}{Combinatorial pairs: every cut, and all the pair types}
+\begin{btframe}{4 · Backgrounds before tagging · combinatorial (2)}{Combinatorial pairs: every cut, and all the pair types}
     
-% \begin{minipage}[t]{0.5\linewidth}
-% {\centering \includegraphics[width=1.00\linewidth,height=34.60pt,keepaspectratio]{figs/s17_sk2.pdf}\par}
-% \vspace{0.27pt}
-% {\centering \fontsize{6.01pt}{6.76pt}\selectfont μ × interaction product\par}
-% \end{minipage}%
-% \hfill%
-% \begin{minipage}[t]{0.5\linewidth}
-% {\centering \includegraphics[width=1.00\linewidth,height=34.60pt,keepaspectratio]{figs/s17_sk3.pdf}\par}
-% \vspace{0.27pt}
-% {\centering \fontsize{5.01pt}{6.76pt}\selectfont μ × cavern-rock particle\par}
-% \end{minipage}
-% \vspace{2.46pt}
-% {\fontsize{5.06pt}{7.98pt}\selectfont\setlength{\tabcolsep}{2.14pt}\renewcommand{\arraystretch}{1.42}
-% \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrr}
-% \textcolor{muted}{pairs per 15 years, ±200 ps} & \textcolor{muted}{pair cuts (no IP)} & \textcolor{muted}{IP < 10 cm} & \textcolor{muted}{IP < 2.5 m} \\\headrule
-% μ × μ & 35.8 & 2.36 ± 0.52 & 34.4 ± 2.1 \\\rowrule
-% (MS7 V0 product) × μ & – & 62.7 & – \\\rowrule
-% (vessel μ-interaction track) × μ & 0.035 & 0.0037 & – \\\rowrule
-% \rowcolor{tint}\bfseries (cavern-rock track) × μ & \bfseries 634 & \bfseries 211 & \bfseries 626 \\\rowrule
-% \end{tabularx}\par}
-% \end{btframe}
+\begin{minipage}[t]{0.5\linewidth}
+{\centering \includegraphics[width=1.00\linewidth,height=34.60pt,keepaspectratio]{figs/s17_sk2.pdf}\par}
+\vspace{0.27pt}
+{\centering \fontsize{6.01pt}{6.76pt}\selectfont μ × interaction product\par}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.5\linewidth}
+{\centering \includegraphics[width=1.00\linewidth,height=34.60pt,keepaspectratio]{figs/s17_sk3.pdf}\par}
+\vspace{0.27pt}
+{\centering \fontsize{5.01pt}{6.76pt}\selectfont μ × cavern-rock particle\par}
+\end{minipage}
+\vspace{2.46pt}
+{\fontsize{5.06pt}{7.98pt}\selectfont\setlength{\tabcolsep}{2.14pt}\renewcommand{\arraystretch}{1.42}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrr}
+\textcolor{muted}{pairs per 15 years, ±200 ps, before tagging} & \textcolor{muted}{pair cuts (no IP)} & \textcolor{muted}{IP < 10 cm} & \textcolor{muted}{IP < 2.5 m} \\\headrule
+μ × μ & 35.8 & 2.36 ± 0.52 & 34.4 ± 2.1 \\\rowrule
+\rowcolor{tint}\bfseries (MS7 μ interaction, 1 track) × μ & \bfseries 709 ± 14 & \bfseries 62.5 ± 2.9 & \bfseries 700 ± 14 \\\rowrule
+(MS7 ν interaction, 1 track) × μ & 0.012 & 8.3×10\textsuperscript{-4} & 0.011 \\\rowrule
+(vessel μ interaction, 1 track) × μ & 0.034 & 0.0036 & 0.033 \\\rowrule
+(vessel ν interaction, 1 track) × μ & 2.7×10\textsuperscript{-4} & 2.2×10\textsuperscript{-5} & 2.7×10\textsuperscript{-4} \\\rowrule
+interaction × interaction (MS7 μ × MS7 μ) & 82 & 0.24 & 74 \\\rowrule
+(cavern-rock track) × μ \textcolor{muted}{(model under review)}\textsuperscript{†} & 634 & 211 & 626 \\\rowrule
+\end{tabularx}\par}
+\slidenote{Only interactions with exactly one good track at SST1 (≥ 2 tracks form their own vertex: pair cuts / tagging); the scattered parent muon is excluded (already in the muon flux, ≤ 3 \%). Time: × 2 × 200 ps / 1 s × 1.5×10\textsuperscript{7} spills. After R2 tagging every interaction term is ≈ 0 (MS7 × μ: 1.1×10\textsuperscript{-4}). Pair cut as μ × μ (no 5 cm vertex margin; with it MS7 × μ × 0.89 at IP < 10 cm). † With the 4-station + TD good track (23 Nov, 400k-muon subsample, preliminary): 213 / 84 / 208. Source: veto results\_rerun/combi\_single (combi\_single.py, cutflow.json); rock: results\_rerun/rock\_vertices.}
+\end{btframe}

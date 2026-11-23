@@ -7,13 +7,13 @@
 \outlineitem{2}{Simulation}{transport, inelastic scattering, technologies, hits and digitisation, signal generation}{0.35}
 \outlineitem{3}{Selection}{track cuts, pair cuts and time coincidence}{0.35}
 \outlineitem{4}{Backgrounds before tagging}{μ and ν inelastic scattering, MS7 K\textsubscript{L}, combinatorial pairs}{0.35}
-\outlineitem{5}{Background tagging}{rules, V0 rule, SBT model, R1–R3, summary}{1.00}
+\outlineitem{5}{Background tagging}{rules, V0 rule, SBT model, R1, R2, summary}{1.00}
 \outlineitem{6}{Optimisation and conclusion}{genetic-algorithm search, the optimised designs Z2 and Z3}{0.35}
 \end{outlinelist}
 \end{btframe}
 
-% ---------------------------------------------------------------- slide 20: The reference designs R1, R2, R3
-\begin{btframe}{5 · Background tagging · designs}{The reference designs R1, R2, R3}
+% ---------------------------------------------------------------- slide 20: The reference designs R1, R2
+\begin{btframe}{5 · Background tagging · designs}{The reference designs R1, R2}
 \noindent \begin{minipage}[c]{0.2\linewidth}
 {\fontsize{7.37pt}{9.60pt}\selectfont \textcolor{cern}{\textbf{R1}}\par}
 {\fontsize{6.37pt}{8.60pt}\selectfont 99.7 drachmas\par}
@@ -31,18 +31,10 @@
 {\centering {\renewcommand{\skubtlabel}{UBT: straws 1 × 2.7 m\textsuperscript{2} (4.8 dr) + tiles 4 × 4 m\textsuperscript{2}, 2 × 2 cm\textsuperscript{2} flames (94.8 dr)}\designsketch[67.35pt]{0,...,9}{0}{SBT: 854 LS cells, 20 cm, 10 rings (233.8 dr)}}\par}
 
 \end{minipage}\par
-\noindent \begin{minipage}[c]{0.2\linewidth}
-{\fontsize{7.37pt}{9.60pt}\selectfont \textcolor{cern}{\textbf{R3}}\par}
-{\fontsize{6.37pt}{8.60pt}\selectfont 378.7 drachmas\newline{}\textcolor{purple}{+ V0 rule}\par}
-\end{minipage}%
-\hfill%
-\begin{minipage}[c]{0.8\linewidth}
-{\centering {\renewcommand{\skubtlabel}{UBT: straws 1 × 2.7 m\textsuperscript{2} (4.8 dr) + tiles 4 × 4 m\textsuperscript{2}, 2 × 2 cm\textsuperscript{2} flames (94.8 dr)}\renewcommand{\skmsmslabel}{MSMS: 24 Si stations\\30 × 30 cm\textsuperscript{2} (45.2 dr)}\designsketch[67.35pt]{0,...,9}{1}{SBT: 854 LS cells, 20 cm, 10 rings (233.8 dr)}}\par}
-\end{minipage}\par
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 21: How a candidate is tagged: tracks, neutrals, MS7
-\begin{btframe}{5 · Background tagging · tagging chain}{How a candidate is tagged: tracks, neutrals, MS7}
+\begin{btframe}{5 · Background tagging · tagging chain}{How a candidate is tagged: tracks and neutrals}
 {\fontsize{5.23pt}{7.07pt}\selectfont \textbf{Tracks: does a measured track come from upstream?}\par}
 \vspace{2.46pt}
 \begin{flowrow}{\dimexpr(\linewidth-3\dimexpr6.37pt\relax)/4\relax}{6.37pt}%
@@ -55,7 +47,7 @@
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{hit?}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{yes → tagged (+ bounce search from the cavern wall)}\par}}%
 \end{flowrow}
 \vspace{2.46pt}
-{\fontsize{5.23pt}{7.07pt}\selectfont \textcolor{purple}{\textbf{Neutrals (V0 rule, R2 and R3): was the candidate made upstream?}}\par}
+{\fontsize{5.23pt}{7.07pt}\selectfont \textcolor{purple}{\textbf{Neutrals (V0 rule, R2): was the candidate made upstream?}}\par}
 \vspace{2.46pt}
 \begin{flowrow}{\dimexpr(\linewidth-3\dimexpr6.37pt\relax)/4\relax}{6.37pt}%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{purple}{candidate}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{p\textsubscript{vis} = p\textsubscript{1} + p\textsubscript{2} < 20 GeV}\par}}%
@@ -66,23 +58,12 @@
 \flowarrow%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{purple}{any hit?}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{yes → tagged: the parent muon or the other products}\par}}%
 \end{flowrow}
-\vspace{2.46pt}
-{\fontsize{5.23pt}{7.07pt}\selectfont \textcolor{red}{\textbf{MS7 (MSMS, R3): did the interaction happen in the last iron?}}\par}
-\vspace{2.46pt}
-\begin{flowrow}{\dimexpr(\linewidth-3\dimexpr6.37pt\relax)/4\relax}{6.37pt}%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{red}{candidate}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{traced back as a neutral}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{red}{strip layers}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{29.39 / 29.59 / 29.79 m, 24 stations}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{red}{disc}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{2 cm + 10 mrad·Δz, ±1.5 ns}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{red}{own products?}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{yes → tagged}\par}}%
-\end{flowrow}
+
 \slidenote{Source: veto lib/veto/reco.py v0\_tag (16–17 Nov 2026); numbers results\_rerun/reco/r123\_study\_v0statk\_1622cf7.json (bin/v0rule\_study.py, V0-enriched MS7 samples, full selection).}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 22: How a candidate is tagged: tracks
-\begin{btframe}{5 · Background tagging · tagging chain 1/3}{How a candidate is tagged: tracks}
+\begin{btframe}{5 · Background tagging · tagging chain 1/2}{How a candidate is tagged: tracks}
 \noindent \begin{minipage}[c]{38.69pt}\raggedright
 {\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{cern}{\textbf{Tracks}}\par}
 \end{minipage}%
@@ -100,7 +81,7 @@
 \end{minipage}\par
 \vspace{2.46pt}
 \fadeblock{0.28}{\noindent \begin{minipage}[c]{38.69pt}\raggedright
-{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{purple}{\textbf{Neutrals (V0 rule, R2, R3)}}\par}
+{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{purple}{\textbf{Neutrals (V0 rule, R2)}}\par}
 \end{minipage}%
 \hfill%
 \begin{minipage}[c]{\dimexpr(1.0000\linewidth-1.0000\dimexpr42.90pt\relax)}\raggedright
@@ -112,22 +93,6 @@
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{disc + early window}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{5 cm + max(25, 250/p\textsubscript{vis}) mrad·Δz}\par}}%
 \flowarrow%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{any hit?}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{yes → tagged}\par}}%
-\end{flowrow}
-\end{minipage}\par
-}\vspace{2.46pt}
-\fadeblock{0.28}{\noindent \begin{minipage}[c]{38.69pt}\raggedright
-{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{red}{\textbf{MS7 (MSMS, R3)}}\par}
-\end{minipage}%
-\hfill%
-\begin{minipage}[c]{\dimexpr(1.0000\linewidth-1.0000\dimexpr42.90pt\relax)}\raggedright
-\begin{flowrow}{\dimexpr(\linewidth-3\dimexpr5.46pt\relax)/4\relax}{5.46pt}%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{red}{candidate}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{traced back as a neutral}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{red}{strip layers}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{29.39 / 29.59 / 29.79 m}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{red}{disc}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{2 cm + 10 mrad·Δz, ±1.5 ns}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{red}{own products?}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{yes → tagged}\par}}%
 \end{flowrow}
 \end{minipage}\par
 }\vspace{2.46pt}
@@ -144,7 +109,7 @@
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 23: How a candidate is tagged: neutrals (V0 rule)
-\begin{btframe}{5 · Background tagging · tagging chain 2/3}{How a candidate is tagged: neutrals (V0 rule)}
+\begin{btframe}{5 · Background tagging · tagging chain 2/2}{How a candidate is tagged: neutrals (V0 rule)}
 \fadeblock{0.28}{\noindent \begin{minipage}[c]{38.69pt}\raggedright
 {\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{cern}{\textbf{Tracks}}\par}
 \end{minipage}%
@@ -162,7 +127,7 @@
 \end{minipage}\par
 }\vspace{2.46pt}
 \noindent \begin{minipage}[c]{38.69pt}\raggedright
-{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{purple}{\textbf{Neutrals (V0 rule, R2, R3)}}\par}
+{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{purple}{\textbf{Neutrals (V0 rule, R2)}}\par}
 \end{minipage}%
 \hfill%
 \begin{minipage}[c]{\dimexpr(1.0000\linewidth-1.0000\dimexpr42.90pt\relax)}\raggedright
@@ -177,22 +142,6 @@
 \end{flowrow}
 \end{minipage}\par
 \vspace{2.46pt}
-\fadeblock{0.28}{\noindent \begin{minipage}[c]{38.69pt}\raggedright
-{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{red}{\textbf{MS7 (MSMS, R3)}}\par}
-\end{minipage}%
-\hfill%
-\begin{minipage}[c]{\dimexpr(1.0000\linewidth-1.0000\dimexpr42.90pt\relax)}\raggedright
-\begin{flowrow}{\dimexpr(\linewidth-3\dimexpr5.46pt\relax)/4\relax}{5.46pt}%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{red}{candidate}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{traced back as a neutral}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{red}{strip layers}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{29.39 / 29.59 / 29.79 m}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{red}{disc}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{2 cm + 10 mrad·Δz, ±1.5 ns}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{red}{own products?}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{yes → tagged}\par}}%
-\end{flowrow}
-\end{minipage}\par
-}\vspace{2.46pt}
 \noindent \begin{minipage}[c]{0.55\linewidth}
 {\centering \includegraphics[width=1.00\linewidth,height=75.52pt,keepaspectratio]{figs/s22_sk1.pdf}\par}
 \end{minipage}%
@@ -213,79 +162,8 @@
 \end{btframe}
 
 
-
-% ---------------------------------------------------------------- slide 24: How a candidate is tagged: MS7 strips
-\begin{btframe}{5 · Background tagging · tagging chain 3/3}{How a candidate is tagged: MS7 strips}
-\fadeblock{0.28}{\noindent \begin{minipage}[c]{38.69pt}\raggedright
-{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{cern}{\textbf{Tracks}}\par}
-\end{minipage}%
-\hfill%
-\begin{minipage}[c]{\dimexpr(1.0000\linewidth-1.0000\dimexpr42.90pt\relax)}\raggedright
-\begin{flowrow}{\dimexpr(\linewidth-3\dimexpr5.46pt\relax)/4\relax}{5.46pt}%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{cern}{candidate}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{2 tracks, vertex in the vessel}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{cern}{each track back}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{straight line from SST1 upstream}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{cern}{window}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{r = 5 cm + (0.5 + 6 GeV/p) mrad·Δz, ±3σ}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{cern}{hit?}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{yes → tagged}\par}}%
-\end{flowrow}
-\end{minipage}\par
-}\vspace{2.46pt}
-\fadeblock{0.28}{\noindent \begin{minipage}[c]{38.69pt}\raggedright
-{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{purple}{\textbf{Neutrals (V0 rule, R2, R3)}}\par}
-\end{minipage}%
-\hfill%
-\begin{minipage}[c]{\dimexpr(1.0000\linewidth-1.0000\dimexpr42.90pt\relax)}\raggedright
-\begin{flowrow}{\dimexpr(\linewidth-3\dimexpr5.46pt\relax)/4\relax}{5.46pt}%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{candidate}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{p\textsubscript{vis} < 20 GeV}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{trace back as a neutral}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{vertex → UBT along p\textsubscript{vis}}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{disc + early window}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{5 cm + max(25, 250/p\textsubscript{vis}) mrad·Δz}\par}}%
-\flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{any hit?}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{yes → tagged}\par}}%
-\end{flowrow}
-\end{minipage}\par
-}\vspace{2.46pt}
-\noindent \begin{minipage}[c]{38.69pt}\raggedright
-{\fontsize{4.32pt}{5.84pt}\selectfont \textcolor{red}{\textbf{MS7 (MSMS, R3)}}\par}
-\end{minipage}%
-\hfill%
-\begin{minipage}[c]{\dimexpr(1.0000\linewidth-1.0000\dimexpr42.90pt\relax)}\raggedright
-\begin{flowrow}{\dimexpr(\linewidth-3\dimexpr5.46pt\relax)/4\relax}{5.46pt}%
-\flowstep{red}{red}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{white}{candidate}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{white}{traced back as a neutral}\par}}%
-\flowarrow%
-\flowstep{red}{red}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{white}{strip layers}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{white}{29.39 / 29.59 / 29.79 m}\par}}%
-\flowarrow%
-\flowstep{red}{red}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{white}{disc}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{white}{2 cm + 10 mrad·Δz, ±1.5 ns}\par}}%
-\flowarrow%
-\flowstep{red}{red}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{white}{own products?}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{white}{yes → tagged}\par}}%
-\end{flowrow}
-\end{minipage}\par
-\vspace{2.46pt}
-\noindent \begin{minipage}[c]{0.55\textwidth}
-{\centering \includegraphics[width=1.00\linewidth,height=79.18pt,keepaspectratio]{figs/s23_sk1.pdf}\par}
-\end{minipage}%
-\hfill%
-\begin{minipage}[c]{0.45\textwidth}
-\begin{mathbox}[red]{5.23pt}
-\textbf{strip disc}\newline{}r = 2 cm + 10 mrad · Δz\newline{}|Δt| < 1.5 ns\newline{}\textcolor{muted}{Δz: from the vertex back to the strip layer}
-\end{mathbox}
-{\fontsize{6.55pt}{7.37pt}\selectfont
-\begin{itemize}
-  \item K\textsubscript{L} made in the last iron (MS7) by the muon: the parent muon and other products cross the strips
-  \item Same back-trace, but the strips are close and precise:\newline{} vertex at 50 m → MS7 (29.6 m), Δz ≈ 20 m\newline{}r = 2 cm + 10 mrad × 20 m ≈ \textbf{22 cm}, ±1.5 ns
-  \item Own products in the disc → \textbf{tagged}.
-  \item Applied to \textbf{every} candidate: the origin is not assumed. A candidate not made in MS7 has no strip hits on its line, except by chance (that is the random-hit cost)
-\end{itemize}}
-\end{minipage}\par
-
-\end{btframe}
-
-
 % ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
-\begin{btframe}{5 · Background tagging · V0 rule aperture}{Why the V0-rule disc is r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) · Δz}
+\begin{btframe}{5 · Background tagging  · V0 rule aperture}{Why the V0-rule disc is r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) · Δz}
 \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
 \includegraphics[width=0.95\linewidth]{figs/s40d_angle_vs_pvis.png}
 \end{minipage}\hfill
@@ -296,11 +174,12 @@
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item The pair momentum p\textsubscript{vis} misses the K\textsubscript{L} direction because of the lost ν / π\textsuperscript{0}: selected median 18.5 mrad, 90 \% at 37 mrad; the error falls as 1/p
-  \item Upper edge is kinematic: the lost particle carries at most its rest-frame momentum (K\textsubscript{e3} 0.228 GeV) → \textbf{0.25 GeV / p\textsubscript{vis}}; \textbf{25 mrad} = 68 \% of the back-trace errors (strip study); \textbf{5 cm} = the track-search radius
+  \item Upper edge is kinematic: the lost particle carries at most its rest-frame momentum (K\textsubscript{e3} 0.228 GeV) → \textbf{0.25 GeV / p\textsubscript{vis}}; \textbf{25 mrad} = 68 \% of the back-trace errors (back-trace study); \textbf{5 cm} = the track-search radius
   \item With the 1/p term the true K\textsubscript{L} line is inside the disc for 100 \% of the candidates (flat 25 mrad: 68 \%); only loss: the 4 selected K\textsubscript{L} above p\textsubscript{max} = 20 GeV
 \end{itemize}}
 \slidenote{Right: miss distance of the back-traced line from the true K\textsubscript{L} line at the tile plane (31.13 m), over the disc radius. FAIL uses the truth decay point and the sum of the charged daughters. Source: veto results\_rerun/kl\_distributions/seen\_by (seen\_by.py); docs/r3\_shield\_strips\_v0rule.md:28, lib/veto/reco.py:556-563; the kinematic argument is new (not in the repo docs).}
 \end{btframe}
+
 
 
 % ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
@@ -380,59 +259,26 @@ single SST1 μ tagged, all / bounced & 95 / 87 \% & 95 / 84 \% \\\rowrule
 \slidenote{Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Interaction-product pairs: full chain, own hits, interactions with one charged track at SST1 (23 Nov, veto results\_rerun/sst1one\_23nov; MS7 part, the vessel-μ part is < 10\textsuperscript{-4}; 0 MC left: 90 \% CL of the run); SBT ν: own hits, 0 of 311 selected MC left; rock: model under review; partial IP cut and ν in MS7: full chain (20 Nov). V0 rule only for p\textsubscript{vis} < 20 GeV. “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
 \end{btframe}
 
-% ---------------------------------------------------------------- slide 29: R3: R2 + Muon Shield Monitoring System — 378.7 drachmas
-\begin{btframe}{5 · Background tagging · R3}{R3: R2 + Muon Shield Monitoring System — 378.7 drachmas}
-{\centering \designsketch[74.52pt]{0,...,9}{1}{SBT: 10 rings, 854 liquid-scintillator cells on the four walls}\par}
-\vspace{2.46pt}
-\noindent \begin{minipage}[c]{0.5\linewidth}
+% ---------------------------------------------------------------- slide 30: R1, R2: background left in 15 years and signal lost
+\begin{btframe}{5 · Background tagging · summary}{R1, R2: background left in 15 years and signal lost}
 {\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabular}{lrr}
-\textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{without V0 rule} & \textcolor{muted}{with V0 rule} \\\headrule
-signal lost, full / partial IP cut & 5.18 / 6.11 \% & 6.83 / 10.16 \% \\\rowrule
-μμ pairs & < 0.052 (90 \% CL) & < 0.052 (90 \% CL) \\\rowrule
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrr}
+\textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{R1} & \textcolor{muted}{R2} \\\headrule
+μμ pairs & < 0.26 & < 0.052 \\\rowrule
 rock × μ pairs & \textcolor{muted}{model under review} & \textcolor{muted}{model under review} \\\rowrule
-interaction product × μ pairs & < 1.3×10\textsuperscript{-3} (90 \% CL) & < 1.1×10\textsuperscript{-4} (90 \% CL) \\\rowrule
-μ in the vessel & 1.3 ± 1.3 (1 ev.) & 1.3 ± 1.3 (1 ev.) \\\rowrule
-ν in the vessel & 1.08 ± 0.10 & 1.07 ± 0.10 \\\rowrule
-SBT material μ & 121 ± 23 & 2.95 ± 2.9 (1 heavy ev.) \\\rowrule
-\rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries (1.34 ± 0.26)×10\textsuperscript{4} & \bfseries 0.48 ± 0.34 \\\rowrule
-ν in MS7 / SBT material ν & 1.73 / < 6×10\textsuperscript{-3} (90 \% CL) & 0.70 / < 6×10\textsuperscript{-3} (90 \% CL) \\\rowrule
-single SST1 μ tagged, all / bounced & 95 / 87 \% & 94 / 87 \% \\\rowrule
-\end{tabular}\par}
-\end{minipage}%
-\hfill%
-\begin{minipage}[c]{0.5\linewidth}
-{\fontsize{6.15pt}{8.60pt}\selectfont
-\begin{itemize}
-  \item \textbf{Why MSMS:} the MS7 K\textsubscript{L} are the largest background and neutral; the only handle is the interaction itself, inside the last iron: 3 × 8 strip stations (30 × 30 cm\textsuperscript{2}) on the return-yoke legs, 82 \% of the V0 interaction points
-  \item On top of R2 (with the V0 rule) the strips change nothing at full selection; partial selection MS7 4.7×10\textsuperscript{4} → 3.6×10\textsuperscript{4}
-  \item +45 drachmas over the budget
-\end{itemize}}
-\end{minipage}\par
-\slidenote{Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Interaction-product pairs: full chain, own hits, interactions with one charged track at SST1 (23 Nov, veto results\_rerun/sst1one\_23nov; MS7 part, the vessel-μ part is < 10\textsuperscript{-4}; 0 MC left: 90 \% CL of the run); SBT ν: own hits, 0 of 311 selected MC left; rock: model under review; partial IP cut and ν in MS7: full chain (20 Nov). V0 rule only for p\textsubscript{vis} < 20 GeV. “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
-\end{btframe}
-
-% ---------------------------------------------------------------- slide 30: R1, R2, R3: background left in 15 years and signal lost
-\begin{btframe}{5 · Background tagging · summary}{R1, R2, R3: background left in 15 years and signal lost}
-{\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
-\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrr}
-\textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{R1} & \textcolor{muted}{R2} & \textcolor{muted}{R3} \\\headrule
-μμ pairs & < 0.26 & < 0.052 & < 0.052 \\\rowrule
-rock × μ pairs & \textcolor{muted}{model under review} & \textcolor{muted}{model under review} & \textcolor{muted}{model under review} \\\rowrule
-interaction product × μ pairs & 0.0030 ± 0.0006 & < 1.1×10\textsuperscript{-4} & < 1.1×10\textsuperscript{-4} \\\rowrule
-μ in the vessel (helium, walls) & 70 & 1.3 (1 ev.) & 1.3 (1 ev.) \\\rowrule
-SBT material, K\textsubscript{L} / other & – & < 13 / < 940 & < 13 / < 940 \\\rowrule
-MS7 μ (V0, K\textsuperscript{±}) & 1.70×10\textsuperscript{4} & 0.67 ± 0.32 & 0.7 ± 0.3 \\\rowrule
-ν in the vessel & 3.5 & 1.09 & 1.09 \\\rowrule
-ν in MS7 / SBT material & 2.6 / – & 0.70 / 0.05 & 0.70 / 0.05 \\\rowrule
-\rowcolor{tint}\bfseries signal lost, full / partial IP cut & \bfseries 2.45 / 2.24 \% & \bfseries 6.74 / 9.71 \% & \bfseries 6.83 / 10.16 \% \\\rowrule
-\rowcolor{tint}\bfseries signal lost at UBT rate ×2 & \bfseries 3.98 / 3.83 \% & \bfseries 9.33 / 14.14 \% & \bfseries 9.17 / 14.88 \% \\\rowrule
+interaction product × μ pairs & 0.0030 ± 0.0006 & < 1.1×10\textsuperscript{-4} \\\rowrule
+μ in the vessel (helium, walls) & 70 & 1.3 (1 ev.) \\\rowrule
+SBT material, K\textsubscript{L} / other & – & < 13 / < 940 \\\rowrule
+MS7 μ (V0, K\textsuperscript{±}) & 1.70×10\textsuperscript{4} & 0.67 ± 0.32 \\\rowrule
+ν in the vessel & 3.5 & 1.09 \\\rowrule
+ν in MS7 / SBT material & 2.6 / – & 0.70 / 0.05 \\\rowrule
+\rowcolor{tint}\bfseries signal lost, full / partial IP cut & \bfseries 2.45 / 2.24 \% & \bfseries 6.74 / 9.71 \% \\\rowrule
+\rowcolor{tint}\bfseries signal lost at UBT rate ×2 & \bfseries 3.98 / 3.83 \% & \bfseries 9.33 / 14.14 \% \\\rowrule
 \end{tabularx}\par}
 \vspace{2.46pt}
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item “<”: no simulated event left, 90 \% CL upper limit 2.30 Σw\textsuperscript{2}/Σw
-  \item With the V0 rule, R2 leaves the same background as R3: the MSMS strips only help the partial selection
   \item Signal is lost only to random hits in the search windows: the V0 disc is the most sensitive (+2.6 / +4.4 points at twice the UBT rate)
 \end{itemize}}
 \end{btframe}
