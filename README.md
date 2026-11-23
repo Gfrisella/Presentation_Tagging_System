@@ -95,3 +95,8 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 20 Nov evening: rock x mu rows -> "model under review" in every column (R1-R3, Z2/Z3, summary; both decks): the rock library
   gives ~28x more concrete-made tracks at SST1 than FairShip (veto docs/investigations_2026-11-20/cavern_rock). The other n.e.
   cells stay until the own-hits rerun (Slurm 2164033); then all R / Z tables are rebuilt from it.
+- 23 Nov 2026: n.e. cells filled where results exist: SBT-material ν in R2 / R3 (both columns) and Z2 / Z3 = < 6×10⁻³ (90 % CL)
+  (own-hits reruns: 0 of 311 selected MC left; veto results_rerun/ownhits_20nov, full_chain_extra/sbt_nu_*_nov0_full);
+  the old R2 / R3 0.05 replaced. Z2 / Z3 interaction product × μ 0.014 ± 0.002 / 0.010 ± 0.001 (ownhits_20nov dis_comb, old
+  single-good-track definition). Pending (Slurm 2203236, veto results_rerun/sst1one_23nov): every interaction × μ number
+  (slide 19, R1-R3 / Z2-Z3 rows) redone with ONE charged track at SST1 per interaction; 3 R-table cells still n.e. until then.
