@@ -116,3 +116,8 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   K_L-decay) and cavern; TD hit row labelled as FairShip's own G4 hit. The previous "ours" MS7 values were ×0.8 too low
   (generators_natural.md is already per 4e13). Source: comparison_noSBT/results/ms7_good_tracks.json.
 - 23 Nov 2026 (15 h): R2 / R3 product × μ without V0 rule from their own runs: < 1.2e-3 / < 1.3e-3 (90 % CL; vessel μ part ~1e-7).
+- 23 Nov 2026 (evening): pulled the Overleaf removals (V0-rule-fixes slide in 06, two SBT-firing slides in 07). New back-up
+  "Z2 SBT rings" (sections/10_backup_z2_rings.tex, figs/s46_z2_design_top.pdf from veto results_rerun/sbt_ls_stat/
+  plot_z2_design.py): why the GA keeps ring 2 and drops 0, 1, 4 (ring 0: one heavy SBT-LS MC event; x11 LS statistics
+  running, Slurm 2205690). Back-up divider rewritten as the list of all back-up chapters in page order (8 in main, 7 in
+  nomsms). main 63 pages, main_nomsms 60.
