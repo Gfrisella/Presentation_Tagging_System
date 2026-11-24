@@ -164,3 +164,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 24 Nov 2026: 'Forced inelastic interactions' moved from the back-up to slide 9 (after the seven steps).
 - 24 Nov 2026: slide 21 (combinatorial 2) x-z top view of the IP < 10 cm pair vertices, MS7 interaction x mu and cavern rock x mu (figs/s20_pairs_xz_doca1.pdf, veto results_rerun/combi_vertices); table spacing tightened.
 - 24 Nov 2026: new back-up page 'Where the combinatorial vertices are' (x-z maps, figs/s20_pairs_xz_doca1.pdf) after the cavern-rock vertices; page 21 example-pair figure to follow.
+- 24 Nov 2026: page 21 one example pair per panel (MS7 interaction point -> product, rock track) with the fake vertex (figs/s20_pairs_tracks_doca1.pdf, results_rerun/combi_vertices/plot_tracks.py).
