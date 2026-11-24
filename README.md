@@ -152,3 +152,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   17 (ν), 18 (μμ cut flow: good 6.3e3, DOCA < 1 cm, 15 y 0.73 / 13.9), 19 restored "combinatorial (2)" (combi_single
   --sst1-one noscat, rock_comb 110 / 42 / 108), R1 / R2 / summary / Z1 tables + bullets, conclusion. SBT-material ν after
   tagging not re-run: "< 6e-3 (20 Nov)". Z1 MS7 K_L 160 ± 150 (one heavy event, kinematic V0 rule without TOF: under check).
+- 24 Nov 2026: SBT-material ν after tagging re-run at 1 cm (own hits): 0 of 255 MC left -> < 7e-3 (R2, summary, Z1); slide 11: UBT straws 'no y position along the 0.9 m section'.
