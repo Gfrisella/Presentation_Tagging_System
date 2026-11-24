@@ -185,18 +185,25 @@ SBT cells & 854 LS cells, 20 cm, 30 MeV threshold & \textasciitilde{}1 ns, ±3 n
 \end{minipage}%
 \hfill%
 \begin{minipage}[c]{0.5\linewidth}
-{\fontsize{6.02pt}{8.43pt}\selectfont
-\begin{itemize}
-  \item \textbf{Own hits:} each simulated particle is crossed with every plane; a hit if the cell fires (efficiency, threshold, energy deposit in the LS)
-  \item \textbf{Random hits:} all the other muons of the spill, Poisson from full-statistics rate maps, 
-  \begin{equation*}
-      \langle N_\text{acc}\rangle  = R_\text{plane} · 2W / 1 s
-  \end{equation*}
-  \item \textbf{EM debris} of the shield end (e / γ) added to the UBT rate maps
-  \item \textbf{Scattering} in the vessel walls and the SBT shell, mean \textbf{energy loss} in the shell (soft muons stop)
-  \item A track is \textbf{tagged} by a hit in its space–time window on any plane upstream of its vertex
-  \item Tile plane: up to 2.8 MHz per channel from muons in the flames, ≤ 53 kHz from EM debris; mean random hits per tile in ±0.36 ns: 2×10\textsuperscript{-3} (μ), 4×10\textsuperscript{-5} (EM)
-\end{itemize}}
+{\centering\begin{tikzpicture}[x=1pt,y=1pt,font=\fontsize{4.6pt}{5.6pt}\selectfont]
+\foreach \yy in {0,12,...,96} {\draw[draw=rule,fill=tint] (10,\yy) rectangle (20,\yy+12);}
+\node[text=muted,anchor=south] at (15,109) {plane (cells)};
+\fill[cern,opacity=0.18] (10,40) rectangle (20,72);
+\draw[cern,line width=0.5pt] (8.5,40) -- (8.5,72);
+\node[text=cern,anchor=east,align=right] at (8,56) {window r(p)\\and ±W in time};
+\draw[line width=0.8pt,draw=ink] (200,82) -- (120,66) -- (15,52);
+\draw[densely dashed,line width=0.6pt,draw=cern] (200,82) -- (15,59);
+\node[text=ink,anchor=south east] at (200,84) {track from SST1};
+\node[text=cern,anchor=north east] at (200,74) {back-traced line};
+\node[text=muted,anchor=south] at (122,67) {scattering};
+\node[star,star points=6,fill=orange,inner sep=1.3pt] at (15,52) {};
+\node[text=orange,anchor=west] at (60,40) {own hit: cell fires (efficiency, threshold)};
+\draw[orange,line width=0.4pt] (17,51) -- (58,41);
+\fill[grey] (15,66) circle (1.8pt); \fill[grey] (15,20) circle (1.8pt); \fill[grey] (15,90) circle (1.8pt);
+\node[text=muted,anchor=west,align=left] at (60,20) {random hits: other muons + EM debris\\Poisson, $\langle N \rangle = R_\mathrm{plane} \cdot 2W$};
+\draw[grey,line width=0.4pt] (17,21) -- (58,21);
+\node[draw=cern,fill=white,rounded corners=1.5pt,align=center,text=ink,inner sep=2pt] at (130,0) {\textbf{tagged}: ≥ 1 hit (own or random) in the window\\on any plane upstream of the vertex};
+\end{tikzpicture}\par}
 \end{minipage}\par
 \slidenote{$N_\text{acc}$ is the mean number of accidental hits. The actual number is drawn from a Poisson distribution with that mean, independently for each event. $R_\text{plane}$ the total rate of hits on the whole plane, The maps are built from the full muon sample, EM debris included, and the SBT uses ×4 itssimulated rate.  - 2W: the full width of the time window the plane is read in. W is the half-width; for    tiles the window is ±1.5 ns, so 2W = 3 ns.}
 \end{btframe}

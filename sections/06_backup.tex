@@ -7,7 +7,7 @@
 \outlineitem{2}{Cavern-rock × μ pairs}{which particles make the pairs, where the vertices are (4 stations + TD)}{1.00}
 \outlineitem{3}{MS7 K\textsubscript{L} production}{from production to SST1, Q\textsuperscript{2} and W, Geant4 and Pythia against the data}{1.00}
 \outlineitem{4}{MS7 K\textsubscript{L} in the vessel}{momentum and species, the parent interaction, which detector sees it, z in MS7}{1.00}
-\outlineitem{5}{Tagging rules}{V0-rule history (the 25 mrad escapes), all rules on every candidate: tagged = OR}{1.00}
+\outlineitem{5}{Tagging rules}{V0-rule aperture (kinematic limit), search windows, V0-rule history, all rules on every candidate: tagged = OR}{1.00}
 \end{outlinelist}
 \end{btframe}
 
@@ -107,45 +107,45 @@ cross the vessel region, miss SST1 & 2.49×10\textsuperscript{4} \\\rowrule
 \end{btframe}
 
 % ---------------------------------------------------------------- 23 Nov 2026: how the cavern-rock x mu pairs form (4-station + TD good track, preliminary)
-\begin{btframe}{7 · Back-up · cavern-rock × μ pairs}{Cavern-rock × μ pairs: where the vertex is and which particles (4 stations + TD, preliminary)}
+\begin{btframe}{7 · Back-up · cavern-rock × μ pairs}{Cavern-rock × μ pairs: where the vertex is and which particles (4 stations + TD, DOCA < 1 cm)}
 \noindent \begin{minipage}[t]{\dimexpr(0.50\linewidth-0.50\dimexpr9.67pt\relax)}\vspace{0pt}\centering
-\includegraphics[width=\linewidth,height=165pt,keepaspectratio]{figs/s47_rock_mu_pairs.pdf}\par
+\includegraphics[width=\linewidth,height=165pt,keepaspectratio]{figs/s47_rock_mu_pairs_doca1.png}\par
 \end{minipage}%
 \hfill%
 \begin{minipage}[t]{\dimexpr(0.50\linewidth-0.50\dimexpr9.67pt\relax)}\vspace{0pt}\raggedright
 \begin{itemize}
   \item \textbf{Rock leg:} soft negative hadron (median 1.8 GeV) from the −x cavern wall at z ≈ 59–69 m, entering the vessel through the −x wall
-  \item \textbf{Muon leg:} hard μ\textsuperscript{+} (median 218 GeV) along the −x wall; alone it misses the target by +18 cm
-  \item \textbf{Vertex:} large opening angle (219 mrad) → closest approach just inside the −x wall, z ≈ 77–81 m; the rock leg tilts the pair onto the target (+3 cm)
+  \item \textbf{Muon leg:} hard μ\textsuperscript{+} (median 222 GeV) along the −x wall; alone it misses the target by +18 cm
+  \item \textbf{Vertex:} large opening angle (220 mrad) → closest approach just inside the −x wall, z ≈ 77–81 m; the rock leg tilts the pair onto the target (+3 cm)
 \end{itemize}
 \vspace{2pt}
 {\fontsize{5.02pt}{6.52pt}\selectfont\setlength{\tabcolsep}{3.2pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrrr}
 \textcolor{muted}{pairs / 15 y, before tagging (PDG μ, rock)} & \textcolor{muted}{w\textsubscript{μ} / spill} & \textcolor{muted}{w\textsubscript{rock} / spill} & \textcolor{muted}{IP < 10 cm} & \textcolor{muted}{share} \\\headrule
-μ\textsuperscript{+} × π\textsuperscript{−} (−13, −211) & 0.17 & 4.6 & 62 & 74 \% \\\rowrule
-μ\textsuperscript{+} × K\textsuperscript{−} (−13, −321) & 0.17 & 4.5 & 11.5 & 14 \% \\\rowrule
-μ\textsuperscript{+} × p̄ (−13, −2212) & 0.17 & 4.4 & 6.1 & 7 \% \\\rowrule
-μ\textsuperscript{+} × e\textsuperscript{−} (−13, 11) & 0.17 & 4.9 & 3.8 & 5 \% \\\rowrule
-μ\textsuperscript{−} × positive (13, +) & 0.002–0.12 & 4.1–5.1 & < 0.02 & 0 \\\rowrule
-\rowcolor{tint}\bfseries total (candidates 213, IP < 2.5 m 208) & & & \bfseries 84 & \\\rowrule
+μ\textsuperscript{+} × π\textsuperscript{−} (−13, −211) & 0.0025 & 4.6 & 30.9 & 73 \% \\\rowrule
+μ\textsuperscript{+} × K\textsuperscript{−} (−13, −321) & 0.0025 & 4.5 & 5.7 & 14 \% \\\rowrule
+μ\textsuperscript{+} × p̄ (−13, −2212) & 0.0025 & 4.4 & 3.2 & 8 \% \\\rowrule
+μ\textsuperscript{+} × e\textsuperscript{−} (−13, 11) & 0.0025 & 4.9 & 2.0 & 5 \% \\\rowrule
+μ\textsuperscript{−} × positive (13, +) & & & 0.05 & 0 \\\rowrule
+\rowcolor{tint}\bfseries total (candidates 110, IP < 2.5 m 108) & & & \bfseries 42 & \\\rowrule
 \end{tabularx}\par}
 \vspace{2pt}
 \begin{itemize}
-  \item 4 stations + TD on both legs: 213 / 84 / 208 per 15 y (SST1 + TD: 634 / 211 / 626); weights = median per leg
-  \item After tagging (SST1 + TD runs): R1 0.59, R2 / R3 < 0.018 (90 \% CL); current Z2 / Z3 and the 4-station re-run in production
+  \item 4 stations + TD on both legs, DOCA < 1 cm, all muons: 110 / 42 / 108 per 15 y (DOCA < 2 cm: 220 / 84 / 216; old SST1 + TD: 634 / 211 / 626); weights = median per leg
+  \item After tagging: R1 0.097 ± 0.012, R2 < 0.027 (90 \% CL), Z1 1.2×10\textsuperscript{-5}
 \end{itemize}
 \end{minipage}\par
 \end{btframe}
 
 % ---------------------------------------------------------------- 24 Nov 2026: cavern-rock x mu vertices with the pair lines, and vertex z (4-station + TD, preliminary)
-\begin{btframe}{7 · Back-up · cavern-rock × μ vertices}{Cavern-rock × μ vertices in the vessel (4 stations + TD, preliminary)}
+\begin{btframe}{7 · Back-up · cavern-rock × μ vertices}{Cavern-rock × μ vertices in the vessel (4 stations + TD, DOCA < 1 cm)}
 \centering
-\includegraphics[width=0.96\linewidth,height=170pt,keepaspectratio]{figs/s48_rock_mu_vertices.pdf}\par
+\includegraphics[width=0.96\linewidth,height=170pt,keepaspectratio]{figs/s48_rock_mu_vertices_doca1.pdf}\par
 \vspace{4pt}
 \raggedright
 \begin{itemize}\footnotesize
   \item Left: vertices of the pairs with measured IP < 10 cm (top view, per 15 y) and 12 example pairs: rock tracks (orange) from the −x cavern wall cross the muon lines (blue) just inside the −x vessel wall
-  \item Right: vertex z at each cut, μ × μ for comparison: all μ × rock vertices in the last ~10 m of the vessel (median 79.2 m), μ × μ spread over the whole vessel
+  \item Right: vertex z at each cut, μ × μ for comparison: all μ × rock vertices in the last ~10 m of the vessel (median 79.1 m), μ × μ spread over the whole vessel
 \end{itemize}
 \end{btframe}
 
@@ -312,6 +312,35 @@ W < 3.5 / 3.5–5 / > 5 GeV & 0 / 1.6 / 98 \% & 0.6 / 4.3 / 95 \% & 89 / 5.4 / 5
   \item \textbf{UBT}: any own hit 100 \% at every z; rule 88–100 \% (the misses are the p\textsubscript{vis} > 20 GeV events)
   \item \textbf{SBT}: more often seen for K\textsubscript{L} made at the end of the iron (FAIL 57 → 73 \%), probably because less iron is left to absorb the products (not yet checked)
   \item 95 \% of the K\textsubscript{L} come from the muon vertex itself (the rest from the shower, within 7 mm of it)
+\end{itemize}}
+\end{btframe}
+
+% ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
+\begin{btframe}{7 · Back-up · V0 rule aperture}{V0-rule disc from the kinematic limit: r = 5 cm + p*\textsubscript{max} / p\textsubscript{vis} · Δz, p*\textsubscript{max} = 0.229 GeV}
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
+\includegraphics[width=0.88\linewidth]{figs/s40d_angle_vs_pvis_kin.png}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
+\includegraphics[width=0.88\linewidth]{figs/s40d_miss_over_r_kin.png}
+\end{minipage}
+\vspace{2.46pt}
+{\fontsize{6.15pt}{8.60pt}\selectfont
+\begin{itemize}
+  \item The pair momentum p\textsubscript{vis} misses the K\textsubscript{L} direction because of the lost ν / π\textsuperscript{0}: selected median 18.5 mrad, 90 \% at 37 mrad; the error falls as 1/p
+  \item Kinematic limit: in K\textsubscript{L} → π e ν the lost ν has at most \(p^*_{\max} = (m_K^2 - (m_\pi + m_e)^2)/2m_K\) = \textbf{0.229 GeV} (K\textsubscript{μ3} 0.188, π\textsuperscript{0} lost 0.132), so θ(p\textsubscript{vis}, K\textsubscript{L}) ≤ p*\textsubscript{max} / p\textsubscript{vis}; no tuned parameter, 5 cm = track-search radius
+  \item All 4.9×10\textsuperscript{5} K\textsubscript{L} copies inside (max θ · p\textsubscript{vis} = 0.225 GeV). R2 test vs the old max(25 mrad, 0.25/p): MS7 0.81 → 0.84 / 15 y, signal lost 5.21 → 4.97 \% (20 k decays)
+\end{itemize}}
+\end{btframe}
+
+% ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
+\begin{btframe}{7 · Back-up · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
+{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii_kin.pdf}\par}
+\vspace{2.46pt}
+{\fontsize{5.9pt}{7.9pt}\selectfont
+\begin{itemize}
+  \item \textbf{Track rule} (left), traced back from SST1 (82.08 m) over d = 51 m: r = 5 cm + (0.5 + 6 GeV / p) mrad × d → \textbf{10.6 cm at 10 GeV}, 7.9 cm at 90 GeV (straws, 30.73 m: +0.2 mm)
+  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + 0.229 GeV / p\textsubscript{vis} × Δz → \textbf{2.9 m at 2 GeV}, 1.2 m at 5 GeV, 77 cm at 8 GeV, 46 cm at 14 GeV, \textbf{34 cm at 20 GeV}; the rule is off above p\textsubscript{vis} = 20 GeV
+  \item The V0 disc is 3–30 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
 \end{itemize}}
 \end{btframe}
 

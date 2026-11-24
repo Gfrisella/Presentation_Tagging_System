@@ -153,3 +153,8 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   --sst1-one noscat, rock_comb 110 / 42 / 108), R1 / R2 / summary / Z1 tables + bullets, conclusion. SBT-material ν after
   tagging not re-run: "< 6e-3 (20 Nov)". Z1 MS7 K_L 160 ± 150 (one heavy event, kinematic V0 rule without TOF: under check).
 - 24 Nov 2026: SBT-material ν after tagging re-run at 1 cm (own hits): 0 of 255 MC left -> < 7e-3 (R2, summary, Z1); slide 11: UBT straws 'no y position along the 0.9 m section'.
+- 24 Nov 2026 (afternoon): slide 11 TikZ sketch of own / random hits, window and tag (replaces the bullet list); slide 14 ACTS row:
+  6.31 kHz with the ACTS fit efficiency (−0.4 %, veto results_rerun/acts_rate); slides 17 / 18: zero cells -> 90 % CL limits
+  (< 64, < 1.0e3, < 0.04) + note with P_int in MS7; slide 25: TikZ K_L -> π e ν sketch with the kinematic-limit formula;
+  V0-rule aperture and search-window slides moved to the back-up (chapter 5); cavern-rock back-ups at DOCA < 1 cm with all
+  muons (110 / 42 / 108; figs/s47_rock_mu_pairs_doca1.png, s48_rock_mu_vertices_doca1.pdf from rock_vertices/full_mu_doca1).

@@ -143,6 +143,19 @@
 \vspace{2.46pt}
 \noindent \begin{minipage}[c]{0.55\linewidth}
 {\centering \includegraphics[width=1.00\linewidth,height=75.52pt,keepaspectratio]{figs/s22_sk1.pdf}\par}
+\vspace{4pt}
+{\centering\begin{tikzpicture}[x=1pt,y=1pt,font=\fontsize{4.8pt}{5.8pt}\selectfont]
+\draw[line width=0.9pt,draw=ink,-{Stealth[length=3pt]}] (0,20) -- (70,20) node[midway,above,text=ink] {K\textsubscript{L}};
+\fill[ink] (70,20) circle (1.2pt);
+\draw[line width=0.8pt,draw=cern,-{Stealth[length=3pt]}] (70,20) -- (150,42) node[right,text=cern] {π};
+\draw[line width=0.8pt,draw=cern,-{Stealth[length=3pt]}] (70,20) -- (150,14) node[right,text=cern] {e};
+\draw[line width=0.7pt,draw=grey,dotted,-{Stealth[length=3pt]}] (70,20) -- (112,-4) node[right,text=muted] {ν (missing)};
+\draw[line width=1pt,draw=purple,dashed,-{Stealth[length=3pt]}] (70,20) -- (160,32) node[right,text=purple] {p\textsubscript{vis} = p\textsubscript{π} + p\textsubscript{e}};
+\draw[densely dotted,draw=ink] (70,20) -- (165,20);
+\draw[purple] (100,20) arc (0:7.6:30) node[midway,right,text=purple] {θ};
+\node[anchor=west,align=left,text=ink] at (0,-14) {θ(p\textsubscript{vis}, K\textsubscript{L}) ≤ p*\textsubscript{max} / p\textsubscript{vis},\quad p*\textsubscript{max} = (m\textsubscript{K}\textsuperscript{2} − (m\textsubscript{π} + m\textsubscript{e})\textsuperscript{2}) / 2m\textsubscript{K} = \textbf{0.229 GeV}};
+\node[anchor=west,text=muted] at (0,-23) {the missing ν carries at most p*\textsubscript{max} transverse to the K\textsubscript{L} (K\textsubscript{μ3} 0.188, π\textsuperscript{0} lost 0.132 GeV)};
+\end{tikzpicture}\par}
 \end{minipage}%
 \hfill%
 \begin{minipage}[c]{0.45\linewidth}
@@ -161,36 +174,9 @@
 \end{btframe}
 
 
-% ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
-\begin{btframe}{5 · Background tagging  · V0 rule aperture}{V0-rule disc from the kinematic limit: r = 5 cm + p*\textsubscript{max} / p\textsubscript{vis} · Δz, p*\textsubscript{max} = 0.229 GeV}
-\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
-\includegraphics[width=0.88\linewidth]{figs/s40d_angle_vs_pvis_kin.png}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
-\includegraphics[width=0.88\linewidth]{figs/s40d_miss_over_r_kin.png}
-\end{minipage}
-\vspace{2.46pt}
-{\fontsize{6.15pt}{8.60pt}\selectfont
-\begin{itemize}
-  \item The pair momentum p\textsubscript{vis} misses the K\textsubscript{L} direction because of the lost ν / π\textsuperscript{0}: selected median 18.5 mrad, 90 \% at 37 mrad; the error falls as 1/p
-  \item Kinematic limit: in K\textsubscript{L} → π e ν the lost ν has at most \(p^*_{\max} = (m_K^2 - (m_\pi + m_e)^2)/2m_K\) = \textbf{0.229 GeV} (K\textsubscript{μ3} 0.188, π\textsuperscript{0} lost 0.132), so θ(p\textsubscript{vis}, K\textsubscript{L}) ≤ p*\textsubscript{max} / p\textsubscript{vis}; no tuned parameter, 5 cm = track-search radius
-  \item All 4.9×10\textsuperscript{5} K\textsubscript{L} copies inside (max θ · p\textsubscript{vis} = 0.225 GeV). R2 test vs the old max(25 mrad, 0.25/p): MS7 0.81 → 0.84 / 15 y, signal lost 5.21 → 4.97 \% (20 k decays)
-\end{itemize}}
-\end{btframe}
 
 
 
-% ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
-\begin{btframe}{5 · Background tagging · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
-{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii_kin.pdf}\par}
-\vspace{2.46pt}
-{\fontsize{5.9pt}{7.9pt}\selectfont
-\begin{itemize}
-  \item \textbf{Track rule} (left), traced back from SST1 (82.08 m) over d = 51 m: r = 5 cm + (0.5 + 6 GeV / p) mrad × d → \textbf{10.6 cm at 10 GeV}, 7.9 cm at 90 GeV (straws, 30.73 m: +0.2 mm)
-  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + 0.229 GeV / p\textsubscript{vis} × Δz → \textbf{2.9 m at 2 GeV}, 1.2 m at 5 GeV, 77 cm at 8 GeV, 46 cm at 14 GeV, \textbf{34 cm at 20 GeV}; the rule is off above p\textsubscript{vis} = 20 GeV
-  \item The V0 disc is 3–30 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
-\end{itemize}}
-\end{btframe}
 
 %---------------------------------------------------------------- slide 27: R1: UBT only — 99.7 drachmas, 18 100 channels
 \begin{btframe}{5 · Background tagging · R1}{R1: UBT only — 99.7 drachmas, 18 100 channels}
