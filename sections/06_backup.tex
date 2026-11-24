@@ -61,7 +61,7 @@ MS7 iron, last 50 cm & 2.1×10\textsuperscript{-3} & 480 & 2×10\textsuperscript
 \textbf{4 · generator} (final state) & \multicolumn{2}{>{\raggedright\arraybackslash}p{\dimexpr0.600\linewidth-2\tabcolsep\relax}}{energy transfer ν < ν\textsubscript{x}(E): \textbf{Geant4 11.2.2 muonNuclear} (G4MuonVDNuclearModel, FTFP\_BERT), per material; ν > ν\textsubscript{x}: \textbf{Pythia 6.4.28} γ/μ on p and n (VMD, direct, anomalous, DIS; W > 2 GeV). ν\textsubscript{x} ≈ 2–25 GeV: where Pythia's dσ/dν reaches Kokoulin's. Library: 20 000 events per energy (50 energies, 0.5–500 GeV) per generator} & \textbf{GENIE 3.06.02}, tune G18\_02a (nuclear model and FSI), on He4, C, H, Cl, N, O, Ar, Fe56; 5 000 events per energy \\\rowrule
 \textbf{5 · short-lived} & K\textsubscript{S}, Λ, Σ, Ξ, π\textsuperscript{0}, η decayed at once (in helium: no material before the decay) & \textbf{K\textsubscript{S}, Λ kept} and handed to Geant4 (decay in flight or interact in the iron); Σ, Ξ, π\textsuperscript{0}, η decayed & as the muon case of the same target \\\rowrule
 \textbf{6 · transport} & straight lines from the vertex to SST1 (z = 82 m): no field before the spectrometer; the scattered μ follows its parent to the vertex and kinks. Multiple scattering (Highland + single-scatter tails) in the PVC (0.3 mm), UBT, fins, helium and air; no hadronic re-interaction (PVC ≈ 5×10\textsuperscript{-4} λ\textsubscript{I}) & \textbf{Geant4 FTFP\_BERT} through the iron (G4\_Fe, |x| < 1.71, |y| < 1.27 m) with the \textbf{MS7 field map} (FEM: core −1.9 T, return yoke +1.3 T) to z = 29.90 m; hadronic showers, decays; every particle that reaches z = 29.90 m with \textbf{p > 1 GeV} is kept (a single track needs p > 1 GeV to be registered), \textbf{whether it is the original one or made in the shower} (π, n, K\textsubscript{S} interactions make new K\textsubscript{L}, K\textsubscript{S}, Λ): "out of the iron" = itself + shower. Then straight lines (no field, air not simulated); K\textsubscript{L}, K\textsubscript{S}, Λ forced to decay in 31.1–81.1 m, weight × P\textsubscript{dec} & vessel: as μ DIS in the vessel (no parent); MS7: as μ DIS in MS7 \\\rowrule
-\textbf{7 · selection, veto} & \multicolumn{3}{>{\raggedright\arraybackslash}p{\dimexpr0.750\linewidth-2\tabcolsep\relax}}{same as for the muon pairs: two opposite-charge tracks of one interaction, p > 1 GeV in SST1 and timing acceptance, DOCA, vertex in the vessel, IP; veto: reconstructed tracks extrapolated back to the planes, own and random hits (algorithm A)} \\\rowrule
+\textbf{7 · selection, veto} & \multicolumn{3}{>{\raggedright\arraybackslash}p{\dimexpr0.750\linewidth-2\tabcolsep\relax}}{same as for the muon pairs: two opposite-charge tracks of one interaction, good tracks (p > 1 GeV, 4 straw stations + TD), DOCA < 1 cm, vertex in the vessel, IP; veto: reconstructed tracks extrapolated back to the planes, own and random hits (algorithm A)} \\\rowrule
 \end{tabularx}\par}
 \end{btframe}
 
@@ -79,8 +79,8 @@ stop between 30.6 and 82 m (cavern rock) & 6.75×10\textsuperscript{8} \\\rowrul
 in the rock at 82 m & 1.48×10\textsuperscript{7} \\\rowrule
 cross the vessel region, miss SST1 & 2.49×10\textsuperscript{4} \\\rowrule
 \rowcolor{tint}\bfseries SST1, bounced off the cavern wall / floor & \bfseries 1.09×10\textsuperscript{4} \\\rowrule
-\rowcolor{tint}\bfseries SST1, straight, p > 1 GeV, in the TD & \bfseries 8.17×10\textsuperscript{3} \\\rowrule
-\rowcolor{tint}\bfseries SST1, other (soft or outside the TD) & \bfseries 1.28×10\textsuperscript{4} \\\rowrule
+\rowcolor{tint}\bfseries SST1, straight, good track (p > 1 GeV, 4 stations + TD) & \bfseries 6.05×10\textsuperscript{3} \\\rowrule
+\rowcolor{tint}\bfseries SST1, other (soft or outside the stations / TD) & \bfseries 1.49×10\textsuperscript{4} \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
 \hfill%
@@ -89,7 +89,7 @@ cross the vessel region, miss SST1 & 2.49×10\textsuperscript{4} \\\rowrule
 \begin{itemize}
   \item Every muon is followed from the target to z = 30.6 m and to SST1; its type is set by where it ends
   \item \textbf{Bounced}: leave the vessel region, scatter in the cavern concrete and come back into SST1; their straight backward line misses the planes they crossed (bounce search)
-  \item \textbf{Straight, p > 1 GeV, TD}: the good tracks of the pair candidates
+  \item \textbf{Straight, p > 1 GeV, 4 straw stations + TD}: the good tracks of the pair candidates
 \end{itemize}}
 \end{minipage}\par
 \end{btframe}
@@ -160,8 +160,8 @@ muon interactions (Geant4 muonNuclear) & 8.0×10\textsuperscript{5} & P ≈ 1.7�
 K\textsubscript{L} made (vertex 7.8×10\textsuperscript{3} + shower 7.6×10\textsuperscript{3}) & 1.5×10\textsuperscript{4} & 0.0099 per interaction at the vertex \\\rowrule
 K\textsubscript{L} leaving the iron (T > 0.5 GeV) & 3.2×10\textsuperscript{3} & absorption λ ≈ 19 cm \\\rowrule
 K\textsubscript{L} decaying in the vessel & 1.5×10\textsuperscript{3} – 2.0×10\textsuperscript{3} & 49 \% of those leaving \\\rowrule
-\rowcolor{tint}\bfseries two good tracks, pair cuts & \bfseries 0.93 & \bfseries 1.39×10\textsuperscript{7} / 15 y \\\rowrule
-\rowcolor{tint}\bfseries IP < 10 cm (full selection) & \bfseries 9.5×10\textsuperscript{-4} & \bfseries 1.43×10\textsuperscript{4} / 15 y \\\rowrule
+\rowcolor{tint}\bfseries two good tracks, pair cuts (DOCA < 1 cm) & \bfseries 0.78 & \bfseries 1.17×10\textsuperscript{7} / 15 y \\\rowrule
+\rowcolor{tint}\bfseries IP < 10 cm (full selection) & \bfseries 8.1×10\textsuperscript{-4} & \bfseries 1.22×10\textsuperscript{4} / 15 y \\\rowrule
 \end{tabularx}\par}
 \end{minipage}%
 \hfill%
@@ -414,6 +414,6 @@ K\textsubscript{L} / neutrals from MS7 or the SBT material & nothing on the trac
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item No “first the tracks, then the V0 rule”: every window is open at the same time; a rule built for another source simply finds nothing
-  \item Tables quote the extra candidates each rule adds (e.g. V0 rule: MS7 1.8×10\textsuperscript{4} → 0.67); the signal loss includes all windows together, which is why p\textsubscript{max} keeps fast (signal-like) pairs out of the V0 disc
+  \item Tables quote the extra candidates each rule adds (e.g. V0 rule: MS7 1.5×10\textsuperscript{4} → 0.82); the signal loss includes all windows together, which is why p\textsubscript{max} keeps fast (signal-like) pairs out of the V0 disc
 \end{itemize}}
 \end{btframe}

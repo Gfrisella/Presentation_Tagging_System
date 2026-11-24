@@ -158,3 +158,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   (< 64, < 1.0e3, < 0.04) + note with P_int in MS7; slide 25: TikZ K_L -> π e ν sketch with the kinematic-limit formula;
   V0-rule aperture and search-window slides moved to the back-up (chapter 5); cavern-rock back-ups at DOCA < 1 cm with all
   muons (110 / 42 / 108; figs/s47_rock_mu_pairs_doca1.png, s48_rock_mu_vertices_doca1.pdf from rock_vertices/full_mu_doca1).
+- 24 Nov 2026 (14:30): audit fixes: date 24 Nov; outline 'optimised design Z1'; slide 12 signal 'through the 4 straw stations to the TD'; Z1 table header; back-up 7-steps selection row (4 stations + TD, DOCA < 1 cm); muon categories (good 6.05e3, other 1.49e4); MS7 K_L table (1.17e7 / 1.22e4); OR-of-rules example (1.5e4 -> 0.82); search-window figure label (R1, R2); slide 14 plot with the 4-station good tracks (figs/s12_sst1_good_4st.png, results_rerun/acts_rate).
