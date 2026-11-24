@@ -11,6 +11,45 @@
 \end{outlinelist}
 \end{btframe}
 
+% ---------------------------------------------------------------- back-up: forced inelastic interactions, the method (24 Nov 2026)
+\begin{btframe}{7 · Back-up · forced interactions}{Forced inelastic interactions: every crossing gives an event}
+{\centering\begin{tikzpicture}[x=1pt,y=0.78pt,font=\fontsize{5pt}{6.2pt}\selectfont,
+  hd/.style={font=\fontsize{5.6pt}{6.8pt}\selectfont\bfseries,text=cern},
+  arr/.style={-{Stealth[length=4pt]},draw=muted,line width=0.7pt}]
+% ---- natural
+\node[hd,anchor=west] at (0,112) {natural (FairShip, Geant4)};
+\fill[grey!30] (20,10) rectangle (150,96);
+\node[text=muted,anchor=south] at (85,97) {target: He 50 m · MS7 iron 50 cm};
+\foreach \y/\s in {18/0, 30/0, 42/0, 54/1, 66/0, 78/0, 90/0} {\draw[line width=0.6pt,draw=ink] (0,\y-6) -- (170,\y+4);}
+\node[star,star points=6,fill=orange,inner sep=1.4pt] at (104,54.1) {};
+\node[text=ink,align=left,anchor=north west] at (0,7) {1 interaction per 1/P crossings, P = nσL\\He, 10 GeV: P = 4×10\textsuperscript{-6} → \textbf{250 000 muons per event}};
+% ---- arrow
+\draw[arr] (180,53) -- (212,53) node[midway,above,text=muted] {force};
+% ---- forced
+\node[hd,anchor=west] at (222,112) {forced (our chain)};
+\fill[grey!30] (242,10) rectangle (372,96);
+\foreach \y/\x in {18/262, 30/340, 42/300, 54/281, 66/356, 78/318, 90/270} {\draw[line width=0.6pt,draw=ink] (222,\y-6) -- (392,\y+4);
+  \node[star,star points=6,fill=orange,inner sep=1.2pt] at (\x,{\y-6+10*(\x-222)/170}) {};}
+\node[text=ink,align=left,anchor=north west] at (222,7) {one interaction on every crossing, vertex uniform on the chord\\weight w·P = interactions per spill → \textbf{every muon gives an event}};
+\end{tikzpicture}\par}
+\vspace{6pt}
+\noindent\begin{minipage}[t]{0.47\linewidth}
+\begin{mathbox}[cern]{6.23pt}
+\textbf{why it is exact}\newline{}interactions per spill = Σ\textsubscript{crossings} w\textsubscript{i} · n σ(E\textsubscript{i}) L\textsubscript{i}\newline{}{\fontsize{5.4pt}{6.8pt}\selectfont the same sum the natural simulation estimates with 1 event in 1/P; forcing keeps the mean and removes the 1/P waste. Rare channels (V0 in MS7) get k copies of each crossing, weight / k}
+\end{mathbox}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.5\linewidth}
+{\fontsize{5.2pt}{6.6pt}\selectfont\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrrr}
+\textcolor{muted}{target} & \textcolor{muted}{P per crossing} & \textcolor{muted}{natural: μ per event} & \textcolor{muted}{forced MC} \\\headrule
+helium (50 m, 10 GeV) & 4×10\textsuperscript{-6} & 2.5×10\textsuperscript{5} & 1 per μ \\\rowrule
+MS7 iron, last 50 cm & 2.1×10\textsuperscript{-3} & 480 & 2×10\textsuperscript{7} in 14 min \\\rowrule
+\end{tabularx}\par}
+\vspace{3pt}
+{\fontsize{5.4pt}{6.8pt}\selectfont \textbf{\textcolor{cern}{final state}}: drawn from a library made once (Geant4 muonNuclear at low ν, Pythia 6 at high ν; per material, grid in E\textsubscript{μ}), rotated onto the muon; then the seven steps of the next page\par}
+\end{minipage}
+\end{btframe}
+
 % ---------------------------------------------------------------- slide 38: Inelastic interactions in detail: the seven steps per target
 \begin{btframe}{7 · Back-up · inelastic interactions}{Inelastic interactions in detail: the seven steps per target}
 {\fontsize{5.11pt}{6.65pt}\selectfont\setlength{\tabcolsep}{3.58pt}\renewcommand{\arraystretch}{1.42}

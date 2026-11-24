@@ -52,7 +52,7 @@
 \flowarrow%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{5 · short-lived}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{K\textsubscript{S}, Λ, π\textsuperscript{0} … decayed; in MS7 handed to Geant4}\par}}%
 \flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{6 · transport}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{straight to SST1 with scattering (vessel); Geant4 + field map through the MS7 iron}\par}}%
+\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{6 · transport}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{straight + scattering (vessel); Geant4 + field (MS7 iron); field map SST1 → TD}\par}}%
 \flowarrow%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{cern}{7 · selection, tagging}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{as for the muon pairs; own and random hits}\par}}%
 \end{flowrow}
@@ -60,21 +60,41 @@
 \noindent \begin{minipage}[[c]{0.5\linewidth}
 {\fontsize{4.55pt}{6.15pt}\selectfont \textcolor{cern}{\textbf{2 · cross section: μ, per nucleon in iron}}\par}
 \vspace{0.55pt}
-{\centering \includegraphics[height=86.49pt,keepaspectratio]{figs/s07_img1.png}\par}
+{\centering \includegraphics[height=54pt,keepaspectratio]{figs/s07_img1.png}\par}
 \end{minipage}%
 \hfill%
 \begin{minipage}[c]{0.5\linewidth}
 {\fontsize{4.55pt}{6.15pt}\selectfont \textcolor{cern}{\textbf{2 · cross section: ν, σ/E per nucleon on \textsuperscript{56}Fe}}\par}
 \vspace{0.55pt}
-{\centering \includegraphics[height=86.49pt,keepaspectratio]{figs/s07_img2.png}\par}
+{\centering \includegraphics[height=54pt,keepaspectratio]{figs/s07_img2.png}\par}
 \end{minipage}%
 \hfill%
 \vspace{2.46pt}
-{\fontsize{4.55pt}{6.15pt}\selectfont \centering \textcolor{cern}{\textbf{3 · forced interaction}}\par}
-\vspace{0.82pt}
-{\centering \includegraphics[width=1.00\linewidth,height=29.59pt,keepaspectratio]{figs/s07_sk3.pdf}\par}
-\vspace{0.82pt}
-{\fontsize{4.78pt}{6.45pt}\selectfont \centering P = n σ L along the crossing (helium, 10 GeV: 4×10\textsuperscript{-6}); the vertex is forced, the event weight w·P = interactions per spill\par}
+{\fontsize{4.55pt}{6.15pt}\selectfont \centering \textcolor{cern}{\textbf{how one interaction is generated}}\par}
+\vspace{1pt}
+{\centering\begin{tikzpicture}[x=1pt,y=1pt,font=\fontsize{4.4pt}{5.3pt}\selectfont,
+  box/.style={draw=rule,fill=tint,rounded corners=1.5pt,align=center,inner sep=2pt},
+  hd/.style={font=\fontsize{4.7pt}{5.7pt}\selectfont\bfseries,text=cern},
+  arr/.style={-{Stealth[length=3pt]},draw=muted,line width=0.5pt}]
+\node[box,minimum width=84pt,minimum height=40pt] (lib) at (42,20) {};
+\node[hd,anchor=north] at (lib.north) {1 · library, once (offline)};
+\node[align=center,text=ink,anchor=north] at (42,31) {Geant4 muonNuclear (low ν)\\+ Pythia 6 (high ν)\\per material, grid in E\textsubscript{μ}\\stored in the μ frame (ν, W)};
+\fill[grey!30] (112,2) rectangle (160,38);
+\node[text=muted,anchor=north] at (136,37.5) {He · wall · plane · MS7};
+\draw[line width=0.9pt,draw=ink] (90,8) -- (136,20);
+\node[text=ink,anchor=north west] at (88,6) {parent μ};
+\node[star,star points=6,fill=orange,inner sep=1.3pt] (v) at (136,20) {};
+\draw[arr,dashed] (lib.east) .. controls (100,34) and (118,32) .. (v);
+\node[text=muted,anchor=south] at (100,31) {event at E\textsubscript{μ}};
+\node[text=orange,anchor=north,align=center] at (136,1) {2 · vertex forced on the chord, weight w·P (P = nσL)};
+\draw[line width=0.7pt,draw=cern] (v) -- (184,31); \draw[line width=0.7pt,draw=cern] (v) -- (184,19);
+\draw[line width=0.7pt,draw=green] (v) -- (184,10); \draw[line width=0.5pt,draw=muted,dashed] (v) -- (184,25);
+\node[text=ink,anchor=west,align=left] at (187,20) {\textbf{\textcolor{cern}{3 · placed}}: rotated onto the μ\\direction (μ\textsuperscript{+}: sign flipped);\\K\textsubscript{S}, Λ, π\textsuperscript{0} decayed};
+\draw[arr] (262,20) -- (276,20);
+\node[box,minimum width=104pt,minimum height=40pt] (tr) at (330,20) {};
+\node[hd,anchor=north] at (tr.north) {4 · transport};
+\node[align=center,text=ink,anchor=north] at (330,31) {vessel: straight + scattering\\MS7: Geant4 + field in the iron\\SST1 → straw stations → TD:\\spectrometer field map};
+\end{tikzpicture}\par}
 
 \end{btframe}
 

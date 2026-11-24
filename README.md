@@ -140,3 +140,9 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   OR of the rules). main.tex 51 pages. sections_withmsms unchanged by this step (main_withmsms.tex is commented out).
 - 24 Nov 2026: slide 22 (tagging chain, tracks): each parameter of the track window defined (r0, σθ, θms, p, Δz, σt); plot smaller.
 - 24 Nov 2026: new slide 9 "Why our own chain: speed buys statistics" (after the inelastic-interaction slide): FairShip vs Cuda Muons speed and two same-task times (figs/s06b_framework_speed.pdf from veto results_rerun/framework_speed/plot_speed.py; FairShip CPU times from 300 noSBT_full job logs on EOS) + four numbers (3 220 spills, 2e7 MS7 interactions in 14 min, 2.2e9 pairs in 6 min, 72 s per design).
+- 24 Nov 2026: slide 5 left plot = 2D p–pT of the Nov-4 muons (figs/s04_nov4_p_pt.png, veto results_rerun/nov4_p_pt:
+  all 23 train chunks, 2.2e9 rows, physical weights, momentum after the target; μ+ 2.46e10, μ- 2.23e10 / spill).
+  Slide 8: TikZ "how one interaction is generated" (library → forced vertex w·P → placed → transport incl. the
+  spectrometer field map SST1 → TD), step 6 text, smaller cross-section plots; main.tex loads tikz shapes.geometric.
+  New back-up page 35 "Forced inelastic interactions: every crossing gives an event" (natural vs forced diagram, why the
+  weight is exact, μ per event He / MS7), before the seven-steps table.
