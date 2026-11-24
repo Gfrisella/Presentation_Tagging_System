@@ -162,3 +162,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 24 Nov 2026: slide 20 total row (165 / 47 / 162 per 15 y, DOCA < 1 cm).
 - 24 Nov 2026: 'total background left' row in R1 / R2 / summary / Z1 tables (upper limits counted as 0): R1 (1.80 ± 0.33)e4 / 191 ± 110, R2 (1.52 ± 0.36)e4 / 4.4 ± 1.1, Z1 166 ± 150.
 - 24 Nov 2026: 'Forced inelastic interactions' moved from the back-up to slide 9 (after the seven steps).
+- 24 Nov 2026: slide 21 (combinatorial 2) x-z top view of the IP < 10 cm pair vertices, MS7 interaction x mu and cavern rock x mu (figs/s20_pairs_xz_doca1.pdf, veto results_rerun/combi_vertices); table spacing tightened.
