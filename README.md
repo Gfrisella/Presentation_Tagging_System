@@ -165,3 +165,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 24 Nov 2026: slide 21 (combinatorial 2) x-z top view of the IP < 10 cm pair vertices, MS7 interaction x mu and cavern rock x mu (figs/s20_pairs_xz_doca1.pdf, veto results_rerun/combi_vertices); table spacing tightened.
 - 24 Nov 2026: new back-up page 'Where the combinatorial vertices are' (x-z maps, figs/s20_pairs_xz_doca1.pdf) after the cavern-rock vertices; page 21 example-pair figure to follow.
 - 24 Nov 2026: page 21 one example pair per panel (MS7 interaction point -> product, rock track) with the fake vertex (figs/s20_pairs_tracks_doca1.pdf, results_rerun/combi_vertices/plot_tracks.py).
+- 24 Nov 2026: talk cross-reference strips (figs/talk_1-4.png) on slides 18 (talk_3, talk_4 top right), 19 (talk_1 bottom left), 42 (talk_2); slide 18 MS7 rows from the x4 V0 statistics (cutflow_notag_ms7_mu_fs*_x4_4st_doca1).
