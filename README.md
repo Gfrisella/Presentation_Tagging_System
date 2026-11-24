@@ -122,3 +122,19 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   running, Slurm 2205690). Back-up divider rewritten as the list of all back-up chapters in page order (8 in main, 7 in
   nomsms). main 63 pages, main_nomsms 60.
 - 23 Nov 2026 (night): slide 19 (combinatorial, before tagging): cavern-rock × μ row keeps 634 / 211 / 626 (old SST1 + TD), note † with the 4-station + TD values 213 / 84 / 208 (400k muons, preliminary; veto results_rerun/rock_vertices).
+- 24 Nov 2026 (night, GPU session): synced with Overleaf (a8c42bd: `sections/` = deck without MSMS compiled by main.tex,
+  `sections_withmsms/` + main_withmsms.tex = R3 version, fully commented out). On top, in both folders:
+  - V0 rule = kinematic limit r = 5 cm + p*_max / p_vis · Δz, p*_max = (m_K² − (m_π + m_e)²) / (2 m_K) = 0.229 GeV (K_e3), no
+    25 mrad floor: aperture slide (formula, new plots figs/s40d_*_kin.png), search-radius slide (figs/aperture_radii_kin.pdf),
+    tagging-chain formulas, Z2 bullet. Source veto results_rerun/v0rule_fit (README, plot_angle_kin.py, plot_radii_kin.py).
+  - Page 13 (track cuts): cut 2 = all 4 straw stations + TD; good tracks 6.34 kHz (6.05 straight + 0.28 bounced), was 8.5.
+  - Rock × μ rows ("model under review" → numbers, 4-station good track, kinematic V0 rule, all designs): R1 0.20 ± 0.02,
+    R2 / R3 < 0.028 (90 % CL), Z2 (1.4 ± 0.7)e-4, Z3 (3.9 ± 1.5)e-4; conclusion "rock × μ (84)"; with-MSMS slide 19 row 220 / 84 / 216.
+    Source veto results_rerun/reco/rock_comb_*_4st.json. The other numbers are still the old SST1 + TD definition (production P3/P4).
+  - Back-ups 11 / 12 (cavern-rock × μ pairs / vertices, deck session 23 Nov) added to sections/ and main.tex (active),
+    sections_withmsms/ + main_withmsms.tex (commented like the rest).
+- 24 Nov 2026 (morning): footnotes removed from the main deck except slide 10 (hits and digitisation) and the article
+  citations (Cuda Muons arXiv:2512.10520; K_L production data: Abe 1984 / NOMAD 2002, SAPHIR / CLAS / ABBHHM / SLAC).
+  Back-up reorganised in 5 chapters (divider updated): 1 simulation inputs, 2 cavern-rock × μ pairs (the 11 / 12 slides,
+  now inside sections/06_backup.tex), 3 MS7 K_L production, 4 MS7 K_L in the vessel, 5 tagging rules (V0-rule history,
+  OR of the rules). main.tex 51 pages. sections_withmsms unchanged by this step (main_withmsms.tex is commented out).

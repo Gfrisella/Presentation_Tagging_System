@@ -54,12 +54,11 @@
 \flowarrow%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{purple}{trace back as a neutral}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{from the vertex along p\textsubscript{vis} to the UBT}\par}}%
 \flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{purple}{disc + early window}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{r = 5 cm + max(25 mrad, 0.25 GeV/p\textsubscript{vis})·Δz; window opened by the K\textsubscript{L} flight time}\par}}%
+\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{purple}{disc + early window}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{r = 5 cm + 0.229 GeV/p\textsubscript{vis}·Δz; window opened by the K\textsubscript{L} flight time}\par}}%
 \flowarrow%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{5.92pt}{7.40pt}\selectfont\textbf{\textcolor{purple}{any hit?}}\par}\vspace{0.91pt}{\fontsize{5.01pt}{6.76pt}\selectfont\textcolor{ink}{yes → tagged: the parent muon or the other products}\par}}%
 \end{flowrow}
 
-\slidenote{Source: veto lib/veto/reco.py v0\_tag (16–17 Nov 2026); numbers results\_rerun/reco/r123\_study\_v0statk\_1622cf7.json (bin/v0rule\_study.py, V0-enriched MS7 samples, full selection).}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 22: How a candidate is tagged: tracks
@@ -90,7 +89,7 @@
 \flowarrow%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{trace back as a neutral}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{vertex → UBT along p\textsubscript{vis}}\par}}%
 \flowarrow%
-\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{disc + early window}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{5 cm + max(25, 250/p\textsubscript{vis}) mrad·Δz}\par}}%
+\flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{disc + early window}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{5 cm + (229/p\textsubscript{vis}) mrad·Δz}\par}}%
 \flowarrow%
 \flowstep{white}{rule}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{purple}{any hit?}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{ink}{yes → tagged}\par}}%
 \end{flowrow}
@@ -136,7 +135,7 @@
 \flowarrow%
 \flowstep{purple}{purple}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{white}{trace back as a neutral}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{white}{vertex → UBT along p\textsubscript{vis}}\par}}%
 \flowarrow%
-\flowstep{purple}{purple}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{white}{disc + early window}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{white}{5 cm + max(25, 250/p\textsubscript{vis}) mrad·Δz}\par}}%
+\flowstep{purple}{purple}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{white}{disc + early window}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{white}{5 cm + (229/p\textsubscript{vis}) mrad·Δz}\par}}%
 \flowarrow%
 \flowstep{purple}{purple}{2.28pt}{3.64pt}{{\fontsize{4.78pt}{5.97pt}\selectfont\textbf{\textcolor{white}{any hit?}}\par}\vspace{0.91pt}{\fontsize{4.10pt}{5.53pt}\selectfont\textcolor{white}{yes → tagged}\par}}%
 \end{flowrow}
@@ -148,12 +147,12 @@
 \hfill%
 \begin{minipage}[c]{0.45\linewidth}
 \begin{mathbox}[purple]{6.23pt}
-\textbf{neutral back-trace}\newline{}r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) · Δz\newline{}−w − t\textsubscript{early} < Δt < w, t\textsubscript{early} ≤ 6 ns\newline{}\textcolor{muted}{Δz: from the vertex back to the plane}
+\textbf{neutral back-trace}\newline{}r = 5 cm + 0.229 GeV / p\textsubscript{vis} · Δz\newline{}−w − t\textsubscript{early} < Δt < w, t\textsubscript{early} ≤ 6 ns\newline{}\textcolor{muted}{Δz: from the vertex back to the plane}
 \end{mathbox}
 {\fontsize{6.55pt}{7.37pt}\selectfont
 \begin{itemize}
   \item A K\textsubscript{L} made upstream leaves no track: only its decay pair is seen
-  \item Trace back from the vertex along p\textsubscript{vis}: vertex at 50 m → UBT, Δz ≈ 19 m\newline{}p\textsubscript{vis} = 15 GeV: θ = 25 mrad, r = 5 cm + 25 mrad × 19 m ≈ \textbf{0.5 m}\newline{}p\textsubscript{vis} = 5 GeV: θ = 50 mrad, r ≈ \textbf{1.0 m}
+  \item Trace back from the vertex along p\textsubscript{vis}: vertex at 50 m → UBT, Δz ≈ 19 m\newline{}p\textsubscript{vis} = 15 GeV: θ = 15 mrad, r = 5 cm + 15 mrad × 19 m ≈ \textbf{0.3 m}\newline{}p\textsubscript{vis} = 5 GeV: θ = 46 mrad, r ≈ \textbf{0.9 m}
   \item The K\textsubscript{L} is slow: the window opens up to its flight time earlier (≤ 6 ns). Any hit (parent muon, sister particles) → \textbf{tagged}
 \end{itemize}}
 \end{minipage}\par
@@ -163,36 +162,34 @@
 
 
 % ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
-\begin{btframe}{5 · Background tagging  · V0 rule aperture}{Why the V0-rule disc is r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) · Δz}
+\begin{btframe}{5 · Background tagging  · V0 rule aperture}{V0-rule disc from the kinematic limit: r = 5 cm + p*\textsubscript{max} / p\textsubscript{vis} · Δz, p*\textsubscript{max} = 0.229 GeV}
 \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
-\includegraphics[width=0.95\linewidth]{figs/s40d_angle_vs_pvis.png}
+\includegraphics[width=0.88\linewidth]{figs/s40d_angle_vs_pvis_kin.png}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
-\includegraphics[width=0.95\linewidth]{figs/s40d_miss_over_r.png}
+\includegraphics[width=0.88\linewidth]{figs/s40d_miss_over_r_kin.png}
 \end{minipage}
 \vspace{2.46pt}
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item The pair momentum p\textsubscript{vis} misses the K\textsubscript{L} direction because of the lost ν / π\textsuperscript{0}: selected median 18.5 mrad, 90 \% at 37 mrad; the error falls as 1/p
-  \item Upper edge is kinematic: the lost particle carries at most its rest-frame momentum (K\textsubscript{e3} 0.228 GeV) → \textbf{0.25 GeV / p\textsubscript{vis}}; \textbf{25 mrad} = 68 \% of the back-trace errors (back-trace study); \textbf{5 cm} = the track-search radius
-  \item With the 1/p term the true K\textsubscript{L} line is inside the disc for 100 \% of the candidates (flat 25 mrad: 68 \%); only loss: the 4 selected K\textsubscript{L} above p\textsubscript{max} = 20 GeV
+  \item Kinematic limit: in K\textsubscript{L} → π e ν the lost ν has at most \(p^*_{\max} = (m_K^2 - (m_\pi + m_e)^2)/2m_K\) = \textbf{0.229 GeV} (K\textsubscript{μ3} 0.188, π\textsuperscript{0} lost 0.132), so θ(p\textsubscript{vis}, K\textsubscript{L}) ≤ p*\textsubscript{max} / p\textsubscript{vis}; no tuned parameter, 5 cm = track-search radius
+  \item All 4.9×10\textsuperscript{5} K\textsubscript{L} copies inside (max θ · p\textsubscript{vis} = 0.225 GeV). R2 test vs the old max(25 mrad, 0.25/p): MS7 0.81 → 0.84 / 15 y, signal lost 5.21 → 4.97 \% (20 k decays)
 \end{itemize}}
-\slidenote{Right: miss distance of the back-traced line from the true K\textsubscript{L} line at the tile plane (31.13 m), over the disc radius. FAIL uses the truth decay point and the sum of the charged daughters. Source: veto results\_rerun/kl\_distributions/seen\_by (seen\_by.py); docs/r3\_shield\_strips\_v0rule.md:28, lib/veto/reco.py:556-563; the kinematic argument is new (not in the repo docs).}
 \end{btframe}
 
 
 
 % ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
 \begin{btframe}{5 · Background tagging · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
-{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii.pdf}\par}
+{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii_kin.pdf}\par}
 \vspace{2.46pt}
 {\fontsize{5.9pt}{7.9pt}\selectfont
 \begin{itemize}
   \item \textbf{Track rule} (left), traced back from SST1 (82.08 m) over d = 51 m: r = 5 cm + (0.5 + 6 GeV / p) mrad × d → \textbf{10.6 cm at 10 GeV}, 7.9 cm at 90 GeV (straws, 30.73 m: +0.2 mm)
-  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + max(25 mrad, 0.25 GeV / p\textsubscript{vis}) × Δz → \textbf{3.2 m at 2 GeV}, 1.3 m at 5 GeV, 83 cm at 8 GeV; above 10 GeV the 25 mrad floor gives \textbf{68 cm}; the rule is off above p\textsubscript{vis} = 20 GeV
-  \item The V0 disc is 6–40 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
+  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + 0.229 GeV / p\textsubscript{vis} × Δz → \textbf{2.9 m at 2 GeV}, 1.2 m at 5 GeV, 77 cm at 8 GeV, 46 cm at 14 GeV, \textbf{34 cm at 20 GeV}; the rule is off above p\textsubscript{vis} = 20 GeV
+  \item The V0 disc is 3–30 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
 \end{itemize}}
-\slidenote{Rule radius only; the V0 search adds half a cell diagonal (2.8 cm for 4 × 4 cm tiles). Formulas: lib/veto/reco.py (RecoConfig r0, r\_slope, r\_ms; V0\_RULE\_DEFAULT, theta\_p). Source: veto results\_rerun/aperture\_radii (plot\_radii.py, numbers.json).}
 \end{btframe}
 
 %---------------------------------------------------------------- slide 27: R1: UBT only — 99.7 drachmas, 18 100 channels
@@ -205,7 +202,7 @@
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{without V0 rule} & \textcolor{muted}{with V0 rule} \\\headrule
 signal lost, full / partial IP cut & 2.45 / 2.24 \% & 4.35 / 7.06 \% \\\rowrule
 μμ pairs & < 0.26 (90 \% CL) & < 0.26 (90 \% CL) \\\rowrule
-rock × μ pairs & \textcolor{muted}{model under review} & \textcolor{muted}{model under review} \\\rowrule
+rock × μ pairs & 0.20 ± 0.02 & 0.20 ± 0.02 \\\rowrule
 interaction product × μ pairs & 0.0030 ± 0.0006 & 0.0030 ± 0.0006 \\\rowrule
 μ in the vessel \textsuperscript{*} & 86 ± 22 & 86 ± 22 \\\rowrule
 ν in the vessel & 3.38 ± 0.18 & 3.37 ± 0.18 \\\rowrule
@@ -223,7 +220,6 @@ single SST1 μ tagged, all / bounced & 64 / 34 \% & 63 / 30 \% \\\rowrule
   \item Signal loss: 1.5 points EM debris on the straws, 1 point muons in the flame tiles
 \end{itemize}}
 \end{minipage}\par
-\slidenote{* The V0 rule can only add tags: its run gave 96 ± 21 (99 vs 103 MC events, different random-hit draws), so the value without it is shown in both columns. Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Interaction-product pairs: full chain, own hits, interactions with one charged track at SST1 (23 Nov, veto results\_rerun/sst1one\_23nov; MS7 part, the vessel-μ part is < 10\textsuperscript{-4}; 0 MC left: 90 \% CL of the run); SBT ν: own hits, 0 of 311 selected MC left; rock: model under review; partial IP cut and ν in MS7: full chain (20 Nov). V0 rule only for p\textsubscript{vis} < 20 GeV. “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 28: R2: SBT + UBT + V0 rule — 333.5 drachmas (the budget), 31 764 channels
@@ -236,7 +232,7 @@ single SST1 μ tagged, all / bounced & 64 / 34 \% & 63 / 30 \% \\\rowrule
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{without V0 rule} & \textcolor{muted}{with V0 rule} \\\headrule
 signal lost, full / partial IP cut & 5.00 / 5.19 \% & 6.74 / 9.71 \% \\\rowrule
 μμ pairs & < 0.052 (90 \% CL) & < 0.052 (90 \% CL) \\\rowrule
-rock × μ pairs & \textcolor{muted}{model under review} & \textcolor{muted}{model under review} \\\rowrule
+rock × μ pairs & < 0.028 (90 \% CL) & < 0.028 (90 \% CL) \\\rowrule
 interaction product × μ pairs & < 1.2×10\textsuperscript{-3} (90 \% CL) & < 1.1×10\textsuperscript{-4} (90 \% CL) \\\rowrule
 μ in the vessel & 1.3 ± 1.3 (1 ev.) & 1.3 ± 1.3 (1 ev.) \\\rowrule
 ν in the vessel & 1.08 ± 0.10 & 1.07 ± 0.10 \\\rowrule
@@ -256,7 +252,6 @@ single SST1 μ tagged, all / bounced & 95 / 87 \% & 95 / 84 \% \\\rowrule
   \item Cost of the V0 rule: signal 5.0 / 5.2 → 6.7 / 9.7 \%
 \end{itemize}}
 \end{minipage}\par
-\slidenote{Both columns: optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1), so the V0 effect is like-for-like; the summary slide uses the full chain. Interaction-product pairs: full chain, own hits, interactions with one charged track at SST1 (23 Nov, veto results\_rerun/sst1one\_23nov; MS7 part, the vessel-μ part is < 10\textsuperscript{-4}; 0 MC left: 90 \% CL of the run); SBT ν: own hits, 0 of 311 selected MC left; rock: model under review; partial IP cut and ν in MS7: full chain (20 Nov). V0 rule only for p\textsubscript{vis} < 20 GeV. “<”: no simulated event left, 90 \% CL. Source: results\_rerun/reco/r1\_v0rule, r23\_nov0rule, tiles\_x34.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 30: R1, R2: background left in 15 years and signal lost
@@ -265,7 +260,7 @@ single SST1 μ tagged, all / bounced & 95 / 87 \% & 95 / 84 \% \\\rowrule
 \begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}Xrr}
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{R1} & \textcolor{muted}{R2} \\\headrule
 μμ pairs & < 0.26 & < 0.052 \\\rowrule
-rock × μ pairs & \textcolor{muted}{model under review} & \textcolor{muted}{model under review} \\\rowrule
+rock × μ pairs & 0.20 ± 0.02 & < 0.028 \\\rowrule
 interaction product × μ pairs & 0.0030 ± 0.0006 & < 1.1×10\textsuperscript{-4} \\\rowrule
 μ in the vessel (helium, walls) & 70 & 1.3 (1 ev.) \\\rowrule
 SBT material, K\textsubscript{L} / other & – & < 13 / < 940 \\\rowrule

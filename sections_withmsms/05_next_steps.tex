@@ -44,7 +44,7 @@
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{Z2} \\\headrule
 signal lost, full / partial IP cut & 2.71 / 4.37 \% \\\rowrule
 μμ pairs & < 0.052 (90 \% CL) \\\rowrule
-rock × μ pairs & \textcolor{muted}{model under review} \\\rowrule
+rock × μ pairs & (1.4 ± 0.7)×10\textsuperscript{-4} \\\rowrule
 interaction product × μ pairs & 0.014 ± 0.002 \\\rowrule
 μ in the vessel & 1.3 ± 1.3 (1 ev.) \\\rowrule
 ν in the vessel & 1.13 ± 0.11 \\\rowrule
@@ -60,11 +60,11 @@ single SST1 μ tagged, all / bounced & 91 / 84 \% \\\rowrule
 \begin{itemize}
   \item Best design of the genetic-algorithm search (section 6): R2 with 6 of the 10 SBT rings (no 0, 1, 3, 4)
   \item UBT straws with t\textsubscript{0} and the segment cut; tile plane |x| < 1.7 m, 2×2 cm only on the cavern side
-  \item V0 rule with a 15.7 mrad cone, no K\textsubscript{L} time-of-flight window, only for p\textsubscript{vis} < 20 GeV
+  \item V0 rule: kinematic limit 0.229 GeV / p\textsubscript{vis} (the search's 15.7 mrad floor removed, 24 Nov), no K\textsubscript{L} time-of-flight window, only for p\textsubscript{vis} < 20 GeV
   \item \textbf{Signal loss 2.7 \%} (R2: 6.7 \%), 68 \% of the budget; every plane within its rate limit
 \end{itemize}}
 \end{minipage}\par
-\slidenote{Optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1); Partial IP cut and ν in MS7: full chain, 20 Nov (results\_rerun/full\_chain\_extra); Interaction-product pairs and SBT-material ν: full chain with own hits only (20 Nov rerun, results\_rerun/ownhits\_20nov; SBT ν: 0 of 311 selected MC events left). V0 rule applied only to candidates with p\textsubscript{vis} < 20 GeV (selected MS7 V0: 3–9 GeV; signal: 43–94 GeV). “<”: no simulated event left, 90 \% CL. Design file: results\_rerun/evolve/Z2\_opt\_ga7c3.json.}
+\slidenote{Optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1); Partial IP cut and ν in MS7: full chain, 20 Nov (results\_rerun/full\_chain\_extra); Interaction-product pairs and SBT-material ν: full chain with own hits only (20 Nov rerun, results\_rerun/ownhits\_20nov; SBT ν: 0 of 311 selected MC events left). V0 rule applied only to candidates with p\textsubscript{vis} < 20 GeV (selected MS7 V0: 3–9 GeV; signal: 43–94 GeV). “<”: no simulated event left, 90 \% CL. Design file: results\_rerun/evolve/Z2\_opt\_ga7c3.json. Rock × μ: 4-station + TD good track, V0 rule = kinematic limit (24 Nov, veto results\_rerun/reco/rock\_comb\_*\_4st.json; R1 2846 MC left, R2 / R3 0 MC); the rock library makes ~2.7× more good tracks than FairShip.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 32: Z3 (optimised)
@@ -77,7 +77,7 @@ single SST1 μ tagged, all / bounced & 91 / 84 \% \\\rowrule
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{Z3} \\\headrule
 signal lost, full / partial IP cut & 3.01 / 4.75 \% \\\rowrule
 μμ pairs & < 0.052 (90 \% CL) \\\rowrule
-rock × μ pairs & \textcolor{muted}{model under review} \\\rowrule
+rock × μ pairs & (3.9 ± 1.5)×10\textsuperscript{-4} \\\rowrule
 interaction product × μ pairs & 0.010 ± 0.001 \\\rowrule
 μ in the vessel & 1.3 ± 1.3 (1 ev.) \\\rowrule
 ν in the vessel & 1.05 ± 0.10 \\\rowrule
@@ -96,7 +96,7 @@ single SST1 μ tagged, all / bounced & 94 / 84 \% \\\rowrule
   \item \textbf{Signal loss 3.0 \%}, 73 \% of the budget
 \end{itemize}}
 \end{minipage}\par
-\slidenote{Optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1); Partial IP cut and ν in MS7: full chain, 20 Nov (results\_rerun/full\_chain\_extra); Interaction-product pairs and SBT-material ν: full chain with own hits only (20 Nov rerun, results\_rerun/ownhits\_20nov; SBT ν: 0 of 311 selected MC events left). V0 rule applied only to candidates with p\textsubscript{vis} < 20 GeV (selected MS7 V0: 3–9 GeV; signal: 43–94 GeV). “<”: no simulated event left, 90 \% CL. Design file: results\_rerun/evolve/Z3\_opt\_ga8c8.json.}
+\slidenote{Optimiser chain (evolve/evaluate\_designs.py, Nov-4, 10\textsuperscript{5} signal decays, seed 1, UBT rate ×1); Partial IP cut and ν in MS7: full chain, 20 Nov (results\_rerun/full\_chain\_extra); Interaction-product pairs and SBT-material ν: full chain with own hits only (20 Nov rerun, results\_rerun/ownhits\_20nov; SBT ν: 0 of 311 selected MC events left). V0 rule applied only to candidates with p\textsubscript{vis} < 20 GeV (selected MS7 V0: 3–9 GeV; signal: 43–94 GeV). “<”: no simulated event left, 90 \% CL. Design file: results\_rerun/evolve/Z3\_opt\_ga8c8.json. Rock × μ: 4-station + TD good track, V0 rule = kinematic limit (24 Nov, veto results\_rerun/reco/rock\_comb\_*\_4st.json; R1 2846 MC left, R2 / R3 0 MC); the rock library makes ~2.7× more good tracks than FairShip.}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 35b: optimisation result
@@ -129,7 +129,7 @@ single SST1 tagged, all / bounced & 94 / 83 \% & 91 / 84 \% & 94 / 84 \% \\\rowr
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item Full chain on the Nov-4 production: muon and neutrino inelastic scattering, MS7 K\textsubscript{L}, combinatorial pairs with muons, rock and interaction products
-  \item Before tagging the MS7 K\textsubscript{L} dominate (1.8×10\textsuperscript{4} / 15 y), then the vessel muon interactions (2×10\textsuperscript{3}) and the rock × μ pairs (211)
+  \item Before tagging the MS7 K\textsubscript{L} dominate (1.8×10\textsuperscript{4} / 15 y), then the vessel muon interactions (2×10\textsuperscript{3}) and the rock × μ pairs (84; 4-station good track)
   \item \textbf{R2} (SBT + UBT + V0 rule, at the budget) removes everything that enters through a wall and, with the V0 rule, the MS7 and SBT-material K\textsubscript{L}: \textasciitilde{}3 events left, mostly neutrinos, at 6.7 / 9.7 \% signal loss
   \item \textbf{R3} adds the MSMS strips (+45 drachmas): the same at full selection, MS7 4.7×10\textsuperscript{4} → 3.6×10\textsuperscript{4} at partial selection
   \item \textbf{One muon event in the helium} left in R2 and R3 (1.3 / 15 y): a 157 GeV muon kinked by 5 mrad at z = 73.8 m; its straight backward line misses its own UBT hit by 20 cm (window 7 cm). No vertex cone in the designs: it would cost signal
