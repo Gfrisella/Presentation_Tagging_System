@@ -146,3 +146,9 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   spectrometer field map SST1 → TD), step 6 text, smaller cross-section plots; main.tex loads tikz shapes.geometric.
   New back-up page 35 "Forced inelastic interactions: every crossing gives an event" (natural vs forced diagram, why the
   weight is exact, μ per event He / MS7), before the seven-steps table.
+- 24 Nov 2026 (noon): **the main deck now uses DOCA < 1 cm and the 4-station good track everywhere** (user decision), numbers
+  from veto results_rerun/prod_4st (P3_doca1, P4_doca1, reco/*_4st_doca1.json, deck_numbers_4st_doca1.json):
+  slide 15 plot (figs/s13_pair_cut_doca1.png, results_rerun/pair_cut_plot), 16 (μ: cutflow_notag_*_4st_doca1),
+  17 (ν), 18 (μμ cut flow: good 6.3e3, DOCA < 1 cm, 15 y 0.73 / 13.9), 19 restored "combinatorial (2)" (combi_single
+  --sst1-one noscat, rock_comb 110 / 42 / 108), R1 / R2 / summary / Z1 tables + bullets, conclusion. SBT-material ν after
+  tagging not re-run: "< 6e-3 (20 Nov)". Z1 MS7 K_L 160 ± 150 (one heavy event, kinematic V0 rule without TOF: under check).
