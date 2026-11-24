@@ -167,3 +167,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 24 Nov 2026: page 21 one example pair per panel (MS7 interaction point -> product, rock track) with the fake vertex (figs/s20_pairs_tracks_doca1.pdf, results_rerun/combi_vertices/plot_tracks.py).
 - 24 Nov 2026: talk cross-reference strips (figs/talk_1-4.png) on slides 18 (talk_3, talk_4 top right), 19 (talk_1 bottom left), 42 (talk_2); slide 18 MS7 rows from the x4 V0 statistics (cutflow_notag_ms7_mu_fs*_x4_4st_doca1).
 - 24 Nov: conclusion slide (33) rebuilt as 4 boxes: environment, selection+tagging (preliminary), FairShip designs R1/R2, next steps (AlphaEvolve, first FoM evaluation). Old text in sections/05_next_steps.tex.bak_conclusion_20261124 (not committed).
+- 24 Nov: slide 18 + SBT-material rows (LS 2 020 ± 230, walls 2 690 ± 250 per 15 y at IP < 10 cm, DOCA 1 cm; from interactions/prepared_sbt_nov4full_eloss_ls11_doca1.npz), tables tightened.
