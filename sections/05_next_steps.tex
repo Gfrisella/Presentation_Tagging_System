@@ -99,14 +99,43 @@ single SST1 μ tagged, all / bounced & 92 / 82 \% \\\rowrule
 
 % ---------------------------------------------------------------- slide 36: Conclusion
 \begin{btframe}{6 · Next steps · conclusion}{Conclusion}
-{\fontsize{6.15pt}{8.60pt}\selectfont
-\begin{itemize}
-  \item Full chain on the Nov-4 production: muon and neutrino inelastic scattering, MS7 K\textsubscript{L}, combinatorial pairs with muons, rock and interaction products
-  \item Before tagging the MS7 K\textsubscript{L} dominate (1.9×10\textsuperscript{4} / 15 y), then the vessel muon interactions (1.7×10\textsuperscript{3}) and the rock × μ pairs (42)
-  \item \textbf{R2} (SBT + UBT + V0 rule, at the budget) removes everything that enters through a wall and, with the V0 rule, the MS7 and SBT-material K\textsubscript{L}: \textasciitilde{}4 events left (vessel μ and ν, MS7 and SBT-material K\textsubscript{L}, MS7 ν) at 5.7 / 8.3 \% signal loss
-  \item \textbf{Muon interactions in the helium} left in R2: 1.3 / 15 y (2 MC events): kinked muons whose straight backward line misses their own UBT hit. No vertex cone in the designs: it would cost signal
-  \item The signal loss is set by random hits: the UBT and SBT rates are the key systematic
-  \item \textbf{Optimisation} (genetic algorithm, full chain): Z1 keeps R2's tagging at 68 \% of the budget and halves the signal loss (2.7 \% vs 5.7 \%); its MS7 K\textsubscript{L} term (one heavy event) is under check with the kinematic V0 rule
-  \item Next: enriched samples for the one-event classes (vessel μ, SBT material); FairShip validation of the optimum
-\end{itemize}}
+\noindent\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+\begin{mathbox}[cern]{7pt}
+{\fontsize{8.6pt}{10pt}\selectfont\textbf{\textcolor{cern}{1 · Simulation environment: fast and efficient}}}\par\vspace{2pt}
+\begin{itemize}\setlength{\itemsep}{3pt}
+  \item Cuda Muons: 3.2×10\textsuperscript{6} μ/s on one GPU, ≈ 4×10\textsuperscript{5} × FairShip per core: \textbf{3 220 spills} of muons simulated
+  \item Forced inelastic interactions: every crossing gives an event; 2×10\textsuperscript{7} MS7 interactions in 14 min
+  \item Full chain per design (all backgrounds + 10\textsuperscript{5} signal decays) in \textbf{72 s} on one core
+\end{itemize}
+\end{mathbox}
+\end{minipage}\hfill\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+\begin{mathbox}[purple]{7pt}
+{\fontsize{8.6pt}{10pt}\selectfont\textbf{\textcolor{purple}{2 · Selection and tagging strategy (preliminary)}}}\par\vspace{2pt}
+\begin{itemize}\setlength{\itemsep}{3pt}
+  \item Good track: p > 1 GeV, all 4 straw stations + TD; pair: opposite charge, DOCA < 1 cm, vertex in the vessel, IP < 10 cm (full) / 2.5 m (partial)
+  \item Tagging, all rules at once (OR): track back-trace window, V0 rule (kinematic disc, p\textsubscript{vis} < 20 GeV), SBT rules
+  \item Background tagged with its own hits only; random hits only for the signal loss
+\end{itemize}
+\end{mathbox}
+\end{minipage}
+\vspace{10pt}
+\noindent\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+\begin{mathbox}[green]{7pt}
+{\fontsize{8.6pt}{10pt}\selectfont\textbf{\textcolor{green}{3 · FairShip designs evaluated in the framework}}}\par\vspace{2pt}
+\begin{itemize}\setlength{\itemsep}{3pt}
+  \item \textbf{R1} (UBT only, 99.7 drachmas): (1.8 ± 0.3)×10\textsuperscript{4} / 15 y left, MS7 K\textsubscript{L} dominated; signal lost 2.3 \%
+  \item \textbf{R2} (SBT + UBT + V0 rule, the budget): 4.4 ± 1.1 / 15 y left; signal lost 5.7 / 8.3 \% (full / partial)
+  \item MS7 K\textsubscript{L} with 4× statistics: R2 term under check (V0-rule floor)
+\end{itemize}
+\end{mathbox}
+\end{minipage}\hfill\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
+\begin{mathbox}[orange]{7pt}
+{\fontsize{8.6pt}{10pt}\selectfont\textbf{\textcolor{orange}{4 · Next steps}}}\par\vspace{2pt}
+\begin{itemize}\setlength{\itemsep}{3pt}
+  \item Optimisation with \textbf{AlphaEvolve} on the full chain: a first evaluation of the figure of merit has been done (genetic-algorithm trial, Z1: 2.7 \% signal loss, 68 \% of the budget)
+  \item Enriched samples for the one-event classes (vessel μ, MS7 K\textsubscript{L}); track-window study (simulation-based r(p))
+  \item FairShip validation of the optimum
+\end{itemize}
+\end{mathbox}
+\end{minipage}
 \end{btframe}
