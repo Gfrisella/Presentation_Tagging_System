@@ -138,3 +138,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
   Back-up reorganised in 5 chapters (divider updated): 1 simulation inputs, 2 cavern-rock × μ pairs (the 11 / 12 slides,
   now inside sections/06_backup.tex), 3 MS7 K_L production, 4 MS7 K_L in the vessel, 5 tagging rules (V0-rule history,
   OR of the rules). main.tex 51 pages. sections_withmsms unchanged by this step (main_withmsms.tex is commented out).
+- 24 Nov 2026: slide 22 (tagging chain, tracks): each parameter of the track window defined (r0, σθ, θms, p, Δz, σt); plot smaller.
