@@ -292,7 +292,7 @@ W < 3.5 / 3.5–5 / > 5 GeV & 0 / 1.6 / 98 \% & 0.6 / 4.3 / 95 \% & 89 / 5.4 / 5
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 40d: V0-rule aperture (19 Nov 2026)
-\begin{btframe}{7 · Back-up · V0 rule aperture}{V0-rule disc from the kinematic limit: r = 5 cm + p*\textsubscript{max} / p\textsubscript{vis} · Δz, p*\textsubscript{max} = 0.229 GeV}
+\begin{btframe}{7 · Back-up · V0 rule aperture}{V0-rule disc from the kinematic limit: r = 5 cm + p*\textsubscript{max} / p\textsubscript{vis} · Δz, p*\textsubscript{max} = 0.229 GeV, rule 0.24 GeV}
 \begin{minipage}[t]{0.49\linewidth}\vspace{0pt}\centering
 \includegraphics[width=0.88\linewidth]{figs/s40d_angle_vs_pvis_kin.png}
 \end{minipage}\hfill
@@ -303,19 +303,19 @@ W < 3.5 / 3.5–5 / > 5 GeV & 0 / 1.6 / 98 \% & 0.6 / 4.3 / 95 \% & 89 / 5.4 / 5
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item The pair momentum p\textsubscript{vis} misses the K\textsubscript{L} direction because of the lost ν / π\textsuperscript{0}: selected median 18.5 mrad, 90 \% at 37 mrad; the error falls as 1/p
-  \item Kinematic limit: in K\textsubscript{L} → π e ν the lost ν has at most \(p^*_{\max} = (m_K^2 - (m_\pi + m_e)^2)/2m_K\) = \textbf{0.229 GeV} (K\textsubscript{μ3} 0.188, π\textsuperscript{0} lost 0.132), so θ(p\textsubscript{vis}, K\textsubscript{L}) ≤ p*\textsubscript{max} / p\textsubscript{vis}; no tuned parameter, 5 cm = track-search radius
+  \item Kinematic limit: in K\textsubscript{L} → π e ν the lost ν has at most \(p^*_{\max} = (m_K^2 - (m_\pi + m_e)^2)/2m_K\) = \textbf{0.229 GeV} (K\textsubscript{μ3} 0.188, π\textsuperscript{0} lost 0.132), so θ(p\textsubscript{vis}, K\textsubscript{L}) ≤ p*\textsubscript{max} / p\textsubscript{vis}; 5 cm = track-search radius; the rule uses \textbf{0.24 GeV} (limit + 5 \%): with ×4 MS7 statistics two heavy K\textsubscript{L} needed 0.229–0.24 (resolution)
   \item All 4.9×10\textsuperscript{5} K\textsubscript{L} copies inside (max θ · p\textsubscript{vis} = 0.225 GeV). R2 test vs the old max(25 mrad, 0.25/p): MS7 0.81 → 0.84 / 15 y, signal lost 5.21 → 4.97 \% (20 k decays)
 \end{itemize}}
 \end{btframe}
 
 % ---------------------------------------------------------------- slide 40r: search radius at the tile plane, track rule vs V0 rule (19 Nov 2026)
 \begin{btframe}{7 · Back-up · search windows}{Search radius at the UBT tile plane: track rule and V0 rule}
-{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii_kin.pdf}\par}
+{\centering \includegraphics[width=\linewidth,height=136pt,keepaspectratio]{figs/aperture_radii_v024.pdf}\par}
 \vspace{2.46pt}
 {\fontsize{5.9pt}{7.9pt}\selectfont
 \begin{itemize}
   \item \textbf{Track rule} (left), traced back from SST1 (82.08 m) over d = 51 m: r = 5 cm + (0.5 + 6 GeV / p) mrad × d → \textbf{10.6 cm at 10 GeV}, 7.9 cm at 90 GeV (straws, 30.73 m: +0.2 mm)
-  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + 0.229 GeV / p\textsubscript{vis} × Δz → \textbf{2.9 m at 2 GeV}, 1.2 m at 5 GeV, 77 cm at 8 GeV, 46 cm at 14 GeV, \textbf{34 cm at 20 GeV}; the rule is off above p\textsubscript{vis} = 20 GeV
+  \item \textbf{V0 rule} (right), vertex on axis in the middle of the vessel (z = 56.13 m, Δz = 25 m): r = 5 cm + 0.24 GeV / p\textsubscript{vis} × Δz → \textbf{3.1 m at 2 GeV}, 1.3 m at 5 GeV, 80 cm at 8 GeV, 48 cm at 14 GeV, \textbf{29 cm at 25 GeV}; the rule is off above p\textsubscript{vis} = 25 GeV
   \item The V0 disc is 3–30 × wider than a track window: it collects the most random hits, hence most of the signal loss (2 GeV: the disc covers the whole 4 × 4 m plane)
 \end{itemize}}
 \end{btframe}
@@ -390,6 +390,6 @@ K\textsubscript{L} / neutrals from MS7 or the SBT material & nothing on the trac
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item No “first the tracks, then the V0 rule”: every window is open at the same time; a rule built for another source simply finds nothing
-  \item Tables quote the extra candidates each rule adds (e.g. V0 rule: MS7 1.5×10\textsuperscript{4} → 0.82); the signal loss includes all windows together, which is why p\textsubscript{max} keeps fast (signal-like) pairs out of the V0 disc
+  \item Tables quote the extra candidates each rule adds (e.g. V0 rule: MS7 1.0×10\textsuperscript{4} → 0.74); the signal loss includes all windows together, which is why p\textsubscript{max} keeps fast (signal-like) pairs out of the V0 disc
 \end{itemize}}
 \end{btframe}

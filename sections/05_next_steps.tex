@@ -47,16 +47,16 @@
 {\fontsize{5.31pt}{6.90pt}\selectfont\setlength{\tabcolsep}{3.72pt}\renewcommand{\arraystretch}{1.42}
 \begin{tabular}{lr}
 \textcolor{muted}{per 15 y, full selection} & \textcolor{muted}{Z1} \\\headrule
-signal lost, full / partial IP cut & 2.70 / 2.13 \% \\\rowrule
+signal lost, full / partial IP cut & 2.79 / 2.43 \% \\\rowrule
 μμ pairs & < 0.11 (90 \% CL) \\\rowrule
 rock × μ pairs & (1.2 ± 0.9)×10\textsuperscript{-5} \\\rowrule
 interaction product × μ pairs & 0.0012 ± 0.0002 \\\rowrule
-μ in the vessel & 1.3 ± 0.9 (2 ev.) \\\rowrule
+μ in the vessel & 1.3 ± 1.3 (1 ev.) \\\rowrule
 ν in the vessel & 0.94 ± 0.09 \\\rowrule
 SBT material μ & 0.001 ± 0.001 \\\rowrule
-\rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries 160 ± 150 (25 ev.) \\\rowrule
+\rowcolor{tint}\bfseries MS7 μ (V0, K\textsuperscript{±}) & \bfseries 157 ± 58 (27 ev.) \\\rowrule
 ν in MS7 / SBT material ν & 0.86 / < 7×10\textsuperscript{-3} \\\rowrule
-\rowcolor{tint}\bfseries total background left & \bfseries 166 ± 150 \\\rowrule
+\rowcolor{tint}\bfseries total background left & \bfseries 160 ± 58 \\\rowrule
 single SST1 μ tagged, all / bounced & 92 / 82 \% \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
@@ -66,8 +66,9 @@ single SST1 μ tagged, all / bounced & 92 / 82 \% \\\rowrule
 \begin{itemize}
   \item Best design of the genetic-algorithm search (section 6): R2 with 6 of the 10 SBT rings (no 0, 1, 3, 4)
   \item UBT straws with t\textsubscript{0} and the segment cut; tile plane |x| < 1.7 m, 2×2 cm only on the cavern side
-  \item V0 rule: kinematic limit 0.229 GeV / p\textsubscript{vis} (the search's 15.7 mrad floor removed, 24 Nov), no K\textsubscript{L} time-of-flight window, only for p\textsubscript{vis} < 20 GeV
-  \item \textbf{Signal loss 2.7 \%} (R2: 5.7 \%), 68 \% of the budget; every plane within its rate limit
+  \item V0 rule: 0.24 GeV / p\textsubscript{vis} (kinematic limit + 5 \%; the search's 15.7 mrad floor removed), no K\textsubscript{L} time-of-flight window, only for p\textsubscript{vis} < 25 GeV
+  \item \textbf{Signal loss 2.8 \%} (R2: 6.1 \%), 68 \% of the budget; every plane within its rate limit
+  \item \textbf{With ×4 MS7 statistics: 160 MS7 K\textsubscript{L} left} (R2: 0.74): found on the ×1 sample, it exploited a low-statistics hole → GA re-run
 \end{itemize}}
 \end{minipage}\par
 \end{btframe}
@@ -113,7 +114,7 @@ single SST1 μ tagged, all / bounced & 92 / 82 \% \\\rowrule
 {\fontsize{8.6pt}{10pt}\selectfont\textbf{\textcolor{purple}{2 · Selection and tagging strategy (preliminary)}}}\par\vspace{2pt}
 \begin{itemize}\setlength{\itemsep}{3pt}
   \item Good track: p > 1 GeV, all 4 straw stations + TD; pair: opposite charge, DOCA < 1 cm, vertex in the vessel, IP < 10 cm (full) / 2.5 m (partial)
-  \item Tagging, all rules at once (OR): track back-trace window, V0 rule (kinematic disc, p\textsubscript{vis} < 20 GeV), SBT rules
+  \item Tagging, all rules at once (OR): track back-trace window, V0 rule (kinematic disc 0.24 GeV / p\textsubscript{vis}, p\textsubscript{vis} < 25 GeV), SBT rules
   \item Background tagged with its own hits only; random hits only for the signal loss
 \end{itemize}
 \end{mathbox}
@@ -123,16 +124,16 @@ single SST1 μ tagged, all / bounced & 92 / 82 \% \\\rowrule
 \begin{mathbox}[green]{7pt}
 {\fontsize{8.6pt}{10pt}\selectfont\textbf{\textcolor{green}{3 · FairShip designs evaluated in the framework}}}\par\vspace{2pt}
 \begin{itemize}\setlength{\itemsep}{3pt}
-  \item \textbf{R1} (UBT only, 99.7 drachmas): (1.8 ± 0.3)×10\textsuperscript{4} / 15 y left, MS7 K\textsubscript{L} dominated; signal lost 2.3 \%
-  \item \textbf{R2} (SBT + UBT + V0 rule, the budget): 4.4 ± 1.1 / 15 y left; signal lost 5.7 / 8.3 \% (full / partial)
-  \item MS7 K\textsubscript{L} with 4× statistics: R2 term under check (V0-rule floor)
+  \item \textbf{R1} (UBT only, 99.7 drachmas): (1.33 ± 0.08)×10\textsuperscript{4} / 15 y left, MS7 K\textsubscript{L} dominated; signal lost 2.3 \%
+  \item \textbf{R2} (SBT + UBT + V0 rule, the budget): 4.3 ± 1.4 / 15 y left; signal lost 6.1 / 9.0 \% (full / partial)
+  \item MS7 K\textsubscript{L} with 4× statistics: R2 term 0.74 ± 0.23 with the V0 rule at the kinematic limit + 5 \%
 \end{itemize}
 \end{mathbox}
 \end{minipage}\hfill\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
 \begin{mathbox}[orange]{7pt}
 {\fontsize{8.6pt}{10pt}\selectfont\textbf{\textcolor{orange}{4 · Next steps}}}\par\vspace{2pt}
 \begin{itemize}\setlength{\itemsep}{3pt}
-  \item Optimisation with \textbf{AlphaEvolve} on the full chain: a first evaluation of the figure of merit has been done (genetic-algorithm trial, Z1: 2.7 \% signal loss, 68 \% of the budget)
+  \item Optimisation with \textbf{AlphaEvolve} on the full chain: a first evaluation of the figure of merit has been done (genetic-algorithm trial Z1: 2.8 \% signal loss at 68 \% of the budget, but 160 MS7 K\textsubscript{L} with 4× statistics: re-run on the ×4 sample)
   \item Enriched samples for the one-event classes (vessel μ, MS7 K\textsubscript{L}); track-window study (simulation-based r(p))
   \item FairShip validation of the optimum
 \end{itemize}
