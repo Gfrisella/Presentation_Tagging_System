@@ -172,3 +172,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 25 Nov: slide 18 SBT-material rows removed for now (user).
 - 25 Nov: Z1 replaced by Z1' = ga10c18 (GA re-run 25 Nov, results_rerun/prod_4st/P6_z1n, full SBT model): slide 32 table with R2 column, sketch, bullets; method slide 31 (new convergence plot figs/s35_ga_convergence_rerun3.png, 24 children, N+1 sigma, tile2 3 MHz soft, seeds); conclusion box 4; outline; back-up rock line.
 - 25 Nov: slide 31 score formula box (objective.py split sensitivity, nu helium x0.01, N+1 sigma, cost per drachma, rate penalty; R2 / Z1' breakdown). Slides 27/28/32: bullets replaced by confusion matrices (real / fake signal x accepted / vetoed), figs/confusion_{R1,R2,Z1p}.pdf from results_rerun/confusion_plots/plot_confusion.py; old bullets kept as comments.
+- 25 Nov: slide 27 shows R1 and R1 + V0 confusion matrices side by side (figs/confusion_R1_both.pdf, plot_confusion_R1_both.py).
