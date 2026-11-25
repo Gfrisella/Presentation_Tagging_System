@@ -20,6 +20,13 @@
 \includegraphics[width=\linewidth]{figs/s35_ga_convergence.png}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.41\linewidth}\vspace{2pt}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{figs/GA.png}
+\end{figure}
+\end{minipage}
+
 {\fontsize{6.15pt}{8.60pt}\selectfont
 \begin{itemize}
   \item \textbf{Genes}: SBT rings and threshold, UBT straw extent, tile plane size and 2×2 / 4×4 cm regions, V0 rule settings
@@ -28,11 +35,6 @@
   \item \textbf{Seeds}: the reference designs and R1 / R2 with a 3.4 m tile plane, 2×2 cm only in the cavern-side flame block
   \item Model fixed; V0 p\textsubscript{max} cut held on
 \end{itemize}}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\linewidth]{figs/GA.png}
-\end{figure}
-\end{minipage}
 
 \end{btframe}
 
@@ -126,14 +128,15 @@ single SST1 μ tagged, all / bounced & 92 / 82 \% \\\rowrule
 \begin{itemize}\setlength{\itemsep}{3pt}
   \item \textbf{R1} (UBT only, 99.7 drachmas): (1.33 ± 0.08)×10\textsuperscript{4} / 15 y left, MS7 K\textsubscript{L} dominated; signal lost 2.3 \%
   \item \textbf{R2} (SBT + UBT + V0 rule, the budget): 4.3 ± 1.4 / 15 y left; signal lost 6.1 / 9.0 \% (full / partial)
-  \item MS7 K\textsubscript{L} with 4× statistics: R2 term 0.74 ± 0.23 with the V0 rule at the kinematic limit + 5 \%
+  % \item MS7 K\textsubscript{L} with 4× statistics: R2 term 0.74 ± 0.23 with the V0 rule at the kinematic limit + 5 \%
 \end{itemize}
 \end{mathbox}
 \end{minipage}\hfill\begin{minipage}[t]{0.49\linewidth}\vspace{0pt}
 \begin{mathbox}[orange]{7pt}
 {\fontsize{8.6pt}{10pt}\selectfont\textbf{\textcolor{orange}{4 · Next steps}}}\par\vspace{2pt}
 \begin{itemize}\setlength{\itemsep}{3pt}
-  \item Optimisation with \textbf{AlphaEvolve} on the full chain: a first evaluation of the figure of merit has been done (genetic-algorithm trial Z1: 2.8 \% signal loss at 68 \% of the budget, but 160 MS7 K\textsubscript{L} with 4× statistics: re-run on the ×4 sample)
+  \item Optimisation with \textbf{AlphaEvolve} on the full chain: a first evaluation of the figure of merit has been done (genetic-algorithm trial Z1: 2.8 \% signal loss at 68 \% of the budget)
+  %but 160 MS7 K\textsubscript{L} with 4× statistics: re-run on the ×4 sample)
   \item Enriched samples for the one-event classes (vessel μ, MS7 K\textsubscript{L}); track-window study (simulation-based r(p))
   \item FairShip validation of the optimum
 \end{itemize}
