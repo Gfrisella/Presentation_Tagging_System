@@ -17,13 +17,13 @@
 % ---------------------------------------------------------------- slide 35: design optimisation with a genetic algorithm (19 Nov 2026)
 \begin{btframe}{6 · Optimisation · method}{Design optimisation: a genetic algorithm on the full chain}
 \begin{minipage}[t]{0.56\linewidth}\vspace{0pt}
-\includegraphics[width=\linewidth,height=118pt,keepaspectratio]{figs/s35_ga_convergence_rerun3.png}
+\includegraphics[width=\linewidth,height=92pt,keepaspectratio]{figs/s35_ga_convergence_rerun3.png}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.41\linewidth}\vspace{2pt}
 
 \begin{figure}
     \centering
-    \includegraphics[width=1\linewidth,height=118pt,keepaspectratio]{figs/GA.png}
+    \includegraphics[width=1\linewidth,height=92pt,keepaspectratio]{figs/GA.png}
 \end{figure}
 \end{minipage}
 
@@ -31,10 +31,15 @@
 \begin{itemize}
   \item \textbf{Genes}: SBT rings and threshold, UBT straw extent, tile plane size and 2×2 / 4×4 cm regions, V0 rule settings
   \item \textbf{Each generation}: 24 children by crossover + mutation, scored with the chain of this talk (10\textsuperscript{5} signal decays, ×4 MS7 statistics); keep the 24 best; 10 generations in 20 min
-  \item \textbf{Score}: background left + 1σ (no gain from a low-statistics hole), signal lost, cost, rate limits (2×2 cm tiles: 3 MHz, soft); untagged bounced single SST1 muons
   \item \textbf{Seeds}: R1, R1 + V0, R2, R2 with a 3.4 m tile plane, Z1 (19 Nov) and a wide-plane design of a first re-run
   \item SBT model and V0 rule fixed for every design (as R2), to compare like with like
 \end{itemize}}
+\vspace{1pt}
+\begin{mathbox}[cern]{5.6pt}
+\textbf{Score} (higher is better):\quad \(\displaystyle \mathrm{score} = -\Big[\,100\Big(1-\frac{S_{90}(0)}{S_{90}(N_w+\sigma_N)}\Big) + 100\,f_{\mathrm{sig}} + 100\,(1-\varepsilon_{\mathrm{bounced}}) + C + P_{\mathrm{rate}}\Big]\)\par\vspace{1pt}
+\textcolor{muted}{\(N_w\): background left / 15 y (ν in the helium × 0.01: no veto can tag it), \(\sigma_N\) its error; \(S_{90}\): expected 90 \% CL limit (2.30 at N = 0); \(f_{\mathrm{sig}}\): signal lost; \(\varepsilon_{\mathrm{bounced}}\): bounced single SST1 μ tagged; \(C\): 0.04 points / drachma up to 74 \% of the budget, 0.08 above; \(P_{\mathrm{rate}}\): 1000 (1 + 10 × excess) per plane over its limit, 2 × 2 cm tiles 100 × excess over 3 MHz.}\par\vspace{1pt}
+R2: −(54.4 + 6.1 + 15.9 + 16.9) = −93.3 \qquad Z1′: −(52.3 + 3.0 + 17.5 + 9.6) = −82.4
+\end{mathbox}
 
 \end{btframe}
 
@@ -63,14 +68,18 @@ single SST1 μ tagged, all / bounced & 90 / 82 \% & 94 / 84 \% \\\rowrule
 \end{tabular}\par}
 \end{minipage}%
 \hfill%
-\begin{minipage}[c]{0.5\linewidth}
-{\fontsize{6.15pt}{8.60pt}\selectfont
-\begin{itemize}
-  \item Best design of the GA re-run (25 Nov, ×4 MS7 statistics, DOCA 1 cm): 6 of the 10 SBT rings (0, 2, 6–9), the full-width tile plane
-  \item Same background as R2 (3.9 vs 4.3 / 15 y), \textbf{half the signal loss} (3.0 vs 6.1 \%), \textbf{71 \% of the budget}
-  \item Gain: fewer SBT rings and a narrower track window (bounce slope 0.159 vs 0.21) → fewer random hits in the windows
-  \item V0 rule as R2 (0.24 GeV / p\textsubscript{vis}, p\textsubscript{vis} < 25 GeV, K\textsubscript{L} time-of-flight window); 2 × 2 cm tiles 2.76 MHz (as R2), optimised with a 3 MHz limit
-\end{itemize}}
+% bullets replaced by the confusion matrix (25 Nov 2026):
+% \begin{minipage}[c]{0.5\linewidth}
+% {\fontsize{6.15pt}{8.60pt}\selectfont
+% \begin{itemize}
+%   \item Best design of the GA re-run (25 Nov, ×4 MS7 statistics, DOCA 1 cm): 6 of the 10 SBT rings (0, 2, 6–9), the full-width tile plane
+%   \item Same background as R2 (3.9 vs 4.3 / 15 y), \textbf{half the signal loss} (3.0 vs 6.1 \%), \textbf{71 \% of the budget}
+%   \item Gain: fewer SBT rings and a narrower track window (bounce slope 0.159 vs 0.21) → fewer random hits in the windows
+%   \item V0 rule as R2 (0.24 GeV / p\textsubscript{vis}, p\textsubscript{vis} < 25 GeV, K\textsubscript{L} time-of-flight window); 2 × 2 cm tiles 2.76 MHz (as R2), optimised with a 3 MHz limit
+% \end{itemize}}
+% \end{minipage}
+\begin{minipage}[c]{0.5\linewidth}\centering
+\includegraphics[height=128pt,keepaspectratio]{figs/confusion_Z1p.pdf}
 \end{minipage}\par
 \end{btframe}
 
