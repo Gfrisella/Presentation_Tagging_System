@@ -169,3 +169,4 @@ Sizes are those of the 1600 × 900 px HTML stage on the 16 × 9 cm frame (1 px =
 - 24 Nov: conclusion slide (33) rebuilt as 4 boxes: environment, selection+tagging (preliminary), FairShip designs R1/R2, next steps (AlphaEvolve, first FoM evaluation). Old text in sections/05_next_steps.tex.bak_conclusion_20261124 (not committed).
 - 24 Nov: slide 18 + SBT-material rows (LS 2 020 ± 230, walls 2 690 ± 250 per 15 y at IP < 10 cm, DOCA 1 cm; from interactions/prepared_sbt_nov4full_eloss_ls11_doca1.npz), tables tightened.
 - 25 Nov: V0 rule p* = 0.24 GeV (kinematic limit + 5 %), p_max 25 GeV (prod_4st/P5_v024, x4 MS7). Updated slide 25 box, flow steps, R1/R2/summary/Z1 tables + totals (R1 1.33e4 / R1+V0 60 / R2 4.3 ± 1.4 / Z1 160 ± 58), conclusion boxes 3-4, back-up aperture (figs/aperture_radii_v024.pdf). UBT x2 row still from the 0.229 rule (labelled).
+- 25 Nov: slide 18 SBT-material rows removed for now (user).
